@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QUORUM — The War Room (Brief &amp; Panel Curation)</title>
+<!-- Typography: Space Grotesk, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#223600",
+            "on-secondary-fixed-variant": "#334f00",
+            "surface-container-highest": "#33343a",
+            "on-primary-fixed": "#001f24",
+            "primary-fixed-dim": "#00daf3",
+            "on-primary-fixed-variant": "#004f58",
+            "on-tertiary-container": "#006083",
+            "secondary": "#aff833",
+            "on-surface": "#e3e2e9",
+            "surface-variant": "#33343a",
+            "on-error": "#690005",
+            "error": "#ffb4ab",
+            "outline-variant": "#3b494c",
+            "inverse-on-surface": "#2f3036",
+            "primary-fixed": "#9cf0ff",
+            "on-background": "#e3e2e9",
+            "error-container": "#93000a",
+            "primary-container": "#00e5ff",
+            "tertiary-container": "#99d9ff",
+            "secondary-fixed": "#aff833",
+            "surface-tint": "#00daf3",
+            "surface-container-high": "#292a2f",
+            "surface-container-low": "#1a1b20",
+            "inverse-primary": "#006875",
+            "on-tertiary-fixed": "#001e2c",
+            "outline": "#849396",
+            "on-tertiary": "#00354a",
+            "on-secondary-fixed": "#121f00",
+            "on-primary-container": "#00626e",
+            "tertiary-fixed-dim": "#7bd0ff",
+            "surface-bright": "#38393e",
+            "on-surface-variant": "#bac9cc",
+            "surface-container": "#1e1f25",
+            "primary": "#c3f5ff",
+            "on-secondary-container": "#3c5b00",
+            "secondary-container": "#95da03",
+            "on-error-container": "#ffdad6",
+            "surface-dim": "#121318",
+            "on-primary": "#00363d",
+            "surface": "#121318",
+            "surface-container-lowest": "#0d0e13",
+            "inverse-surface": "#e3e2e9",
+            "background": "#121318",
+            "on-tertiary-fixed-variant": "#004c69",
+            "tertiary-fixed": "#c4e7ff",
+            "tertiary": "#dbf0ff",
+            "secondary-fixed-dim": "#95da03"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "0.75rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "telemetry-sm": ["JetBrains Mono"],
+            "display-hero": ["Space Grotesk"],
+            "body-sm": ["Inter"],
+            "telemetry-md": ["JetBrains Mono"],
+            "headline-md": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "display-hero-mobile": ["Space Grotesk"],
+            "telemetry-lg": ["JetBrains Mono"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Space Grotesk"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-lg-mobile": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "telemetry-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "telemetry-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "telemetry-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .tactical-grid {
+      background-image: 
+        radial-gradient(circle at 50% 20%, rgba(0, 229, 255, 0.08) 0%, transparent 60%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 32px 32px, 32px 32px;
+    }
+    .neon-border-cyan {
+      border: 1px solid rgba(0, 229, 255, 0.35);
+      box-shadow: 0 0 16px -2px rgba(0, 229, 255, 0.18), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+    }
+    .neon-border-subtle {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-top-color: rgba(255, 255, 255, 0.15);
+    }
+    .neon-border-subtle:hover {
+      border-color: rgba(0, 229, 255, 0.3);
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.08);
+    }
+    .neon-btn-glow {
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+    }
+    .neon-btn-glow:hover {
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.65);
+    }
+  </style>
+</head>
+<body class="bg-[#05060A] text-on-surface antialiased tactical-grid min-h-screen selection:bg-primary-container selection:text-surface-container-lowest">
+<!-- TOP APP BAR (from Shared Components JSON: TopNavBar) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 max-w-[1440px] mx-auto h-14 bg-surface/85 dark:bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline-variant/30 shadow-2xl dark:shadow-2xl">
+<!-- Logo & Session Status Anchor -->
+<div class="flex items-center gap-4">
+<div class="text-headline-sm font-headline-sm tracking-wider uppercase text-primary dark:text-primary flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#00e5ff]"></span>
+<span>QUORUM</span>
+</div>
+<div class="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-lowest/90 border border-outline-variant/40">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_#aff833] animate-pulse"></span>
+<span class="font-telemetry-sm text-telemetry-sm text-outline tracking-wider">[BRIEF REVIEW // PANEL SELECTION]</span>
+</div>
+</div>
+<!-- 4-Node Process Indicator -->
+<nav aria-label="Process Pipeline" class="flex items-center gap-6">
+<!-- 01 SUBMIT (Completed) -->
+<div class="flex items-center gap-1.5 cursor-pointer pb-1 group">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-secondary font-telemetry-sm text-telemetry-sm tracking-wider">01 SUBMIT</span>
+</div>
+<span class="text-outline-variant text-xs">→</span>
+<!-- 02 WAR ROOM (ACTIVE) -->
+<div class="flex items-center gap-1.5 cursor-pointer text-primary-container dark:text-primary-container font-telemetry-sm text-telemetry-sm border-b-2 border-primary-container pb-1 drop-shadow-[0_0_8px_rgba(0,229,255,0.4)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_#00e5ff] animate-ping"></span>
+<span class="font-bold">02 WAR ROOM</span>
+</div>
+<span class="text-outline-variant text-xs">→</span>
+<!-- 03 COUNCIL (Upcoming) -->
+<div class="cursor-pointer text-outline dark:text-outline font-telemetry-sm text-telemetry-sm hover:text-on-surface dark:hover:text-on-surface transition-colors pb-1">
+<span>03 COUNCIL</span>
+</div>
+<span class="text-outline-variant text-xs">→</span>
+<!-- 04 REPORT (Upcoming) -->
+<div class="cursor-pointer text-outline dark:text-outline font-telemetry-sm text-telemetry-sm hover:text-on-surface dark:hover:text-on-surface transition-colors pb-1">
+<span>04 REPORT</span>
+</div>
+</nav>
+<!-- Trailing Diagnostics & Session Telemetry -->
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-low border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary-container text-xs">vital_signs</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary-fixed-dim">12ms</span>
+<span class="text-outline-variant font-telemetry-sm text-telemetry-sm">•</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Live Telemetry</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<button class="p-1.5 rounded hover:text-primary hover:bg-surface-variant/40 transition-colors" title="Terminal" type="button">
+<span class="material-symbols-outlined text-base">terminal</span>
+</button>
+<button class="p-1.5 rounded hover:text-primary hover:bg-surface-variant/40 transition-colors" title="Diagnostic Settings" type="button">
+<span class="material-symbols-outlined text-base">settings</span>
+</button>
+<div class="w-7 h-7 rounded bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-telemetry-sm text-telemetry-sm text-primary-container font-bold" title="Operator Session Ident">
+          OP4
+        </div>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS: Two-Column Responsive Layout -->
+<main class="max-w-[1440px] mx-auto px-8 pt-20 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- LEFT COLUMN (~35% -> col-span-1 lg:col-span-4 or 5) -->
+<aside class="lg:col-span-4 flex flex-col gap-6">
+<!-- Idea Brief Glass Panel -->
+<section class="rounded-2xl border border-outline-variant/30 bg-surface/80 backdrop-blur-md p-6 shadow-2xl flex flex-col gap-5">
+<!-- Header & Status Trigger -->
+<div class="flex items-start justify-between gap-2 border-b border-outline-variant/20 pb-4">
+<div>
+<div class="font-telemetry-sm text-telemetry-sm text-primary-container tracking-wider flex items-center gap-1.5">
+<span>01 // VENTURE BRIEF SPECIFICATION</span>
+</div>
+<div class="mt-1 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-lowest text-secondary border border-secondary/30 font-label-caps text-label-caps uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_#aff833]"></span>
+                SYNTHESIS LOCKED
+              </span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded bg-primary-container/10 border border-primary-container/40 text-primary-container hover:bg-primary-container hover:text-surface-container-lowest transition-all duration-150 font-telemetry-sm text-telemetry-sm flex items-center gap-1 font-semibold" type="button">
+<span class="material-symbols-outlined text-xs">check</span>
+            Approve brief
+          </button>
+</div>
+<!-- 4 Editable Specification Fields -->
+<div class="space-y-4">
+<!-- Field 1: Problem -->
+<div class="group rounded-xl p-3 bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-primary-container/40 transition-all">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-telemetry-sm text-telemetry-sm text-primary tracking-wider uppercase font-semibold">01. PROBLEM VECTOR</span>
+<button class="text-outline group-hover:text-primary-container transition-colors" title="Edit Problem" type="button">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              SMB exporters wait 90-120 days for cross-border receivables, crippling cash flow. Traditional factoring charges predatory 3-5%/month rates with 3-week manual KYC underwriting.
+            </p>
+</div>
+<!-- Field 2: Target Persona -->
+<div class="group rounded-xl p-3 bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-primary-container/40 transition-all">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-telemetry-sm text-telemetry-sm text-primary tracking-wider uppercase font-semibold">02. TARGET ICP &amp; COHORT</span>
+<button class="text-outline group-hover:text-primary-container transition-colors" title="Edit Target Persona" type="button">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Mid-market B2B cross-border suppliers &amp; manufacturing exporters ($2M–$25M GMV) primarily across LATAM and SE Asia selling to US/EU buyers.
+            </p>
+</div>
+<!-- Field 3: Solution -->
+<div class="group rounded-xl p-3 bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-primary-container/40 transition-all">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-telemetry-sm text-telemetry-sm text-primary tracking-wider uppercase font-semibold">03. ARCHITECTURAL SOLUTION</span>
+<button class="text-outline group-hover:text-primary-container transition-colors" title="Edit Solution" type="button">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Zero-wait instant factoring liquidity protocol connecting directly to ERP (QuickBooks, NetSuite) &amp; customs clearance webhooks, automated AI underwriting in under 90 seconds.
+            </p>
+</div>
+<!-- Field 4: Proposed Business Model -->
+<div class="group rounded-xl p-3 bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-primary-container/40 transition-all">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-telemetry-sm text-telemetry-sm text-primary tracking-wider uppercase font-semibold">04. MONETIZATION &amp; FLOAT ENGINE</span>
+<button class="text-outline group-hover:text-primary-container transition-colors" title="Edit Proposed Business Model" type="button">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              85 bps risk-adjusted discount fee per 30-day tranche + 0.25% FX spread buffer on multi-currency settlement. Self-replenishing warehouse line backed by institutional credit facilities.
+            </p>
+</div>
+</div>
+<!-- Taxonomy & Domain Vectors Drawer -->
+<div class="border-t border-outline-variant/20 pt-4 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Detected Taxonomy &amp; Domain Vectors</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">AUTO-RESOLVED</span>
+</div>
+<!-- Sector Badges Cluster -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- Primary Sector: Fintech -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-secondary/40 text-secondary font-telemetry-sm text-telemetry-sm font-semibold shadow-[0_0_10px_rgba(175,248,51,0.15)]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_#aff833]"></span>
+              Fintech
+            </span>
+<!-- Functional Domain Badges -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-primary-container/30 text-on-surface font-telemetry-sm text-telemetry-sm shadow-[0_0_8px_rgba(0,229,255,0.1)]">
+<span class="w-1 h-1 rounded-full bg-primary-container"></span>
+              Fundraising
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-primary-container/30 text-on-surface font-telemetry-sm text-telemetry-sm shadow-[0_0_8px_rgba(0,229,255,0.1)]">
+<span class="w-1 h-1 rounded-full bg-primary-container"></span>
+              Unit Economics
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-primary-container/30 text-on-surface font-telemetry-sm text-telemetry-sm shadow-[0_0_8px_rgba(0,229,255,0.1)]">
+<span class="w-1 h-1 rounded-full bg-primary-container"></span>
+              Distribution
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-primary-container/30 text-on-surface font-telemetry-sm text-telemetry-sm shadow-[0_0_8px_rgba(0,229,255,0.1)]">
+<span class="w-1 h-1 rounded-full bg-primary-container"></span>
+              Cross-Border FX
+            </span>
+</div>
+<!-- Quick Summary Telemetry Stream -->
+<div class="mt-2 grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-lowest/90 border border-outline-variant/30 text-center">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">CONFIDENCE</span>
+<span class="font-telemetry-md text-telemetry-md text-secondary font-bold">81%</span>
+</div>
+<div class="flex flex-col border-x border-outline-variant/30">
+<span class="font-label-caps text-label-caps text-outline">LENGTH</span>
+<span class="font-telemetry-md text-telemetry-md text-primary font-bold">142 words</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">FRICTION</span>
+<span class="font-telemetry-md text-telemetry-md text-error font-bold">High</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Threat / Pre-mortem Radar Mini Console -->
+<div class="rounded-xl p-4 bg-surface-container-low/70 border border-outline-variant/30 backdrop-blur-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-telemetry-sm text-telemetry-sm text-outline tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary-container">radar</span>
+            CALIBRATION RADAR
+          </span>
+<span class="font-label-caps text-label-caps text-secondary font-bold">STRESS READY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Adversarial focus primed on credit default contagion during port bottlenecks and institutional borrowing rate spikes.
+        </p>
+</div>
+</aside>
+<!-- RIGHT COLUMN (~65% -> col-span-1 lg:col-span-8) -->
+<section class="lg:col-span-8 flex flex-col gap-6">
+<!-- Header & Tactical Operations Toolbar -->
+<div class="rounded-2xl border border-outline-variant/30 bg-surface/70 backdrop-blur-md p-6 flex flex-col gap-5 shadow-2xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-3">
+<h1 class="text-headline-md font-headline-md text-on-surface tracking-tight">Suggested Council</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest border border-primary-container/40 text-primary-container font-telemetry-sm text-telemetry-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_#00e5ff] animate-pulse"></span>
+                22 experts selected
+              </span>
+</div>
+<p class="mt-1 font-body-md text-body-md text-on-surface-variant">
+              Simulated adversarial jury calibrated for B2B cross-border capital &amp; distribution friction.
+            </p>
+</div>
+<!-- Top-Right Actions -->
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/40 hover:border-primary-container/50 text-on-surface font-telemetry-sm text-telemetry-sm flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-xs">sync_alt</span>
+              + Swap expert
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container/10 border border-primary-container/40 text-primary-container hover:bg-primary-container hover:text-surface-container-lowest font-telemetry-sm text-telemetry-sm flex items-center gap-1.5 transition-all font-semibold" type="button">
+<span class="material-symbols-outlined text-xs">add</span>
+              + Add functional specialist
+            </button>
+</div>
+</div>
+<!-- Filter / Sector Search Bar -->
+<div class="flex flex-col sm:flex-row items-center gap-3 pt-2 border-t border-outline-variant/20">
+<div class="relative w-full sm:w-72">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-base">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-lowest/90 border border-outline-variant/30 text-body-sm font-body-sm text-on-surface placeholder:text-outline placeholder:font-telemetry-sm focus:border-primary-container focus:ring-0" placeholder="Search jury pool or archetypes..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 w-full">
+<span class="font-label-caps text-label-caps text-outline uppercase mr-1">Filter:</span>
+<button class="px-2.5 py-1 rounded bg-primary-container/20 border border-primary-container text-primary-container font-telemetry-sm text-telemetry-sm" type="button">All (12)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest border border-outline-variant/30 hover:border-secondary/40 text-outline hover:text-secondary font-telemetry-sm text-telemetry-sm" type="button">Fintech (4)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest border border-outline-variant/30 hover:border-primary-container/40 text-outline hover:text-primary-container font-telemetry-sm text-telemetry-sm" type="button">Software (2)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest border border-outline-variant/30 hover:border-primary-fixed/40 text-outline hover:text-primary-fixed font-telemetry-sm text-telemetry-sm" type="button">Capital/Econ (6)</button>
+</div>
+</div>
+</div>
+<!-- Interactive Grid of 12 Persona Avatar Cards (3 cols x 4 rows) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+<!-- CARD 1: Paul Graham -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-cyan flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#00e5ff] bg-gradient-to-tr from-[#00E5FF] to-[#aff833]">
+                PG
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Paul Graham</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Y Combinator // Essayer</p>
+</div>
+</div>
+<!-- Indicator Dot -->
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_#00e5ff]" title="Tech &amp; Software / Fintech"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Founder-Market Fit &amp; Radical Simplicity</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container peer-checked:shadow-[0_0_10px_#00e5ff]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 2: Michael Seibel -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-primary-container/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#00daf3] bg-gradient-to-tr from-[#00daf3] to-[#38bdf8]">
+                MS
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Michael Seibel</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">YC Partner // Justin.tv</p>
+</div>
+</div>
+<!-- Indicator Dot -->
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_#00e5ff]" title="Software"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">B2B Customer Discovery Skeptic</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container peer-checked:shadow-[0_0_10px_#00e5ff]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 3: Dalton Caldwell -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-primary-container/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#7bd0ff] bg-gradient-to-tr from-[#7bd0ff] to-[#9cf0ff]">
+                DC
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Dalton Caldwell</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Managing Director // YC</p>
+</div>
+</div>
+<!-- Indicator Dot -->
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed shadow-[0_0_6px_#c4e7ff]" title="Fundraising"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Skeptic on Market Size &amp; True Moats</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container peer-checked:shadow-[0_0_10px_#00e5ff]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 4: Geoff Ralston -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-primary-container/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#38bdf8] bg-gradient-to-tr from-[#38bdf8] to-[#00daf3]">
+                GR
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Geoff Ralston</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Former President // YC</p>
+</div>
+</div>
+<!-- Indicator Dot -->
+<span class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_6px_#9cf0ff]" title="Capital"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Early Runway &amp; Cap Table Realist</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container peer-checked:shadow-[0_0_10px_#00e5ff]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 5: Patrick Collison -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-secondary/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#aff833] bg-gradient-to-tr from-[#aff833] to-[#95da03]">
+                PC
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Patrick Collison</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">CEO // Stripe</p>
+</div>
+</div>
+<!-- Indicator Dot: Lime -->
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#aff833]" title="Fintech"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">API Infrastructure &amp; Regulatory Depth</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary peer-checked:shadow-[0_0_10px_#aff833]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 6: Nithin Kamath -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-secondary/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#aff833] bg-gradient-to-tr from-[#95da03] to-[#aff833]">
+                NK
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Nithin Kamath</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Founder // Zerodha</p>
+</div>
+</div>
+<!-- Indicator Dot: Lime -->
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#aff833]" title="Fintech"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Zero-Cost Distribution &amp; Float Economics</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary peer-checked:shadow-[0_0_10px_#aff833]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 7: Kunal Shah -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-secondary/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#aff833] bg-gradient-to-tr from-[#aff833] to-[#c3f5ff]">
+                KS
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Kunal Shah</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Founder // CRED</p>
+</div>
+</div>
+<!-- Indicator Dot: Lime -->
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#aff833]" title="Fintech"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Delta 4 Efficiency &amp; Margin Retention</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary peer-checked:shadow-[0_0_10px_#aff833]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 8: Fred Wilson -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-primary-container/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#38bdf8] bg-gradient-to-tr from-[#38bdf8] to-[#7bd0ff]">
+                FW
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Fred Wilson</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Partner // Union Square</p>
+</div>
+</div>
+<!-- Indicator Dot -->
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed shadow-[0_0_6px_#c4e7ff]" title="Fundraising"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Decentralized Liquidity &amp; Syndication Risk</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container peer-checked:shadow-[0_0_10px_#00e5ff]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 9: Bill Gurley -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-primary-container/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#9cf0ff] bg-gradient-to-tr from-[#9cf0ff] to-[#00daf3]">
+                BG
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Bill Gurley</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">General Partner // Benchmark</p>
+</div>
+</div>
+<!-- Indicator Dot -->
+<span class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_6px_#9cf0ff]" title="Unit Economics"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Unit Economics &amp; Marketplace Take-Rate</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container peer-checked:shadow-[0_0_10px_#00e5ff]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 10: Andrew Chen -->
+<article class="rounded-xl p-4 bg-surface-container/60 backdrop-blur-md neon-border-subtle hover:border-primary-container/40 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest shadow-[0_0_12px_#7bd0ff] bg-gradient-to-tr from-[#7bd0ff] to-[#38bdf8]">
+                AC
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Andrew Chen</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">General Partner // a16z</p>
+</div>
+</div>
+<!-- Indicator Dot -->
+<span class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_6px_#9cf0ff]" title="Distribution"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Distribution Churn &amp; Cold Start Friction</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PRIMED
+            </span>
+<!-- Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container peer-checked:shadow-[0_0_10px_#00e5ff]"></div>
+</label>
+</div>
+</article>
+<!-- CARD 11: Lenny Rachitsky (TOGGLED OFF) -->
+<article class="rounded-xl p-4 bg-surface-container/30 backdrop-blur-sm border border-outline-variant/20 opacity-40 hover:opacity-75 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest bg-surface-bright">
+                LR
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Lenny Rachitsky</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Author // Lenny's Podcast</p>
+</div>
+</div>
+<!-- Grayed Indicator -->
+<span class="w-2 h-2 rounded-full bg-outline" title="Consumer / Growth"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/60 border border-outline-variant/10">
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-outline leading-snug">Product Wedge Specialist &amp; Retention Flywheels</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-outline flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Off Duty
+            </span>
+<!-- Inactive Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-outline after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+</article>
+<!-- CARD 12: Alex Hormozi (TOGGLED OFF) -->
+<article class="rounded-xl p-4 bg-surface-container/30 backdrop-blur-sm border border-outline-variant/20 opacity-40 hover:opacity-75 flex flex-col justify-between gap-3 transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-display-hero text-telemetry-lg font-bold text-surface-container-lowest bg-surface-bright">
+                AH
+              </div>
+<div>
+<h3 class="text-on-surface font-headline-sm text-body-lg font-semibold leading-tight">Alex Hormozi</h3>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Acquisition.com</p>
+</div>
+</div>
+<!-- Grayed Indicator -->
+<span class="w-2 h-2 rounded-full bg-outline" title="Offer &amp; Sales"></span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/60 border border-outline-variant/10">
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-1">Adversarial Lens</span>
+<p class="font-body-sm text-body-sm text-outline leading-snug">Offer Architecture &amp; Cash Conversion Velocity</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-outline flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Off Duty
+            </span>
+<!-- Inactive Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-outline after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- BOTTOM STICKY ACTION BAR & TACTICAL COMMAND BAR -->
+<aside aria-label="Jury Execution Control" class="fixed bottom-9 left-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-lg border-t border-outline-variant/30 px-8 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Left: Council Readiness Summary -->
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#aff833] animate-pulse"></div>
+<div class="font-telemetry-sm text-telemetry-sm text-on-surface">
+<span class="text-secondary font-bold">10/12 Active Personas Primed</span>
+<span class="text-outline-variant mx-1.5">//</span>
+<span class="text-primary-fixed-dim">3 Red-Team Attack Angles Anticipated</span>
+</div>
+</div>
+<!-- Right: Prominent Glowing CTA Trigger -->
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex flex-col text-right">
+<span class="font-label-caps text-label-caps text-primary-container font-bold tracking-widest">[INITIATE ADVERSARIAL STRESS-TEST →]</span>
+<span class="font-telemetry-sm text-telemetry-sm text-outline">Simulated consensus threshold: 94%</span>
+</div>
+<button class="px-6 py-2.5 rounded-lg bg-primary-container text-surface-container-lowest font-headline-sm text-body-lg font-bold flex items-center gap-2 neon-btn-glow transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-xl">gavel</span>
+<span>Convene the Council</span>
+<span class="material-symbols-outlined text-lg">bolt</span>
+</button>
+</div>
+</aside>
+<!-- PERSISTENT FOOTER (from Shared Components JSON: Footer) -->
+<footer class="fixed bottom-0 left-0 w-full z-40 flex items-center justify-between px-6 h-9 bg-surface-container-lowest/90 dark:bg-surface-container-lowest/90 backdrop-blur-sm border-t border-outline-variant/20 dark:border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-xs animate-pulse">lock</span>
+<span class="font-telemetry-sm text-telemetry-sm text-outline dark:text-outline">
+        AI-simulated perspectives inspired by public work. Not actual statements by these individuals.
+      </span>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<a class="font-telemetry-sm text-telemetry-sm text-outline dark:text-outline hover:text-primary-fixed-dim dark:hover:text-primary-fixed-dim transition-colors" href="#diagnostics">
+        SYSTEM DIAGNOSTICS
+      </a>
+<span class="text-outline-variant text-xs">•</span>
+<a class="font-telemetry-sm text-telemetry-sm text-outline dark:text-outline hover:text-primary-fixed-dim dark:hover:text-primary-fixed-dim transition-colors" href="#clearance">
+        CLEARANCE LEVEL 4
+      </a>
+<span class="text-outline-variant text-xs">•</span>
+<a class="font-telemetry-sm text-telemetry-sm text-outline dark:text-outline hover:text-primary-fixed-dim dark:hover:text-primary-fixed-dim transition-colors" href="#audit">
+        SECURITY AUDIT
+      </a>
+</div>
+</footer>
+</body></html>

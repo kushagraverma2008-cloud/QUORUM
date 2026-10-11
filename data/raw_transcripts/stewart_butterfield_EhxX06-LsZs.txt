@@ -1,0 +1,715 @@
+[MUSIC] >> Hello. >> Stewart,
+it's a pleasure to have you here today. >> Thank you. >> How are you doing? >> I'm well. >> Cool. So typically we would start
+these with a question, asking the students how
+many of you use Slack. But since it's the official
+communication platform for the GSP, we're going to have to
+do something a little different. How about a game of two truths and a lie? >> All right. >> Cool. So up here on the screen in just a second,
+we're going to see three statements that I pulled from my
+extensive research of your past. We're going to ask the audience to
+guess which one of them is a lie. So, statement one, you were born
+with a name Stewart Butterfield. Okay, statement two,
+you have two philosophy degrees. All right?
+Statement three, Flickr, your first successful startup was conceived
+while battling with food poisoning. Okay, so the audience, raise your hand
+if you think statement one is false. Wow. It's a lot of people. [LAUGH] Raise your hand if you
+think statement two is false. Okay, raise your hand if you
+think statement three is false. >> [LAUGH]
+>> Okay, Stewart. >> Feeling pretty good, it's number one. >> It's number one, so
+you were not born Stewart Butterfield. >> I was born Dharma Jeremy Butterfield
+to hippy parents in a little town called Lund in British, Columbia which
+is literally the end of the road. So Pacific Coast Highway is the same road
+that goes all the way down to Chile. And then all the way up to where
+the Fjords of British Columbia, and the fact that there's no really,
+there's no people within any further north means that it was foolish to
+continue building the road. So, born there and grew up in a log
+cabin for the first couple of years. >> Grew up in a log cabin? Abe Lincoln also grew up in a log cabin. >> Very, yeah. >> [LAUGH]
+>> That's why I bring it up, for the positive associations. >> [LAUGH] Yeah, so
+trust me, I understand. My parents named me
+Trevorski Tylon Garrett. And as a four-year-old, I was not writing
+Trevorski on every spelling test. So I go by Tylin, and
+you actually know me by Ty. >> Yeah. >> So-
+>> T-Y is very creative. >> [LAUGH]
+>> So when I was 12, I really wanted to be normal. And for some reason, I thought Stewart
+was a normal name, like Mike, or something like that. >> [LAUGH]
+>> And Stewart, it's a pretty bad name. You'll notice this after I say it. Any time you watch a movie, TV show,
+there's a character named Stewart, there's like the jerk version and there's
+like the sad sack kind of loser version. >> [LAUGH]
+>> Which never a protagonist with the exception of the mouse Stuart Little. >> Stuart Little. >> [LAUGH]
+>> That was one of my favorite movies growing up. So if you could pick any name today,
+what would it be? >> It would be Dharma Jeremy Butterfield,
+it's a sick name. >> [LAUGH]
+>> Cool, so you hinted a little bit on your parents. What have been the most lasting
+influences from their parenting? >> That's a good question. I mean, it's hard to separate out that from what life would've
+been without those influences. My mom is incredibly supportive
+to the extent that when I was 16, I got in a car accident,
+just totaled the car, my dad's car. And my mom's reaction was, well,
+it's really good that you did that, because you learned an important
+lesson about driving safety. [LAUGH] Which is not
+the reaction I was expecting. My dad was a real estate developer, and
+real estate development usually works, the people incorporating new entity for
+each project or each development. Maybe there's a management company
+that takes measuring fees but it kind of isolates the investments, which means that it's like creating
+your business over and over again. Like every two or three years,
+there's a fundraising cycle, and there's kind of putting
+together the vision and a plan. And then over the next decade or
+so, that plays out. So I think that was a big influence for
+me, just because I got to see
+the development of, I don't even know. Over the course of my childhood,
+once I was aware of what was going on, maybe five or six different businesses. And that was good practice, because I think I started
+looking at the world that way. >> That's cool, that's cool. So you were born Dharma Butterfield. You were raised by parents who
+aspired to live off the land. It only makes sense that you
+would be drawn to technology. So what led you to teach yourself
+to program at the age of seven? >> Computers were just so cool and
+even like you see now, any three-month or six-month old are just drawn
+to the iPad in a way that seems like it must be indicative of
+a lower level brain function that was hijacked in order to be attracted to this. So for me, many screen, just like any child,
+any screen was just super attractive. But the idea that you could control
+what appeared was really magical. And it was 1979, 1980, somewhere around
+there, I got an Apple TV at home. So we had one in the classroom. So the very first class at my school
+to have a computer in the classroom. And I would buy a copy of a magazine
+called Bite which in the back, a couple of pages had programs that you can just
+type out yourself in an Apple basic. And you can change a couple things, and
+see what happened, and it was really, I have difficulty describing like
+why it had such a powerful hold. But what was interesting is if
+you fast forward like 20 years, there was, I had an early getting
+console called television. So like video games, like most boys my
+age, there are arcades where you went and put quarters in machines and
+stuff like that. But computers themselves became less and less interesting to me over the course of
+high school but when I got to college, I got an account on the school's Unix
+machine and discovered the Internet. This was 1992, and
+that was just totally mind expanding. And I almost couldn't believe that
+such a thing was possible, and had like the same feeling of wonder,
+but to a higher degree. Because it was like we as a species, had developed the ability to
+transcend geography in a much more profound way than like long distance
+phone calls had or the telegraph had. You could find community,
+I grew up in between College in Victoria, British Columbia, which is again on
+the edge of the continent, very remote, kind of provincial. And you could find people who were
+interested in exactly what you were, anywhere in the world, and that communication was happening
+at the speed of light. So that really opened it up, and
+then fast forward another ten years. So like in the early 2000s, I had this experience finally
+where I had my laptop with me, and at one point in my life had been like
+the Steve Jobs bicycle for the mind but this incredible machine that anything was
+possible, and all this amazing software. When it wasn't connected to the Internet
+was inert, was basically kind of useless, it was like a rock. So it's a very interesting
+experience to think about, like the successive layers
+of what really matters. The first one being that ability to
+run arbitrary code to generate more or less anything that a human can imagine. And then the ability to
+put all of those together. And I think that was like the thing
+that has guided my career ever since, is the exploration of that idea of
+computing technology as a means of facilitating human interaction. >> It's amazing. So, that's what drew you to
+technology initially, but you actually studied philosophy. So what inspired that decision? >> I really wanted to do
+a degree in cognitive science, but the school that I went to
+didn't have cognitive science. So, cognitive science is usually computer
+science, psychology, linguistics, and psychology. And so
+I wanted to take courses in all four. To do an honors degree in Psychology
+was like every single course was a requirement. In fact, you had to do extra. Where as philosophy,
+it's pretty light set of requirements, even to do an honors degree,
+so I chose philosophy. Literally like that,
+it was like of those four, the one that had the fewest requirements. But after I started studying it,
+even though I suck is really a philosophy of mine is really interested in
+neuro psych as an undergrad. The fundamentals of philosophy
+I found super fascinating and this sounds bad and it is bad in one
+sense and it's good in another sense. So you think about the last
+2,500 years of kind of the history of inquiry
+of all different kinds. At some point, everyone was a philosopher. If you were interested in the world in a religious way like the beginnings
+of science, philosophy. At some point, mathematics, geometry, astronomy split off over
+the next many hundred years. Things like biology in the 19th century
+split off into its own discipline and psychology, anthropology, sociology,
+computer science, linguistics, women's studies. Until all you had left was an area
+of inquiry that is not directed at anything except for
+like itself and language. So in one sense, it's really boring. So, if you didn't ever study philosophy,
+and you pick up a book of contemporary Anglo American analytic philosophy,
+it is super, super boring. It's almost impenetrable
+without this giant vocabulary of ways you're going to get into it. But once you're into it,
+I still find it really fascinating, because there's so
+many unanswerable questions, yeah. >> That's good to know, so who was
+the most influential philosopher to you? >> I have a pretty broad range and
+I liked all kinds of thinkers but like go back to Aristotle, Spinoza, more
+contemporary, Klein and Donald Davidson. But if there's one, it was Decker because
+that's why I ended up going to Cambridge. >> Amazing, amazing. So we're in 1997 now. You're armed with two philosophy degrees
+and a name for philosopher, Butterfield. But you decided to become a web developer. What led you back into technology? >> Well, so like I said, I got to college
+in 92, which, is like, at least for my awareness, six months to maybe
+a year before the web really took off. I think Mosaic had been invented,
+but wasn't really widely deployed. So the Internet was email, IRC,
+a Unix program called Talk. More than anything else, it was Usenet. And that meant that as soon as
+the web became a popular medium, that started supplanting things
+like Gopher and Ways, I was there. And it was really, the HTML back
+then was just dead simple, so very easy to teach ourselves. So 93, I was, I don't know, one of five
+people in my hometown who knew HTML. Which meant that 94, 95, 96,
+every year, my summer job, but also just my job during the school
+year was making websites for people who didn't know how to make
+websites because pretty much no one did. And it was like 98, I finished my
+masters and was enrolled in PhD. And it was the beginning. So a friend of mine had just
+finished his PhD in philosophy. And went to a great school and
+did great thesis work and was really at the top of the range and got his first job which was at
+the University of Louisville in Kentucky. And he really did not want to live
+in Kentucky and it was a crappy job with low pay and it is sessional
+position so it renews every nine months. I thought of how many hoops I had to
+jump through just to get to that point. Or because it was 98, and the .com thing
+started to take off, and I knew the web, and all of my friends who are early web
+people were moving to San Francisco and getting jobs that paid two or
+three times as much. And it was exciting and dynamic and
+were changing the world. So I had an advice from a couple of
+professors over the course of my career who were essentially were this
+is a terrible life please don't become an academic. If you're interested in this stuff, you can subscribe to the journals and
+attend the conferences. >> [LAUGH]
+>> You don't have to actually do a PhD and then go be a professor. I took that advice. >> Okay, [LAUGH] that's good to know. So I'm actually curious, raise your
+hand if you have a humanities degree. Okay, keep your hand raised if you're
+considering a career in technology. Okay, so my question there is,
+what were the advantages and disadvantages in having a humanities
+degree within the technology industry? >> It's tough because there's
+multiple technology industries. So I would say, when I started in 98,
+the web was tech, but it was populated much more by people with
+a background in like graphic design or architecture if you're
+making web development. This serious back end programmers had a
+parallel track to web server development. But it was really like a totally
+different era and there wasn't anything in between the architects
+and the graphic designers on one side. And the people, this won't be a familiar
+reference to many of you, but the people are using web logic and
+ATG, Dynamo, and these like from today's
+contemporary perspective, kind of really horrible
+application servers, that had a fundamentally different
+approach to doing web development. It was stateful applications,
+things like Enterprise JavaBeans. And so I don't think it really made any
+difference, what your background was, at that point. It could have been history could have
+been finance could have been physics. And meanwhile, there's a different
+technology injury which is like all of the descendants
+of Fairchild Semiconductor and Intel HP and a bunch of companies
+that were native to this area. But that was completely different. Like, the design of circuit boards and
+processors and manufacturing computers was
+totally unrelated to the web. And still today,
+I think we say tech industry broadly. I think mostly what people mean
+is at least around the Bay Area is companies that receive EC backing
+as opposed to anything else. They're not necessarily
+specifically technology companies. And the side effect of
+software eating the world, in the famous phrase, is that every
+company's a technology company. So you can look at, I don't know,
+Visa or Mastercard probably employ close to an order of magnitude
+more software developers than Stripe. Everyone would say Stripe
+as a technology company, is PayPal a financial services company or
+a tech company? Is Airbnb a tech company or
+a hospitality company? It really becomes increasingly
+hard to make that distinction, unless you mean like technology is
+Huawei making 5G antenna chips, and it's Dell, and
+then software businesses, like. >> Yeah, thank you for that. So you worked as a web designer for a few
+years before starting a video game company and launching your first video game,
+Game Neverending. What was your vision for that game? >> So, when you said 92 the thing that was most interesting to me
+about the Internet was Usenet. Usenet is a,
+those of you who don't know it, a hierarchical directory of newsgroups and
+it covered more or less everything. So, they began with the three letter
+Abbreviations, so SCI was science, and there was science, physics,
+and geology, and so on. And then Rak, rack.music.gdad,
+Grateful Dead was, in 92, the Netflix of its time
+in the sense that it used more bandwidth than any other
+single thing on the Internet. There's so much traffic of
+people discussing Grateful Dead, that it kind of surpass everything else. So 93, I guess,
+probably a year later, I had the first experience of having a crush on
+someone that I had never actually met, it was just from her online persona, her sig
+files, the things she said in comments. And that the idea that that kind
+of connection was possible, I mean at this really early stage but
+it's very interesting to me. You go forward to 98, 99,
+2000, and people had blogs, they were the early social networks
+like Six Degrees, and then Friendster was probably 2002-ish,
+around there. But people had started kind of developing
+a persona and having interactions with other people over the Internet in a bunch
+of different virtual communities. Some of those are really explicit, like the wells are, like more the ancient
+ones but bulletin board systems, discussion boards moves kind of
+like interactive chat based games. And I mean I said earlier that the idea of social interaction mediated
+by computing technology like the new possibilities that opens up was the thing
+that is really fascinating to me. So when you say game, I think people have
+the assumption that there's puzzle games, and there's shooting games, and
+there's sports games, and stuff like that. This was none of those and this was just
+play as a pretext for social attraction, so this is a description that may or
+may not have appeal to some of you. I will tell you that it does not
+have broad commercial appeal. >> [LAUGH]
+>> And that's just like a whimsical world of absurdist humor and
+kind of hopefully, delightful little things to discover. But it's mostly like a venue for
+people to interact into and to form community with one another. And super popular among the small
+group of people from we developed this prototype and we're testing it,
+but that was 2002. So some of you are probably were
+just little babies in 2002, but there was the dot-com crash
+which started in 2000, there was the WorldCom, and
+Enron accounting scandals, there was 9/11. It was just like a really dark time for
+financial markets, the Nasdaq was down, I think, 80 or 85%, from its peak,
+so the S&P 500 was down 65%. It's kind of hard to imagine,
+even in comparison to 2008, so no one wanted to invest in
+Internet stuff period, but definitely no one wanted to invest in
+web based massively multiplayer games, that was just as frivolous
+as you could possibly be. Which meant that no one
+would invest in us and we didn't have enough money to finish it. And we tried to cast around for something that we could do with the
+technology that we developed that would create a commercially viable product
+that turned out to be Flickr. >> Yeah, so ironically,
+Game Neverending did end. >> Yep. >> So [LAUGH] how did you feel when you
+realized you had to shut down the game? >> Horrible, but at the same time,
+that kind of happened, but we were developing Flickr and the games
+side-by-side for a couple of months. The decision to make Flickr and then its launch, three months,
+separating those happened pretty quickly. But in that case, it felt like it was, there's a path forward,
+the team got to stay together. We had disappointed a lot of
+people who were playing it, but also a lot of them are like, but
+cool, Flickr is interesting too and they just kind of migrated,
+so that wasn't that bad. >> It's good, so you realize you
+have to shut down a game, but not before flying to one last
+video game conference in New York. What happens next? >> So it's a conference on law and
+virtual worlds, and it's in New York, and flew from Vancouver
+where I was living. And got food poisoning on the flight and I
+don't want to get too vivid, but it's just like puking in the immigration hall at
+JFK, puking in the cab on the freeway. Get to the hotel and step out of
+the cab and puke all over the carpet, [LAUGH] so it's all right, a little vivid. >> [LAUGH]
+>> I couldn't keep down anything, like ginger ale, water. And that night at like 3 in the morning
+after being up with kind of feverish and frantic, wrote out the whole
+first version of flicker, what it would be and how would take
+advantage of those technologies. I will say this though that was the very first version which
+was very different than one and ended up becoming It was not actually
+very good That got us got us going. >> So I've am yet to have a battle
+with food poisoning be so productive. So kudos to you there. You decided to focus on flicker
+When you made that shift, did everyone on your team buy in
+immediately or what was that process like? >> No so
+I'm pretty democratic leader sometimes. [LAUGH] Maybe less so now than back then. But we had a vote and there was a tie and
+I was like [SOUND] so I called. Erik Costello was actually one of
+the founders of slack as well. And just like this and background lobbying
+to get him to change his vote, so that we could go ahead with it. There's definitely like there's people
+who are still interested in making the game and felt like it was
+a shame to leave it behind. It was also I think, in terms of the
+number of people online, way too early and the technology that was
+available way too early. Like I think people forget 2002 was
+the first year that any country that more than 50% internet penetration
+at home and that was the Netherlands. So, and even then that was almost
+all dialogue connectivity. So most Americans didn't
+have Internet access. If they did, it wasn't working. It was very kind of narrowly prescribed. And if they did anything online,
+it was like maybe check sports stores and stock prices or something like that. So there wasn't really a market for it. But, I just like making software
+just in the same way that I did When I was seven years old and I think
+everyone else on the team did too, so we just got to make
+a different kind of software. And in the end it was, the game was,
+play as a pretext for social interaction. Flickr was photography as a pretext for social interaction, is the first, actually
+one of the, we got bought by Yahoo and one of the designers there called it,
+massively multiplayer photo-sharing. Which I thought was pretty accurate
+because it was our first Thing, other than websites that
+I heard about later. Where you can put a photo online and
+people can see it, and comment on it and have a title and description and
+you can tag it and create groups and all that kind of stuff. So it was a social network that
+revolved around photographs. I think we started right around
+the same time as Facebook, when Facebook was still just in Harvard
+for another six months or a year, and then just Ivys for
+another close to a year after that. >> Cool, so not to spoil the story, but you eventually sell Flickr to Yahoo for
+excess of $20 million. I'm curious, looking back now as you're
+leading Slack what lessons from your time at Flickr have been most influential
+on the leader that you are today? >> It's hard to say because it was so
+long ago. We started development in 2003,
+launched in 2004, and then The summer inside the winter break 2004
+2005 there's this big Decision about whether we're going to take VC funding or
+we're going to get bought by Yahoo. So it was 2005 to 2008 and
+I was there, and there's definitely not something
+that stands out like the thing that I learned there other than how
+hard it is to get something done or how hard it is,
+I mean me that's that is a good lesson, how hard it is to get something done
+in an organization of that size. Yeah, it was about 12,000 people. And I think there's a couple things that
+were wrong with it at that time, but the biggest one was it had
+basically stopped growing. And in an environment where the pie isn't
+growing anymore, suddenly the kind of game theoretic, the calculus, especially
+among executives is very zero sum. So it was like people battling
+each other internally. We even forget that for a second,
+any company of any organization of 10,000 people and it requires such
+an extraordinary injection of a will to make anything happen that most things
+are for all practical purposes impossible. >> Okay, so we fast forward to 2012,
+you have left Yahoo, which by the way, if you have not read Seward's resignation
+letter from Yahoo, please Google it. He likens himself to attend Smith or
+named Brad, it's quite hilarious. Since 2012, you're starting another video
+game company this time, Tiny Speck. At Tiny Speck,
+you launched a game called Glitch, what gave you more confidence in
+the gaming area this time around? >> So it's 2009 that we started the
+company, and 2012 is when we shut it down. But it's the same group of people,
+[INAUDIBLE] the four of us who had worked at Flicker, and
+we all worked at Yahoo together. But 2002 to 2009 was pretty amazing
+time in the history of the Internet, and suddenly everyone had Internet access. And there were phones that were capable
+of Internet access, Blackberries and Trios, there were a lot of people had
+high speed Internet by that time. The world of open source software
+specifically to support development on the Internet we had just exploded, so there was really not
+much available in 2002. But by 2009, we had a very robust mature, Apache foundation, and all of these
+great networking technologies, people's computers are much faster,
+and there's many more people online. We were much more experienced,
+it was very easy to raise money. If you just like look at any factor in
+a giant matrix of like things that would lead this to be a good plan or
+to be successful. We had shifted from a two out of ten,
+to an eight, nine or ten out of ten, except that that idea was still
+not very commercially viable. [LAUGH] Same idea, like better graphics. >> [LAUGH]
+>> Do you think that idea is ever going to be commercially viable? >> Well, I mean, so we could have kept
+going and paid all of our salaries and been happy, and it would have been
+interesting but we had taken, by that point, $17 million in VC money. So I felt like it would have been
+an aberration of the responsibility, that kind of contract we made
+with them to just do that, so we had to think of something else. >> So you said 17 and a half million, and funding you had around 45
+employees around the time? So you find yourself in
+a familiar situation and you have to shut down that game again, what was the toughest part about that
+decision the second time around? >> So the second time around, it was very
+different because it wasn't just, hey, everyone, we are now as a group and
+a switch working on because there was animators, and musicians, and writers,
+and illustrators, level designers. A whole bunch of people who just didn't
+have skills that were transferable to so a lot of people were going to get
+laid off, I think there was 35. And in the three and a half years that
+we had been running the various versions of Glitch, there wasn't like pretty
+strong and very active, robust community. There wasn't like a couple hundred
+people who tested Game Neverending, you could just start using Flickr,
+they were going to disappear. And I think this is a hard
+thing to relate to or understand if you haven't gone through it,
+and it's maybe something that hasn't happened in
+a long time and might not happen again. Like Tumblr seems like the last platform
+that had close communities like that, whereas now, everything, like Instagram
+is just one world connected, so Facebook is another world,
+Twitter is like everyone. And there are definitely, sub communities. But when communities exist in
+a one specific platform, and that platform disappears, it is a little
+bit like that moment in the first Star Wars when Alderaan gets blown up. Like it is just that society,
+that little culture, those relationships just will not exist anymore,
+so it is really like that was very sad. But obviously for me, first of all, it is
+embarrassing, I did all this press and made all these claims, I had to
+convince all these people to come and anytime you got new press it was
+I had to convince them I'd do it. Every time I got investment,
+I had to convince them to do it, but more than anything else I had to convince
+all these people to come work on this. And I followed that story many times but the day that I made
+the announcement internally called this all hands, some people already
+a little bit apprehensive because we've been through a couple of different like,
+here's the last thing we're going to try. There's wasn't a day when
+we normally had no hands. And I locked eyes with someone as soon
+as they started talking, who two or three months before I had convinced to
+move to a new city with his wife and two-year-old daughter away
+from where his in-laws lived. Their in-laws were hoping to take care
+of the kid, he moved to the city, bought a house, and I was going to tell
+him that he didn't have a job anymore. Those are really, really, really hard,
+I mean I think that that's a, like the impact on me reputationally or
+financially was, in the grand scheme of things, relatively insignificant,
+I haven't just bounce back again. But that's more than just disappointing
+someone like I was going to come meet you for dinner and I bailed at
+the last minute or something like that, this is like I convince you to
+alter the course of your life in a really significant way and
+then didn't It didn't happen. So that was very, very difficult, in
+the end knew like a little bit of positive news because we had five and
+a half million dollars left of that money. We're able to shut down in
+a relatively elegant way, so we made a portfolio site
+which had everyone's resumes and did a bunch of reference letter writing
+and kind of career coaching and. Helps get everyone a job, in most cases a better job than they
+had when they were working for us. And we were able to give customers
+the choice of their money back where we could donate it to charity or
+whatever, but and that one person, Tim Leffler,
+ended up joining slop bucket a year later. So that part all worked out too, but
+doesn't mitigate at all like what it felt like in that moment,
+it was really pretty terrible. >> That's pretty heavy, so
+how do you go from that terrible moment to launching Slack which reached
+a billion dollar valuation in record setting pace of eight months? >> That worked out super well [INAUDIBLE]. >> [LAUGH]
+>> We had developed a system that was the proto-Slack. Again, 92,
+I mentioned that one of the software network tools that I used was
+called IRC or Internet Relay Chat. And we used IRC at the company that made
+Glitch, and it's a very old technology. So it's With most messaging systems,
+and probably every messaging system you've ever used, there's a concept
+of what's called store and forward. And if I want to send a message to you but
+I can't reach you right now, there's no connection to your endpoint,
+your client or your device, it will just be held and then forwarded
+to you the next time you connect. But IRC didn't have that. If you weren't connected at
+the moment that I sent the message, you would just never receive it. So we built the system
+to log the messages. But once we had
+the messages in a database, we wanted to be able to search them. So we built search on top of that. And then bit by bit,
+kind of feature by feature, we built things to integrate
+with our file server. So when someone uploaded a file,
+it would get announced in the IRC or if an alert went off in our data center,
+then that would get put into IRC. And slowly we developed the system which
+was really the foundation of all of the ways in which the company communicated
+and was really beneficial until we realized none of us are ever going to work
+without something like this ever again. Other teams of [INAUDIBLE] software
+developers would probably like it as well, and so
+we decided that's what we're going to do. And we thought that one day
+in the fullness of time, if we had every single person
+who could possibly use this, we would have a $100 million in revenue
+and thereby be a billion dollar company. And that just happened very quickly. >> [LAUGH]
+>> Yeah, I definitely think the math checks out. So at Slack, you created a product that
+not a lot of companies knew they needed. How did you convince them otherwise? >> That was tough, the first first three
+or four external teams to use Slack. It took dozens of tries like going
+to their office and showing them. And I think we learned a lot there about, Marketing probably isn't the right term. And I think we actually had this problem
+a little bit with Flickr because Facebook came out and just stole the social photo
+sharing market while Flickr was trying to decide whether it wanted to be social
+photo sharing or a community for people who are interested in photography. But if you can't explain what you're doing
+well enough that someone to whom you explain it can go on to explain it to
+someone else, then it's a real problem. because otherwise, you're going to
+have to do all the explaining. So we struggled to figure out the way to
+talk about it, what advantages it had, what it was for. But when it's net new and
+it's not replacing something else, it's very difficult. I don't know if it's still frequently
+read but there's a classic book in marketing called Positioning,
+Jack Trout and Al Ries I think. And one of things they talked about is if
+something is a new concept for you, it's almost impossible for you to get purchased
+in somebody's brain, in somebody's mind. You have to find something else
+that already exists there and then alter that idea,
+which is why you hear Uber for whatever. Because if you had to explain
+the whole thing from scratch, it's just very difficult. It's why you hear movie pitches
+that are Jaws meets Star Wars or something like that. >> [LAUGH]
+>> And it's much easier to get that
+than to start from from scratch. But it was like it was a real slog
+to get anyone to even try it. And the encouraging thing was
+once people started trying it, they almost invariably stuck with it. They've logged in every day,
+became like it was for us the foundation of
+how they communicated. >> And so from 2014 to 2017,
+there was limited competitors for Slack given that it was
+such an innovative idea. But in 2017, when Slack had
+more than 100 million revenue, which you predicted 650 employees and evaluation of around $5 billion,
+Microsoft launched their team's app. How did you feel when you found
+out that app was coming out? >> I think mostly just good
+because it validated the idea and we had some advanced notice
+that it was coming out. because we've worked with Microsoft
+on something, like early stuff with Microsoft research on building
+question answering box for first lock. And had a pretty good relationship with a
+guy named Qi Lu who was a software exec at Yahoo, who was the CTO of Microsoft. Left around them to go
+be to take over Baidu. But we weren't especially worried
+just because when it was, before it was first announced,
+it was called Skype teams and had a pretty different approach and
+was just so far behind us from a product perspective that we weren't
+worried about people switching. >> Okay, so now in 2020, how do you
+feel about Microsoft's Team app? >> Well, it got a lot better
+as Microsoft [INAUDIBLE]. >> [LAUGH]
+>> I think there is a bunch of things that, That make it much more of
+a challenge for us today than it was then. And it's not just that it's better
+because it's actually not better enough compared to how it was that any of our
+large customers could switch to it. Our biggest single user is IBM, somewhere close to 300,000 daily active
+users over 10,000 workspaces and Teams is limited to 5,000 users per workspace and
+you can't federate them together. So there'd just be no way to support
+that Structures and what didn't work for them and
+there's many other things that are very, very fundamental limitations
+over 5,000 people. You can have 200 channels and
+if you want to add the 200 first, you have to add,
+delete one with all of the messages, but none of that really matters in
+the face of if you want to be able to collaborate on the word doc with
+track changes send it back and forth. You're lawyers working on a contract or marketing people working
+on a press release and you are an Office 365 customer,
+you more or less have to use Teams now. And the 100 million users of Skype for
+Business are being migrated over to the Teams because Skype for
+Business is being shut down. So there's a bunch of things
+that are kind of force it but maybe most fundamental
+is we have 12 million. I don't even remember what our public
+number is on daily active users. 12?
+Yeah, okay, so- >> [LAUGH] >> 12 million and there's at least 200 million people for
+whom FAQ or something like it is
+the preferred way to work so 200 million people whose working
+lives are mediated by email. And they are moving over
+I think is inevitable. So that's 6% which means 94%
+of people don't use it yet. And if you don't use it and
+you don't have any idea and and you hear that there's two alternatives,
+one's Slack and one's Teams. And because you're an Office 65 customer,
+Teams is already free and integrated with all of
+your Microsoft tools. Then why would you even evaluate Slack? Or Microsoft was aggressive in a way
+that I think was surprising to a lot of people even who watched that company
+closely, like putting out a press release with our daily active users in it during
+our quiet period, post the listing. But if they can put out a press
+release in tank or share price, and you're not watching this stuff very
+closely, you don't have a fighting degree of resolution, then you might think as
+a customer, why would I invest in Slack? They're just going to be out
+of business in three years. Microsoft's going to inevitably kill them. That doesn't, it would be a waste
+of my time to even look at it. And it's not like at that point, the fact
+that they are different really matters to you because you don't use either and
+it's not really replacing anything. So it's much more of a threat now. I think we underestimated
+the degree of importance. The Financial Times Person of
+the Year was Satya Nadella. And so there's a big write-up of that. And there's six consecutive paragraphs
+that are about Slack and there's no other, maybe the names of some competitor
+companies are mentioned in one sentence. Here and there, but
+like it's the biggest chunk of it. And so, I think that's because of
+all the things that can be used as leverage by Microsoft to expand
+relationships inside our businesses. Exchange, the email server, and
+the fact that people are very used to Outlook is like the principle
+one that kind of gets them in. And that makes it difficult for
+people to switch. And if people stop paying
+attention to email, if email declines in relative importance
+compared to other software we use, that's a really difficult position for
+them. So from their perspective, I think, and this is what she knew we
+thought back like 2016. This is in fact, successful to the maximum extent that's
+an existential threat to Microsoft. But I don't think that's
+actually true because so many other things would change in
+the world on the path to that. But I think that is a thought process. >> So, despite selling out and
+actually becoming a consultant, I studied mechanical
+engineering in undergrad. And as a black engineer, I really
+appreciate what Slack has been doing from the perspective of diversity and
+inclusion. Back in 2015, Slack shared a diversity
+report which revealed that most of their black employees were in technical roles,
+contrasted with a lot of companies that will hire black individuals
+primarily into administrative roles. And in that same report,
+45% of managers were females. So to a room full of individuals who
+will start companies or be at companies, what advice you have for
+creating diverse workplaces? >> Start early,
+I think that's the biggest thing. When we were 20 employees, I would say, between 20 and 30 maybe. Wow, there's a lot of white dudes. >> [LAUGH]
+>> And in that case, it wasn't too late, but
+it was close to too late. It was like more of a slog to get started. Because what happened was,
+we have one black woman engineer, and then another one comes to interview and
+she sees the first one. And suddenly it's like a completely
+different assessment of what's going on here, and then there's two. And then the third one comes for
+interview, if feels like there's community, and
+people talk, and have a network. So, getting started early I think
+is the most important thing. I think it can be a kind of
+a fraught topic I think for people. People aren't sure what to say or
+they're uncomfortable. And I think there is
+a really pervasive and incorrect belief that you
+would have to lower the bar to hire someone who isn't
+the canonical candidate, the archetypal candidate for this role. I think that's usually not the truth for
+two reasons. One is, you just have to look harder,
+you're going to see more people. And in fact, that can raise the bar. But people have different
+challenges in their life, and I don't think you can perfectly
+understand someone's background just from their gender identity,
+or their ethnicity. But on the whole, for
+a woman to get to a certain place in her career,
+they had to work a lot harder than a man. For a black engineer to get to
+a certain place in his or her career, they had to work a lot harder than,
+this is where it gets fraught. In Ben Horowitz's words, Jewish, Chinese,
+or Indian guys in Silicon Valley because there's just like these networks
+that are very powerful. And you have an enormous advantage. So for
+two people with equivalent credentials, the person who's probably going to
+be more talented, more capable, and had to overcome more obstacles to get to
+where they are is going to be the one who doesn't have the traditional
+archetypal presentation. >> It's amazing.
+Thank you for sharing that, I'm sure, I hope people were taking notes. >> [LAUGH]
+>> So we've gone through
+the journey of your career. You started as a web developer. You founded a company that
+was acquired by Yahoo. You launched a second company that raised
+more than $1.2 billion in venture funding, and you eventually took
+that company public. You've been a leader
+throughout this entire time. What has changed about your leadership
+style and what stayed the same? >> [INAUDIBLE] It's always hard
+to really assess yourself. I think I'm relatively self aware even
+of those things that don't work and it doesn't matter that I
+know that they don't work. I still can't change them. But there is a difference in the mechanics of being a leader at different scales. Because when it's 20 people and
+we all kind of know each other, it's very different. I say something and
+then we argue about it, and maybe I change my mind, and it's all good. There's a power dynamic where
+I'm the CEO and whoever, and everyone else is not the CEO. But when you get to 500 people or
+1,000 people, where we're at now, a couple of thousand people,
+it's very different. Someone's going to come
+into your presentation for some new product development. And it's like a relatively new designer or
+engineer, or product manager you've never met before. To me, this is just like a one more
+30-minute meeting in my schedule, which is [SOUND]. And for them, this is something
+they've been thinking about for weeks. They probably talked to their spouse
+about it, and they're either excited or they're nervous, they want to know. So the degree of impact
+that my words have is like, from the perspective of me, crazy out of proportion
+to the amount of action. So in other words, it's like a super, super powerful microphone
+on at all the time. So if anything's negative or critical,
+if I have a relationship with someone that I've worked together for
+a long time, it's not really a big deal. If it's someone that, that might be the
+only time they interact with me ever in their whole career at Slack. Or it might be the first interaction
+they've ever had with me, and they might not have another one for
+several years. It carries a huge amount of weight. So it's hard because,
+is that the amount of time we have like, including questions from everyone? >> That is. >> Okay. >> [LAUGH]
+>> I'll try and be a little bit more concise. >> [LAUGH]
+>> I remember reading on Twitter people
+arguing about Warren's tax plan. And someone said something like,
+if Dwayne The Rock Johnson just paid this tax at this rate,
+then we'd have an extra $50 million. And then that's how much it would
+cost to solve the water crisis. And it struck me as just
+a totally absurd argument because federal budget is something
+like $2.7 trillion. So 50 million bucks plus or minus is not
+the reason why that doesn't get solved. It doesn't get solved for
+all kinds of reasons. And people think that way all the time,
+that it's just like money or it's just resources. For anything significant to happen, certainly anything that involves dozens of
+people, let alone hundreds or thousands. The amount of will that has to go in,
+the amount of like selling, the amount of vision, the amount
+of like coercion and cajoling, and the amount of encouragement, and support. All of those things is just enormous. So, the game does change as the company
+gets bigger and things evolve. And I think probably only
+gets more difficult, but. That's what I've been
+learning this whole time is how to do that without
+like crushing people. How to do that without creating an environment where it's entirely
+top down like iron fist from above. And it can be tough
+because I have a different perspective than anyone else
+because I see everything. So I talked to someone in engineering,
+I get a head of sales reports to me, head of marketing reports to me,
+head of finance reports to me, our general counsel reports to me. So I have a very different perspective
+than what is ultimately relatively narrow. And generally,
+a better idea of what we need to do. because I also talk to customers more
+than pretty much anyone else other than the sales person. And I talk to our investors
+more than anyone else. And I talk to our board
+more than anyone else. Yeah, it's really, but I think there are better sources
+than me for like top ten tips. Because none of them
+seem that simple to me. And it's not that they're not out there,
+but the real challenge of leadership and maybe there's one book I would recommend,
+which is Leadership and Self-Deception. The real fundamental challenge of
+leadership is the same as the fundamental challenge of just being a human being. And I think that's, This will
+sound a little bit weird, perhaps. But living with an open heart and
+not seeing other people as, on one hand, either instruments that can
+be used to your advantage or obstacles that are in the way of
+something that you're trying to do. Which is the default judgement of all people with whom you are not
+close instinctually. So like you're on a Southwest flight and
+people are still boarding and the middle seat between you isn't taken. And you're like, please don't take this
+seat, please don't take this seat, please don't take this seat. A person has a whole life and
+their own ambitions and desires and heartaches and
+stuff like that. But to you, in that moment, they're just a potential pain in the ass that might
+take the middle seat next to you. And that's pervasive, and when you're
+really trying to accomplish something, it can be very tempting to see people
+as either instruments or obstacles. >> Amazing, so we're going to go to the
+audience for, we probably have time for about two questions. So? >> Hi, Stuart. Really appreciate your
+comments on diversity, so it makes me feel better about
+my Stanford Slack addiction. >> [LAUGH]
+>> My question is, what were some of the key and
+best things you did on the product and design front in the early days of Slack? So for example, how much of Slack's
+success do you attribute to your personal eye for design, versus hiring the best
+designers, versus feature prioritization, or even just the insight
+about having a personality? Curious what advice you'd share there for
+aspiring entrepreneurs. >> Yeah, so I'm not sure I want it like
+slice it up by who gets more credit. But I think the fundamental approach was how much easier can we
+make people's lives. And when I look at other products,
+it's really, I'm trying to think of the shortest
+version of this I can. It can be an amazing app, and if
+the password reset thing doesn't work, and I need to reset my password to use it,
+then I'm just locked out. So there's very basic, fundamental
+things that you have to get right, and which aren't the interesting ones. In fact, someone Tweeted something
+the other day which I liked that kind of illustrates this from
+a different perspective. And it's someone asking Ray Kroc,
+the kind of founder and the first CEO of McDonald's,
+why was McDonald's so successful? And he says, because we have clean
+bathrooms, and they say, that's easy. That's so simple. That doesn't explain it. And Ray Kroc said,
+are your bathrooms clean? And it actually is like a challenge. So there's some real fundamentals. But the things that we did that were most
+successful were those things which made life more convenient for people. And one of those was for example, typing
+your password on your phone is a pain, so we'll send you a magic
+link that logs you in. Or because for complex reasons, most
+people wanted to have notifications for every message in Slack
+when they first signed up. So they felt comfortable and
+knew how it worked. But we didn't think
+that was a good way for them to set their preferences long-term. After a few notifications,
+we would interject and say, would you like to switch
+to our preferred settings? And that kind of thoughtfulness or
+consideration, that kind of thinking of
+yourself as a host and the customers as your guests,
+is the secret, as it were, to good design. >> And we have time for one more question. >> Can you hear me? >> Yeah. >> Thank you so much for
+taking the time to speak with us today. So in your answers, it was really clear
+that like, what you've been interested in is kind of facilitating communication
+through different mediums. Whether it be video games,
+photography, now Slack. Was that understanding clear
+to you through your journey? And if not, was there like an aha
+moment that you realized this was what the issue you really
+wanted to work on was? >> Yeah, well, so
+the desire was there, but I didn't think I recognized
+it as one single thing. because Slack is also a massively
+multiplayer workplace software. I mean, that's kind of the principal
+distinction between Slack and pretty much every other tool. And it is very much like
+the games that we wanted to play. You take objects and
+you can manipulate them and distribute them and
+form groups and all of that. But I don't really recognize them as being
+fundamentally similar until much later. The thing that I thought as being the
+common thread was just it's all software. And software that groups of people use
+together to me is the most interesting type of challenges,
+because it has all the regular challenges of scalability on the one hand and
+design and usability and the other. But social dynamics because of
+the feedback loop where the output of the system can also be an input
+to the system are much more difficult to design for and
+therefore much more interesting. >> Amazing, thank you all for
+the questions. Dharma-
+>> Yeah. >> It's been a pleasure chatting with you. >> [LAUGH]
+>> It's not often that we get time with a classically trained philospher. So I have a new spin on our
+typical lightning round. I'm going to ask you a few
+questions that keep me up at night. Is that okay?
+>> Yeah. >> Cool. >> [LAUGH]
+>> So we'll start with an easy one, is water wet? >> Yes. >> [LAUGH]
+>> Okay, if soap hits the floor, is the floor clean or is the soap dirty? >> Soap's dirty. >> Yeah. >> [LAUGH]
+>> Dirty soap, all right. I have to make sure I pronounce
+this one the right way. >> All right. >> Does expecting the unexpected
+make the unexpected expected? >> No. >> No, we're going with no? >> Yeah.
+>> Okay, final one, you're ready? >> Yeah.
+>> One word or less. >> [LAUGH]
+>> What is the meaning of life? >> I thought the question was one word or
+less. >> [LAUGH]
+>> For those of you who read Douglas Hofstader, if you're familiar with the history
+of Buddhism, I'll say mu. >> Mu? >> Yeah. >> We have a minute and 20 seconds left. >> [LAUGH]
+>> So I would love to hear more. >> It's funny. >> [LAUGH]
+>> [LAUGH] When I said before, contemporary Anglo-American philosophy
+is really boring on the one hand. And you take away all the subject matter, there's an enormous corpus of research and
+argument and even books written. But certainly like thousands
+of papers on the question of, do holes exist, like H-O-L-E. Like is there such a thing as a hole,
+or is that the absence of something? And I swear that is a giant argument. So, I find it easier just to come
+down on the side of one or the other. The meaning of life, I don't know,
+to love one another. >> Okay, I like that one. Ladies and gentlemen, Stuart. >> [APPLAUSE]
+>> Thank you. [MUSIC]

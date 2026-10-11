@@ -1,0 +1,108 @@
+Joining us now is Emily Bender, director
+of computational linguistics at the University of Washington and author of
+The Icon How to Fight Big Tech's Hype and Create the Future We Want.
+Um, what are the right risks? Professor Bender?
+So there are so many risks, and many of us have been talking about them and
+documenting them for many years. Um, we want to start off by pointing to
+environmental impact, and that is both in the energy production but also water
+use and the production of the chips that go in the data centers.
+I want to point to the degradation of our information ecosystem, now that it
+is cheap for people to create fluent looking text and plausible looking
+images. That has huge harms.
+And I want to point to the gigafact version of the workplace.
+So many workers are being displaced because of this myth that so-called AI
+can do their job, and then they're displaced into jobs where they're
+basically providing the backstop for that janky software.
+We're seeing concentration of power. We're seeing the motivation and
+extension of surveillance systems. And also on an individual level, we're
+seeing people becoming dependent on chat bot companions, often leading to
+grievous self harm. And that's not all.
+That's just, you know, what I could do off the top of my head, right?
+No, I mean, I just want to put out in the water use because this has come up
+in the program. Uh, if you go back to tuned in, video is
+talking about this data from the Manhattan Institute, where data centers
+use 0.2% of daily, 0.2% of daily water usage in the U.S., and that that's a
+number that's becoming dramatically lower.
+Um, I think we're having this conversation
+in the context of of the actions and I to take and the risk presented if those
+actions are outside of what we intended to I to do.
+Right. But right now there are loads of case
+studies like Australia we just listen to.
+Mhm. Mhm.
+Um so that is where the doomsday scenario people would like us to look
+because they have this shared fiction of AI going rogue and then somehow
+improving itself and then taking over the world.
+What's actually happening here is that open air and others are creating and
+running malware. And then when their malware accesses
+things it's not supposed to access, they say, look how clever and scary our
+software is. Instead of saying, we did this.
+We're saying, they say the software's doing it.
+And that was all throughout that report, that anthropomorphizing language.
+So what happened? OpenAI designed a system to, uh, hack
+into websites and ran it and it hacked into websites.
+Um, that doesn't mean that an AI has gone rogue.
+Yes. What's interesting about this is the
+wide ranging schools of thought about what to do about it.
+And, you know, one of those schools of thought is if an AI behaves in the way
+you just described, it's behaving illegally.
+And the laws of the land already provide for illegality.
+Uh, for such a breach in your field of research.
+Do you see that to be the case? That if I were to conduct an action that
+could be defined as illegal, there would be sufficient safeguards in place to act
+on that? Uh, so there is sufficient safeguard,
+but it's not that an AI which doesn't refer to something, um, you know, it's
+not that a piece of software is doing something illegal, it's that companies
+are doing things that are legal. OpenAI hacked into hugging face and the
+Australian government and all these other things, not some independent,
+unaccountable piece of software. And if you look back just to the
+previous administration, we had the FTC under Lina Khan saying exactly that,
+saying there is no exemption for so-called AI in the laws.
+The FTC regulates the activities of businesses.
+It doesn't matter what automation they're using to do those activities.
+I do want to talk about those extremes, whether or not I present an existential
+threat to human life. And, you know, uh, there was the former
+anthropic researcher that put a figure on it.
+Uh, 10%. Sam Altman's point when he testified
+before the U.N. Security Council was, it doesn't matter
+what the chance or the percentage risk is, it's too great either way.
+Is it important to acknowledge that that risk is real?
+Uh, no. The risk is actually fake.
+And this whole debate about percentages is very funny.
+I have yet to see the reporter who asked the anthropic, uh, lever whistleblower
+where he got that number. I think the number just gives us this
+veneer of madness. And then Sam Walton is trying to back
+off of that with his remarks. But this is all based on science fiction
+and based on thought experiments that come out of effective altruism, that
+start from the premise that we have an all powerful so-called artificial
+intelligence and then say, what could happen then?
+But the premise is false and the premises imaginary, so it doesn't
+matter. And meanwhile, we do have real problems
+that are being swept under the rug. So Sam Altman suggesting that Australia
+should look to the US for how to regulate this stuff is bananas.
+We are not doing a good job right now because we are letting all of the
+companies off the hook. Professor Bender, what benefits and net
+positive do you see? From AI in our society?
+Oh, so benefits for synthetic media? Basically none.
+The the killer app for synthetic text for synthetic images is fraud.
+If you want to look at all of the different technologies that have been
+sold as I, some of them are legitimate kinds of automation.
+Like I work in computational linguistics, language technology can be
+quite useful. I'm talking about automatic
+transcription, machine translation, spellcheck.
+Right. Um, but I think that we do a worse job
+making decisions about this automation when we call it artificial intelligence,
+instead of getting specific about the technology.
+What do you think needs to happen here? At the end of the day, all of your
+arguments are still rooted in the question do we regulate or not?
+Yes. So I do want to see existing regulation
+applied. I am very concerned at recent moves in
+the EPA to exempt, uh, power producers from environmental regulations, for
+example. I would love to see any company that
+sets up a system where people can go get synthetic text actually held accountable
+for all of the text that comes out of that system.
+I would love to see existing regulations about who can be, for example, a doctor
+or a psychotherapist actually applied so that we don't get people setting up
+systems where chat bots are supposedly filling those roles.
+Um, and I would like to see stronger protections for labor organizing,
+because a lot of the issues around gig ification of the workplace come down to
+rights companies saying, we can do your job, and then workplace getting worse.

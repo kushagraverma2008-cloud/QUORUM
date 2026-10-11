@@ -1,0 +1,353 @@
+I know you may not have the data, and
+signal's, like, encrypted and everything, but if you could guess how
+many world leaders and CEOs are texting each other on signal right now?
+My guess, because again, our whole deal is not knowing is most of them.
+Why wouldn't you? Given the stakes.
+Given who you're accountable to and what you're accountable to do.
+Why would you trust that with a breach? Why would you trust that
+with a company that could be breached? So, all right.
+I think most people with high stakes job understand that communication privacy is
+essential to getting business done. All right.
+Now, I know we're here to talk about AI, but I have to start with Signal Gate,
+which sort of felt like it first signal out of whatever niche it's been in.
+If it's been in a niche into the mainstream, the front pages, the evening
+news. I've read your initial reaction was what
+the. When this happened
+expand. I read the Atlantic story.
+At my kitchen table, I got up, I got a glass of water.
+I sat back down and I read it again because w t f was in fact, my reaction.
+And then I didn't I didn't expect we would become the main character because
+it seemed a pretty you know, it was an outrageous operatic kind of dramatic
+story, but it was ultimately a story about a guy making a mistake with his
+thumbs and using signal for, you know, in place of a skiff.
+But we did become the main character. There was like one day where there was
+like three stories above the fold in the New York Times.
+All of them had the word signal in it, and I was like, Well, my comms person is
+happy. But we ended up spending a huge amount
+of time effectively expanding the basics of end to end encryption, the
+differences, you know, of signal versus other platforms, how these technologies
+worked at the most basic levels because everyone was covering and it wasn't just
+tech journalists. It was, you know, the culture
+journalists, the finance journalists. Everyone was covering it.
+Everyone wanted to take. And the real danger there was that
+there's a misunderstanding of how the technology work worked would sort of,
+you know, lead to a story around signal being flawed that we know has real
+consequences because we face disinformation campaigns constantly.
+Pretty obviously meant to steer people away from signal, which is secure toward
+less secure platforms that would then allow intercept, would allow
+surveillance. And so we take that very seriously.
+So there was a, you know, a number of days where I was awake about 20 hours
+just repeating sort of, you know, like asking my comms guy, do you have like a
+metaphor for encryption that might work with this person?
+And how do we do this? Ultimately, it turned out well for us,
+but it was a bit stressful. So did you correspond at all with the
+Trump administration around it? We had people we were talking to, you
+know, cutouts of people who who knew them.
+We were you know, again, we're not like the car used for an event drove on the
+road. It's not really a story about the road.
+Right. But what we wanted to make sure is that
+sort of the integrity of signal was clear, that if there were questions
+about signal, we were there to answer them and they weren't answered, you
+know, in strange or inaccurate ways. And that we were very clear that, you
+know, if signal goes away. You can't replace it.
+It has over a decade of legacy. It is open source.
+Our cryptographic protocol has been reviewed by every significant
+cryptographer. Security engineer.
+Have you found a bug in our cryptography?
+You would get hired anywhere. So there is an ecosystem of people
+who've been examining signal. And don't forget, Signal came out in the
+late 2000. So this is just around the time of the
+iPhone. This is before WhatsApp.
+This was not a saturated market and network effects control markets for
+communication technologies. So if you got rid of signal, you can't
+just snap your fingers however technologically virtuosic you are and
+create an alternative. Because if your friends don't use
+signal, if your counterparts don't use signal, you can't use signal.
+So we recognize how precious this infrastructure is.
+It is the core communication infrastructure for militaries,
+governments, intelligence agencies, your boardrooms, I assume.
+And if not. Good time, good time to start.
+And, you know, that's because almost everything else we use collects data,
+creates data that then can be used to compromise us.
+And throughout human history, the norm has been private communication that has
+been eroded quickly then even more quickly over the past 30 years via a
+business model that ultimately relies on monetizing data collected from our
+interactions, our communications, our social networks, etc..
+And so, you know, here I am sitting here discussing that.
+So along with world leaders, journalists, we use it all the time,
+maybe sometimes national security advisors.
+How do you think about the risk of bad actors using signal and how do you
+characterize and quantify that risk? I'm going to you know, look, we're a
+nonprofit. I don't have a board pushing me.
+So I have the extraordinary luxury of being just really honest,
+very relaxing life to lead and go for it.
+That's what we want. And the idea is that what we are talking
+about is math. End to end encryption is a mathematical
+protocol, and either it works for everyone, the person you hate the most
+in the world, or it doesn't work for anyone.
+That includes the people you love the most the human rights workers, the
+dissidents, the politicians who are trying to do their job in a tricky
+situation, whatever it is. Right, you cannot undermine encryption.
+Just so the good guys can get in. Any backdoor, any vulnerability will be
+exploited by bad actors, hostile nation states, hackers, you name it.
+That's that is the long standing and clearly established technical consensus.
+And it doesn't matter if you have an eye on the magic wand or you burn some sage
+to the gods of math, it is not changing. Those are the stakes.
+Now, I also want to say we are in a golden age of surveillance of data.
+Law enforcement and others have never had access to more data than exists
+right now. And the issue really is how do you make
+use of that? Right?
+Are you hiring more personnel? Are you you know.
+Spinning up an I model to summarize it. But when you actually talk to the
+practitioners in the field, in law enforcement, oftentimes they're issues
+like, yeah, we have so much signal, but we can't figure out like, you know, or
+we have so much data, we have so much noise, we can't figure out where the
+signal in the noise is because it's coming at us so fast.
+We have data brokers, we have pipelines, the different sort of infrastructures.
+We're sucking up all the SMS data. They have never had it so good there.
+Then how do you actually find the signal that a bad actor is going to act or who
+a bad actor is? Given that there is so much data,
+so so you, before going to signal, had a decade long career at Google.
+You were a researcher. You really dug into policy and ethics,
+especially around A.I.. You've talked about how agents are a
+privacy nightmare. Why?
+Well, okay, let's that's I've done a lot of AI research.
+I had the privilege of, you know, I started at Google in 2006, so back when
+the dinosaurs roamed, we had desktops, like they were, like, chained to our
+desk. There was no iPhone.
+Like I had a BlackBerry is new to me. You remember the keyboard.
+I wish it would come back. So you know, a completely different
+world. And so I had like this inside view from
+back in the day where machine learning was one of a grab bag of techniques that
+the researchers working on ad optimization would sometimes use.
+But it was like not that fancy. So now when like AI is kind of a new
+godhead and we're all just sort of invoking it, right?
+And what I saw then was the sort of, you know, development of a set of
+technologies that came into being in relationship to the fact that these
+companies had developed business models that had huge amounts of data.
+And infrastructure to process and use that data.
+Right. Because they were indexing certs, they
+were indexing ads, they were supporting large platforms with a lot of content on
+it. And there was a recognition around the
+early 20 tens throughout industry that, oh my God, deep learning based
+approaches that actually date from the late 1980s, early 1990s can do new and
+really cool things. Not because they are new, but because we
+now newly have access to huge amounts of data and compute and then we can
+parallelize that using gaming and you know all of this.
+And when we do that we can do really cool things like optimize our engagement
+driven social media algorithm much better because we're able to process all
+of that data. So there was a new utility for old
+techniques discovered then, and we are still in that paradigm.
+We are still in the paradigm of large scale, deep learning based A.I..
+There are many, many other approaches that could be used.
+And, you know, you saw Daario up here and he's a you know, he's a very good
+actor in this space in terms of being willing to call out these harms.
+But his and anthropic focus and many of these companies is on building models
+that increase the sort of efficacy of that paradigm paradigm, larger, more
+data, sort of more comprehensive. And then we see these models implemented
+as part of so-called agents. Agents are sort of a broad term, but it
+basically means it has access to data and can act independently based on that
+data. The issue that we have at signal is this
+The implementations of these agents we are seeing, particularly in the
+operating system, which is the water that any application swims in, are
+pretty perilous for our future because they need access to data, they are
+acting independently based on this access.
+And so you have this sort of the marketing pitch for agents.
+It's going to plan your birthday party for you and it's going to tell your
+friends what time your birthday is. Coordinate with your friends for your
+birthday party. Great.
+You have the magic genie. It's going to live your life and you can
+go out and sort of walk the promenade in peace.
+Of course, in order to do that, it needs access to your calendar and these access
+to your credit card, to book A restaurants and needs to be able to
+stimulate mouse clicks, access your browser, search history, etc..
+And in this scenario, it would need access to your signal in order to
+contact your friends, message them coordinated time, bringing that all back
+into a shared context window where you have kind of a data slurry created on
+your desktop that it's acting on so autonomously.
+And that is what we've called breaking the blood brain barrier between the
+application and the operating system, because our encryption no longer
+matters. If all you have to do is sort of hijack
+this context window, you know, that has effectively route permissions running in
+your operating system to access things like your signal data.
+So we have seen, you know, these systems aren't magic, right?
+These systems are hardware and software with all the limitations there.
+And we know that these things are are extraordinarily vulnerable.
+And we know that, you know, if you give a system like that sort of root access
+permissions, it can be you know, it can be hijacked, it can be undermined.
+And so I think this is you know, it's incumbent on the companies that are
+deploying these that are wrapping the models in hardware and software to
+really recognize how reckless it would be to deploy these things in ways that
+undermine privacy and security of things like Signal.
+And so this is why we're talking about it.
+There are ways to do it better. I think anthropic is, again, a very good
+actor here. But the stakes when you're talking about
+the operating system couldn't be higher because this is.
+Yeah. And even before we get to agents, you've
+got I mean, so many of us are dumping our deepest, darkest secrets into chat
+and Gemini and Claude and and we're becoming increasingly comfortable doing
+so. I'm curious, what are your AI habits
+like? What do you use?
+What do you avoid? I mean, occasionally I'll use tragic
+beauty or perplexity for research, but I always check my sources.
+Right? Like, these are not inherently accurate.
+I don't write with a I like writing as a process of really like intellectual
+interrogation for me, if it's serious. I do scholarship, I do academic work.
+So I like to sit there with that sort of, you know, niche in discomfort with
+ideas until I understand something. And then, like, I really understand it.
+You can like, pull the string and I will I will know what I think because I've
+had to struggle with it. And I think that's actually when I think
+about I in education, when I think about what education is in terms of training
+the human to engage with complex realities and actually synthesize that
+and come up with conclusions that are responsible and clear and intellectually
+stimulating, like we cannot lose that capacity.
+I think, you know, I use it, you know, we have coding agents that people use,
+but they are responsible for their commit.
+If that committee's insecure, if that if that code doesn't work, they're
+responsible for it. It's their fault.
+I don't really care what they use. And they had better be able to maintain
+that code base. And this is an issue we don't always
+talk about, Right. If you're spitting out a bunch of code,
+but you don't understand it, it's going into your repo.
+You're pushing that to production. Two years later, there's a
+vulnerability. There's something in.
+You don't understand that. That's a huge issue because software is
+living right. It is always in relationship to a
+complex set of dependencies, to the platforms it runs on, to the tooling it
+uses, all of which are changing constantly, which means that even
+software that has integrity one time may actually grow out of integrity because
+in relationship to another part of the system, it no longer works.
+And so, you know, this is why you can't just sort of ship something and have it
+work forever. We have to pay teams of engineer it to
+attend to this constantly like a living creature.
+And so I think there's there's these sort of things that are just the
+reality. If you work in tech, they get abstracted
+away in the promise of sort of, you know, seamless ease and autonomy.
+That is often part of the marketing hype around A.I..
+You left Google in 2019 after leading protests around AI, around military
+contracts. What do you think of the tech industry's
+pendulum swing under the Trump administration?
+I want to characterize that a bit more specifically.
+I think, you know, ultimately, I'm a student of history.
+And centralized surveillance power. Centralized control is never that
+healthy. And my concern was that you had
+companies that had so much incredibly intimate information about global
+populations that were also going to be aligned with one or another nation
+states military. And it was me and thousands and
+thousands of people. Right.
+Because structurally, that is something that is not healthy.
+And I'll just put that out there. Again, I get to be honest.
+I know. But, you know, we we can look back
+through history. We have this is what is unprecedented.
+Now, here is the amount of information, the seamlessness of that information and
+the ability to sort of mine and use that information.
+And we know that, you know, state control is centralized control.
+Authoritarian control is largely constituted via information asymmetries
+like that, the ability to repress and fracture social and economic bonds by
+weaponizing, you know, your most intimate information.
+What would you not do in order to prevent every single text message you've
+ever written to everyone being put in a database and sent to everyone you know,
+your in-laws, your church, everyone, right?
+Everyone's like, Oh my God, I would do a lot to prevent that too, by the way,
+because I'm a human being. So that's, you know, that was the the
+issue that myself and thousands of other people who understood the inside of that
+business where we're raising their. So it's not you know, it's not just like
+it's not an anti-military or anti tech. It's like structurally this
+configuration is something we should be concerned about.
+And if we want to equip ourselves honorably in this one wild life, we
+should do something about it. So text kissing of the ring.
+What do you make of that? I am a technologist.
+I'm not a politician, but I will. What I will say is I was at Google 2006
+to 2019, Right? It's not like I saw the Obama election.
+I saw the Biden election every presidential election.
+You have your policy stuff gets cleared and you hire the people as close as
+possible, like, you know, sleep in with the chief of staff of the new president
+because you want people who understand what's happening.
+You want that influence, you shift your policies, you shift, you know, who
+you're hiring on K Street, all of it. And that's pretty standard, not because
+these are sort of evil corporations, but because structurally they need to sort
+of, you know, maximize shareholder value.
+They need to serve their board. They need to be in the position to talk
+to the people who now have the levers that they want to influence in service
+of their business model. So, again, you know, when I look at
+this, I'm a I'm a structural analyst here.
+Like structurally, that's just what happened.
+Now, there may be people very unhappy with this administration, but, you know,
+what is happening is not outside of the norm of what I saw over 20 years of the
+leading frontier models. It sounds like you you like anthropic.
+Which do you think will end up, quote unquote, succeeding or dominating?
+And why? I don't you know, what does this play
+out? We are in a monoculture.
+And I again, sort of talking about this deep learning based approach that
+requires huge amounts of data, huge amounts of compute.
+And that, you know, I think Dario was really astute to mention these
+benchmarks, right? How we measure matters, how we determine
+who is winning matters. And if our benchmarks are off, then
+we're going to be picking winners that might not actually serve us.
+I think there is a lot of room, a huge amount of room to invest in AI
+techniques that aren't catalogued under the umbrella of deep learning.
+This one approach, but are actually much more sensitive to different domains, use
+cases and needs. You know, talking about finance, what
+does finance need is actually meeting your productivity and customer
+requirements when it is deployed on your infrastructure, with your legacy data,
+with your legacy systems, with your labor processes.
+How do we begin measuring that and how do we recognize that in many cases?
+You know, when I talk to people in the field, it's smaller models, non deep
+learning based approaches, maybe combined with an alum or two for, you
+know, particular uses that are actually in the fresh air of day doing things
+that are increasing our ROI for businesses, not simply sort of virtual
+asset chat bots or others. And I will say, you know, Dario
+mentioned solving cancer. One of the big issues with biotech right
+now is it's not getting the investment for the long term risky research that
+needs to happen if we're actually going to do that.
+So I have a story. I'm not going to name names, but you're
+talking to a friend who's doing incredible research in biotech.
+Right? You know, it is looking to solve cancer,
+to address cancer, but there's no guarantee that that's going to work.
+And they can't get a series B because everyone wants a chat.
+But. Because that's seen as where the money
+is, right? That's where this, you know, the state
+of the art, the know benchmarks are being beaten.
+And, you know, I think the VC model, how we're valuing these and what we're
+actually valuing needs to change. And again, what I see is a giant
+opportunity to make markets over here to ask better questions that are more
+specified to our actual domains, our actual business needs, and to develop
+evaluations and benchmarks that are measuring these systems in relationship
+to our needs, not in relationship to sort of sclerotic data sets or sets of
+tasks that are used to rank these models but aren't actually reflective of what
+happens when they hit the fresh air. So last question for everyone in this
+room is asking what should I do? What is one mistake, people?
+We'll make. People in this room will make about ten
+years from now. Oh, ten years.
+I mean, right now, ten years from now, like right now, what's a mistake we're
+going to make that we're going to realize was a mistake ten years from
+now? I will answer it.
+I see people who are not in tech who would tear the ass out of a PNL
+statement that was flaky or bad, right? They'd be like, Why bespoke accounting
+methods? Like, why is this?
+Don't you know, why is this division doing this and not that?
+Right? We're just right in there with like
+laser focus asking no questions about A.I..
+There's almost like a like intimidation factor if you're just ceding that ground
+to sort of promises and claims using the terms A.I.
+as if it were sort of fungible across different systems and different
+components. Ask the questions and ask the questions
+selfishly in relationship to what your business actually needs.
+What productivity are you going to increase and how are you measuring that?
+Like get down into, you know, is it does it work with your legacy data?
+Is your data fungible with that system or do you have two separate subsidiaries
+measuring the same thing very differently, which means you're not
+going to be able to sort of combine those in any responsible way?
+Like these are the detail level questions that need to be asked with the
+same spirit of confidence that you would sort of, you know, go into a board
+meeting and talk about the numbers that you're being presented.
+And, you know, I see a lot of API contracts being signed and not they're
+not always useful, right? I see a lot of people wanting an AI
+strategy, sort of pushing that on to their CTO.
+The CTO is like, okay, well we'll sign up for a couple of cloud based AI
+systems, but ultimately becomes a kind of a chat bot you have to mandate your
+employees to use because no one's finding that much utility out of it, you
+know, And if you have to mandate that they use it, I think that's a kind of a
+sign, right? And I think really getting specific as
+specific as possible, like these are not dumb questions, These are fundamental.
+And you have to be much more selfish about this.

@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QUORUM // Stage 04: Council Overview Report</title>
+<!-- Google Fonts: Space Grotesk, JetBrains Mono, Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#38393e",
+            "on-tertiary-container": "#006083",
+            "primary-container": "#00e5ff",
+            "primary-fixed": "#9cf0ff",
+            "on-secondary": "#223600",
+            "on-secondary-fixed-variant": "#334f00",
+            "on-tertiary-fixed-variant": "#004c69",
+            "on-secondary-fixed": "#121f00",
+            "on-tertiary": "#00354a",
+            "tertiary-fixed": "#c4e7ff",
+            "secondary-fixed-dim": "#95da03",
+            "surface-container-low": "#1a1b20",
+            "surface-container": "#1e1f25",
+            "background": "#121318",
+            "outline-variant": "#3b494c",
+            "on-background": "#e3e2e9",
+            "surface-tint": "#00daf3",
+            "primary": "#c3f5ff",
+            "surface-container-high": "#292a2f",
+            "surface-variant": "#33343a",
+            "on-primary-fixed-variant": "#004f58",
+            "on-surface": "#e3e2e9",
+            "surface-dim": "#121318",
+            "outline": "#849396",
+            "surface-container-highest": "#33343a",
+            "primary-fixed-dim": "#00daf3",
+            "tertiary": "#dbf0ff",
+            "on-primary-container": "#00626e",
+            "on-secondary-container": "#3c5b00",
+            "on-tertiary-fixed": "#001e2c",
+            "inverse-surface": "#e3e2e9",
+            "secondary-container": "#95da03",
+            "on-primary-fixed": "#001f24",
+            "inverse-on-surface": "#2f3036",
+            "secondary": "#aff833",
+            "on-primary": "#00363d",
+            "tertiary-fixed-dim": "#7bd0ff",
+            "inverse-primary": "#006875",
+            "surface-container-lowest": "#0d0e13",
+            "on-surface-variant": "#bac9cc",
+            "on-error-container": "#ffdad6",
+            "surface": "#121318",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "secondary-fixed": "#aff833",
+            "tertiary-container": "#99d9ff",
+            "on-error": "#690005"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "gutter": "1.5rem",
+            "margin": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "gutter-mobile": "0.75rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Space Grotesk"],
+            "telemetry-sm": ["JetBrains Mono"],
+            "body-sm": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-md": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "telemetry-lg": ["JetBrains Mono"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-sm": ["Space Grotesk"],
+            "telemetry-md": ["JetBrains Mono"],
+            "display-hero-mobile": ["Space Grotesk"],
+            "display-hero": ["Space Grotesk"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "telemetry-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "telemetry-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "telemetry-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Atmospheric Tactical Reticle Background */
+    .tactical-grid-bg {
+      background-color: #05060A;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 90% 40%, rgba(175, 248, 51, 0.04) 0%, transparent 45%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: rgba(13, 14, 19, 0.6);
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(0, 229, 255, 0.3);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="bg-[#05060A] tactical-grid-bg text-on-surface antialiased selection:bg-primary-container selection:text-surface-container-lowest min-h-screen pb-24 font-body-md text-body-md">
+<!-- TOP APP BAR (Shared Components: TopNavBar Glassmorphic Desktop) -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 shadow-2xl h-14">
+<div class="max-w-[1440px] mx-auto px-6 h-full flex items-center justify-between">
+<!-- Brand Logo / Product Name -->
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest border border-primary-container/40 flex items-center justify-center shadow-[0_0_12px_rgba(0,229,255,0.25)]">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="terminal">terminal</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-sm text-headline-sm tracking-wider uppercase text-primary">QUORUM</span>
+<span class="font-label-caps text-label-caps text-outline tracking-widest hidden sm:inline">TACTICAL DOSSIER</span>
+</div>
+</div>
+<!-- Navigation Links: 4-Node Step Progress Tracker -->
+<nav class="hidden md:flex items-center gap-6">
+<!-- 01 SUBMIT (Completed) -->
+<div class="flex items-center gap-1.5 text-outline font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">01 SUBMIT</span>
+</div>
+<span class="text-outline-variant font-telemetry-sm text-telemetry-sm">/</span>
+<!-- 02 WAR ROOM (Completed) -->
+<div class="flex items-center gap-1.5 text-outline font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">02 WAR ROOM</span>
+</div>
+<span class="text-outline-variant font-telemetry-sm text-telemetry-sm">/</span>
+<!-- 03 COUNCIL (Completed) -->
+<div class="flex items-center gap-1.5 text-outline font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">03 COUNCIL</span>
+</div>
+<span class="text-outline-variant font-telemetry-sm text-telemetry-sm">/</span>
+<!-- 04 REPORT (Active highlighted match) -->
+<div class="text-primary-container font-telemetry-sm text-telemetry-sm border-b-2 border-primary-container pb-1 drop-shadow-[0_0_8px_rgba(0,229,255,0.4)] flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse shadow-[0_0_6px_#00E5FF]"></span>
+<span>04 REPORT</span>
+</div>
+</nav>
+<!-- Trailing Status Telemetry & Diagnostic Settings -->
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded bg-surface-container-lowest/80 border border-outline-variant/40">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="vital_signs">vital_signs</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary-fixed-dim">8ms PING // EXECUTIVE DOSSIER READY</span>
+</div>
+<button aria-label="Diagnostic Settings" class="w-8 h-8 rounded bg-surface-variant/40 hover:bg-surface-variant border border-outline-variant/30 flex items-center justify-center text-outline hover:text-primary transition-all">
+<span class="material-symbols-outlined text-base" data-icon="settings">settings</span>
+</button>
+<!-- Session Ident Alt -->
+<div class="w-7 h-7 rounded border border-primary-container/40 bg-surface-container-high flex items-center justify-center font-telemetry-sm text-telemetry-sm text-primary-container font-semibold" title="Operator Session Ident">
+          OP4
+        </div>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-20 mt-2 space-y-8">
+<!-- SUB-NAV HEADER & ACTIVE TAB SWITCHER -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+<div>
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-primary-container/10 border border-primary-container/30 text-primary-container font-label-caps text-label-caps">DOSSIER REF // QRM-8820-EX</span>
+<span class="text-outline font-telemetry-sm text-telemetry-sm">STAGE 04 SYNTHESIS</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">Council Overview Report</h1>
+</div>
+<!-- Top Tab Switcher: Council Overview vs Expert Reviews -->
+<div class="flex items-center p-1 rounded-xl bg-surface-container-lowest/90 border border-outline-variant/30 shadow-inner">
+<button class="px-5 py-1.5 rounded-lg font-telemetry-sm text-telemetry-sm bg-surface-container border border-primary-container/50 text-primary-container shadow-[0_0_14px_rgba(0,229,255,0.25)] flex items-center gap-2 transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          Council Overview
+        </button>
+<button class="px-5 py-1.5 rounded-lg font-telemetry-sm text-telemetry-sm text-outline hover:text-on-surface transition-all flex items-center gap-2">
+<span>Expert Reviews</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-outline text-[9px] font-telemetry-sm">22</span>
+</button>
+</div>
+</div>
+<!-- SECTION 1: EXECUTIVE CONVICTION ROW (Top Grid Bento) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Card 1: Major Conviction Card (L3 Interactive Glass) -->
+<div class="lg:col-span-6 rounded-2xl bg-[#0D111B]/80 backdrop-blur-md border border-primary-container/30 p-6 shadow-[0_0_24px_-2px_rgba(0,229,255,0.12)] relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-widest flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#aff833]"></span>
+            EXECUTIVE CONVICTION INDEX
+          </span>
+<span class="font-telemetry-sm text-telemetry-sm text-outline px-2 py-0.5 rounded bg-surface-container-lowest/60 border border-outline-variant/30">N=22 PERSONAS</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 my-2">
+<!-- Circular Ring Gauge -->
+<div class="relative w-32 h-32 flex-shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 120 120">
+<circle cx="60" cy="60" fill="transparent" r="50" stroke="#1E2433" stroke-width="9"></circle>
+<!-- 7.2 / 10 = 72% circumference: 2 * PI * 50 = 314.159 -> dashoffset = 314 * (1 - 0.72) = 87.9 -->
+<circle class="drop-shadow-[0_0_10px_rgba(0,229,255,0.7)]" cx="60" cy="60" fill="transparent" r="50" stroke="url(#cyanLimeGrad)" stroke-dasharray="314.16" stroke-dashoffset="87.9" stroke-linecap="round" stroke-width="10"></circle>
+<defs>
+<lineargradient id="cyanLimeGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#00E5FF"></stop>
+<stop offset="100%" stop-color="#B6FF3B"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">7.2</span>
+<span class="font-telemetry-sm text-[10px] text-outline -mt-1">/ 10</span>
+</div>
+</div>
+<!-- Conviction Headline & Metadata -->
+<div class="flex-1 text-center sm:text-left">
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-secondary/10 border border-secondary/30 text-secondary font-label-caps text-label-caps mb-2">
+              CONDITIONAL VIABILITY PASS
+            </div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+              Promising Idea, Severe Distribution Risk
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+              B2B Invoice Financing for SMEs • 22 Domain Personas Synthesized
+            </p>
+</div>
+</div>
+<div class="pt-4 mt-2 border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-3 text-outline font-telemetry-sm text-telemetry-sm">
+<span>UNDERWRITING INTEGRITY: <strong class="text-primary-container">HIGH</strong></span>
+<span>GO-TO-MARKET DRAG: <strong class="text-error">CRITICAL (7.8/10)</strong></span>
+<span class="text-secondary font-semibold">RECOMMENDATION: PROCEED W/ PIVOT</span>
+</div>
+</div>
+<!-- Card 2: Success Likelihood -->
+<div class="lg:col-span-3 rounded-2xl bg-surface-container-low/70 backdrop-blur-md border border-outline-variant/30 p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-caps text-label-caps text-outline uppercase">PROBABILISTIC VIABILITY</span>
+<span class="material-symbols-outlined text-outline text-base" data-icon="model_training">model_training</span>
+</div>
+<div class="font-display-hero text-display-hero font-bold tracking-tight text-[#FFB74D] flex items-baseline gap-1">
+            41<span class="text-2xl text-outline font-normal">%</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1">Success Likelihood</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Calculated across seed-stage cross-border fintech cohorts surviving to Series A metrics.
+          </p>
+</div>
+<div class="space-y-3 mt-6">
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden p-0.5 border border-outline-variant/30">
+<div class="h-full rounded-full bg-gradient-to-r from-[#FF5C5C] via-[#FFB74D] to-primary-container shadow-[0_0_10px_rgba(255,183,77,0.4)]" style="width: 41%;"></div>
+</div>
+<div class="flex items-center gap-1.5 text-outline font-telemetry-sm text-[10px]">
+<span class="material-symbols-outlined text-xs" data-icon="info">info</span>
+<span>AI-simulated estimate, not a prediction</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Council Consensus -->
+<div class="lg:col-span-3 rounded-2xl bg-surface-container-low/70 backdrop-blur-md border border-outline-variant/30 p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-caps text-label-caps text-outline uppercase">ALIGNMENT DENSITY</span>
+<span class="material-symbols-outlined text-secondary text-base" data-icon="groups">groups</span>
+</div>
+<div class="font-display-hero text-display-hero font-bold tracking-tight text-secondary flex items-baseline gap-1">
+            86<span class="text-2xl text-outline font-normal">%</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1">Council Consensus</p>
+<p class="font-telemetry-sm text-telemetry-sm text-primary-container mt-1">
+            (High agreement) // 19 of 22 aligned on primary bottleneck
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 space-y-2">
+<div class="flex justify-between font-telemetry-sm text-[11px] text-outline">
+<span>UNIFIED THREAT:</span>
+<span class="text-on-surface font-mono">ONBOARDING LATENCY</span>
+</div>
+<div class="flex justify-between font-telemetry-sm text-[11px] text-outline">
+<span>DIVERGENT VIEW:</span>
+<span class="text-on-surface font-mono">ORGANIC VIRALITY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: 'THE COUNCIL IN ONE PARAGRAPH' GLASS CALLOUT -->
+<section class="rounded-2xl bg-[#090C13]/90 backdrop-blur-lg border border-primary-container/25 p-7 shadow-[0_8px_32px_-4px_rgba(0,0,0,0.6)] relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-container to-secondary"></div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="format_quote">format_quote</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">The Council in One Paragraph</h3>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-outline uppercase tracking-wider">UNIFIED SYNTHESIS // 3-POINT SUMMARY</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-normal leading-relaxed pl-1">
+        The Council strongly validates the technical elegance of instant ERP invoice underwriting and recognizes a high-margin float engine in cross-border factoring. However, distribution velocity faces catastrophic headwinds due to manual procurement onboarding, partner bank escrow red tape, and an unproven SME acquisition model in fragmented international corridors. To survive beyond seed stage, the venture must abandon multi-currency expansion immediately and prove manual single-corridor factoring unit economics for its first ten customers.
+      </p>
+<div class="mt-4 pt-3 border-t border-outline-variant/15 flex flex-wrap items-center gap-4 font-telemetry-sm text-telemetry-sm text-outline">
+<span class="text-secondary font-mono">CORE ADVANTAGE: INSTANT ERP FACTORING ENGINE</span>
+<span class="text-outline-variant">•</span>
+<span class="text-error font-mono">PRIMARY KILL RISK: MULTI-CURRENCY DRIFT &amp; SALES CYCLE</span>
+</div>
+</section>
+<!-- SECTION 3: 8 PILLAR SCORECARDS (Bento Grid: SVG Radar + Compact Cards) -->
+<section class="space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase">DIAGNOSTIC ARCHITECTURE</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">8 Pillar Scorecards</h2>
+</div>
+<div class="font-telemetry-sm text-telemetry-sm text-outline">
+          EVALUATED BY SYNTHESIS MATRIX // THRESHOLD BENCHMARK: 7.0
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Side: Clean High-Tech SVG Radar Chart (L2 Glass Console) -->
+<div class="lg:col-span-5 rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 p-6 flex flex-col items-center justify-between">
+<div class="w-full flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary-container tracking-wider uppercase">POLYGONAL RISK RADAR</span>
+<span class="font-telemetry-sm text-telemetry-sm text-outline">8-AXIS DELTA</span>
+</div>
+<div class="w-full max-w-[340px] aspect-square relative my-4 flex items-center justify-center">
+<svg class="w-full h-full overflow-visible" viewbox="-120 -120 240 240">
+<!-- Radar Background Polygons (Rings) -->
+<polygon fill="none" points="0,-100 70.7,-70.7 100,0 70.7,70.7 0,100 -70.7,70.7 -100,0 -70.7,-70.7" stroke="#252A36" stroke-width="1"></polygon>
+<polygon fill="none" points="0,-75 53,-53 75,0 53,53 0,75 -53,53 -75,0 -53,-53" stroke="#1E2330" stroke-dasharray="2 2" stroke-width="1"></polygon>
+<polygon fill="none" points="0,-50 35.3,-35.3 50,0 35.3,35.3 0,50 -35.3,35.3 -50,0 -35.3,-35.3" stroke="#181C26" stroke-width="1"></polygon>
+<polygon fill="none" points="0,-25 17.7,-17.7 25,0 17.7,17.7 0,25 -17.7,17.7 -25,0 -17.7,-17.7" stroke="#151821" stroke-width="1"></polygon>
+<!-- Axes Lines -->
+<line stroke="#2F3647" stroke-width="1" x1="0" x2="0" y1="0" y2="-100"></line>
+<line stroke="#2F3647" stroke-width="1" x1="0" x2="70.7" y1="0" y2="-70.7"></line>
+<line stroke="#2F3647" stroke-width="1" x1="0" x2="100" y1="0" y2="0"></line>
+<line stroke="#2F3647" stroke-width="1" x1="0" x2="70.7" y1="0" y2="70.7"></line>
+<line stroke="#2F3647" stroke-width="1" x1="0" x2="0" y1="0" y2="100"></line>
+<line stroke="#2F3647" stroke-width="1" x1="0" x2="-70.7" y1="0" y2="70.7"></line>
+<line stroke="#2F3647" stroke-width="1" x1="0" x2="-100" y1="0" y2="0"></line>
+<line stroke="#2F3647" stroke-width="1" x1="0" x2="-70.7" y1="0" y2="-70.7"></line>
+<!-- Radar Data Polygon:
+                   Scores (0 to 10):
+                   1. Market Demand: 7.8 -> (0, -78)
+                   2. Differentiation & Moat: 8.4 -> 84 * (0.707, -0.707) = (59.4, -59.4)
+                   3. Technical Feasibility: 8.2 -> (82, 0)
+                   4. Financial Viability: 7.9 -> 79 * (0.707, 0.707) = (55.8, 55.8)
+                   5. Execution Risk: 4.5 -> (0, 45)
+                   6. Regulatory Risk: 5.2 -> 52 * (-0.707, 0.707) = (-36.8, 36.8)
+                   7. Market Timing: 8.1 -> (-81, 0)
+                   8. Defensibility: 5.6 -> 56 * (-0.707, -0.707) = (-39.6, -39.6)
+              -->
+<polygon class="drop-shadow-[0_0_12px_rgba(0,229,255,0.5)]" fill="rgba(0, 229, 255, 0.15)" points="0,-78 59.4,-59.4 82,0 55.8,55.8 0,45 -36.8,36.8 -81,0 -39.6,-39.6" stroke="#00E5FF" stroke-width="2"></polygon>
+<!-- Data Point Indicators -->
+<circle cx="0" cy="-78" fill="#B6FF3B" r="3.5"></circle>
+<circle cx="59.4" cy="-59.4" fill="#00E5FF" r="3.5"></circle>
+<circle cx="82" cy="0" fill="#00E5FF" r="3.5"></circle>
+<circle cx="55.8" cy="55.8" fill="#B6FF3B" r="3.5"></circle>
+<circle cx="0" cy="45" fill="#FF5C5C" r="3.5"></circle>
+<circle cx="-36.8" cy="36.8" fill="#FFB74D" r="3.5"></circle>
+<circle cx="-81" cy="0" fill="#00E5FF" r="3.5"></circle>
+<circle cx="-39.6" cy="-39.6" fill="#FFB74D" r="3.5"></circle>
+<!-- Micro Labels around Radar -->
+<text fill="#BAC9CC" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="0" y="-108">DEMAND (7.8)</text>
+<text fill="#BAC9CC" font-family="JetBrains Mono" font-size="8" text-anchor="start" x="82" y="-76">MOAT (8.4)</text>
+<text fill="#BAC9CC" font-family="JetBrains Mono" font-size="8" text-anchor="start" x="108" y="4">TECH (8.2)</text>
+<text fill="#BAC9CC" font-family="JetBrains Mono" font-size="8" text-anchor="start" x="78" y="82">FINANCE (7.9)</text>
+<text fill="#FF5C5C" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="0" y="112">EXECUTION (4.5)</text>
+<text fill="#BAC9CC" font-family="JetBrains Mono" font-size="8" text-anchor="end" x="-82" y="82">LEGAL (5.2)</text>
+<text fill="#BAC9CC" font-family="JetBrains Mono" font-size="8" text-anchor="end" x="-108" y="4">TIMING (8.1)</text>
+<text fill="#BAC9CC" font-family="JetBrains Mono" font-size="8" text-anchor="end" x="-82" y="-76">DEFENSE (5.6)</text>
+</svg>
+</div>
+<div class="w-full flex items-center justify-between text-[11px] font-telemetry-sm pt-2 border-t border-outline-variant/20 text-outline">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container"></span> Technical / Timing Superiority</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-error"></span> Execution Friction Point</span>
+</div>
+</div>
+<!-- Right Side: 8 Compact Score Cards -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+<!-- Pillar 1 -->
+<div class="rounded-xl bg-surface-container-low/70 border border-outline-variant/30 p-3.5 hover:border-primary-container/40 transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-body-md font-medium">1. Market Demand</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/10 border border-primary-container/30 text-primary-container font-telemetry-sm text-telemetry-sm font-semibold">7.8 / 10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="rounded-xl bg-surface-container-low/70 border border-outline-variant/30 p-3.5 hover:border-secondary/40 transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-body-md font-medium">2. Differentiation &amp; Moat</span>
+<span class="px-2 py-0.5 rounded bg-secondary/10 border border-secondary/30 text-secondary font-telemetry-sm text-telemetry-sm font-semibold">8.4 / 10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 84%;"></div>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="rounded-xl bg-surface-container-low/70 border border-outline-variant/30 p-3.5 hover:border-primary-container/40 transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-body-md font-medium">3. Technical &amp; Operational Feasibility</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/10 border border-primary-container/30 text-primary-container font-telemetry-sm text-telemetry-sm font-semibold">8.2 / 10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="rounded-xl bg-surface-container-low/70 border border-outline-variant/30 p-3.5 hover:border-secondary/40 transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-body-md font-medium">4. Financial Viability &amp; Margins</span>
+<span class="px-2 py-0.5 rounded bg-secondary/10 border border-secondary/30 text-secondary font-telemetry-sm text-telemetry-sm font-semibold">7.9 / 10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 79%;"></div>
+</div>
+</div>
+<!-- Pillar 5 (Critical Flaw) -->
+<div class="rounded-xl bg-surface-container-low/70 border border-error/35 p-3.5 hover:border-error/60 transition-all flex flex-col justify-between shadow-[0_0_12px_rgba(255,92,92,0.1)]">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-body-md font-medium flex items-center gap-1.5">
+                5. Execution Risk <span class="text-[10px] text-outline font-telemetry-sm">(10=safest)</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-error/15 border border-error/40 text-error font-telemetry-sm text-telemetry-sm font-semibold">4.5 / 10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Pillar 6 (Elevated Risk) -->
+<div class="rounded-xl bg-surface-container-low/70 border border-[#FFB74D]/30 p-3.5 hover:border-[#FFB74D]/60 transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-body-md font-medium">6. Regulatory &amp; Legal Risk</span>
+<span class="px-2 py-0.5 rounded bg-[#FFB74D]/15 border border-[#FFB74D]/40 text-[#FFB74D] font-telemetry-sm text-telemetry-sm font-semibold">5.2 / 10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-[#FFB74D] h-full rounded-full" style="width: 52%;"></div>
+</div>
+</div>
+<!-- Pillar 7 -->
+<div class="rounded-xl bg-surface-container-low/70 border border-primary-container/30 p-3.5 hover:border-primary-container/50 transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-body-md font-medium">7. Market Timing (Why Now?)</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/10 border border-primary-container/30 text-primary-container font-telemetry-sm text-telemetry-sm font-semibold">8.1 / 10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 81%;"></div>
+</div>
+</div>
+<!-- Pillar 8 -->
+<div class="rounded-xl bg-surface-container-low/70 border border-[#FFB74D]/30 p-3.5 hover:border-[#FFB74D]/60 transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-body-md font-medium">8. Defensibility &amp; Scalability</span>
+<span class="px-2 py-0.5 rounded bg-[#FFB74D]/15 border border-[#FFB74D]/40 text-[#FFB74D] font-telemetry-sm text-telemetry-sm font-semibold">5.6 / 10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-[#FFB74D] h-full rounded-full" style="width: 56%;"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: TOP 5 CRITICAL WARNINGS -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-error uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+            SEVERITY ESCALATION MATRIX
+          </span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Top 5 Critical Warnings</h2>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-outline hidden sm:inline">SORTED BY THREAT COEFFICIENT</span>
+</div>
+<div class="space-y-3">
+<!-- Warning 1 -->
+<div class="rounded-xl bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-error/50 p-4 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-error/15 border border-error/40 text-error font-headline-sm font-bold flex items-center justify-center flex-shrink-0">
+              1
+            </div>
+<div>
+<div class="flex items-center gap-2.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Partner Bank Escrow Lockup</h4>
+<span class="px-2 py-0.5 rounded bg-error/15 text-error font-telemetry-sm text-[11px] border border-error/30">Severity 9.2/10</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Escrow delays will freeze cross-border float liquidity.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-4 self-end md:self-center">
+<div class="w-28 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#FFB74D] to-error" style="width: 92%;"></div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 font-telemetry-sm text-telemetry-sm text-on-surface whitespace-nowrap">
+              11 experts noted this
+            </span>
+</div>
+</div>
+<!-- Warning 2 -->
+<div class="rounded-xl bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-error/40 p-4 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-error/15 border border-error/40 text-error font-headline-sm font-bold flex items-center justify-center flex-shrink-0">
+              2
+            </div>
+<div>
+<div class="flex items-center gap-2.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Enterprise Procurement Churn</h4>
+<span class="px-2 py-0.5 rounded bg-error/15 text-error font-telemetry-sm text-[11px] border border-error/30">Severity 8.8/10</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                SME buyers take 4+ months for NetSuite/ERP authorization.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-4 self-end md:self-center">
+<div class="w-28 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#FFB74D] to-error" style="width: 88%;"></div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 font-telemetry-sm text-telemetry-sm text-on-surface whitespace-nowrap">
+              9 experts noted this
+            </span>
+</div>
+</div>
+<!-- Warning 3 -->
+<div class="rounded-xl bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-[#FFB74D]/50 p-4 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-[#FFB74D]/15 border border-[#FFB74D]/40 text-[#FFB74D] font-headline-sm font-bold flex items-center justify-center flex-shrink-0">
+              3
+            </div>
+<div>
+<div class="flex items-center gap-2.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Predatory Default Contagion</h4>
+<span class="px-2 py-0.5 rounded bg-[#FFB74D]/15 text-[#FFB74D] font-telemetry-sm text-[11px] border border-[#FFB74D]/30">Severity 8.1/10</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Unsecured invoice lines vulnerable to fraudulent double-factoring.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-4 self-end md:self-center">
+<div class="w-28 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#FFB74D] to-error" style="width: 81%;"></div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 font-telemetry-sm text-telemetry-sm text-on-surface whitespace-nowrap">
+              8 experts noted this
+            </span>
+</div>
+</div>
+<!-- Warning 4 -->
+<div class="rounded-xl bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-[#FFB74D]/40 p-4 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-[#FFB74D]/15 border border-[#FFB74D]/40 text-[#FFB74D] font-headline-sm font-bold flex items-center justify-center flex-shrink-0">
+              4
+            </div>
+<div>
+<div class="flex items-center gap-2.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">FX Slippage in Emerging Corridors</h4>
+<span class="px-2 py-0.5 rounded bg-[#FFB74D]/15 text-[#FFB74D] font-telemetry-sm text-[11px] border border-[#FFB74D]/30">Severity 7.4/10</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Latin America volatility erodes 85 bps margin.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-4 self-end md:self-center">
+<div class="w-28 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#FFB74D] to-[#FF5C5C]" style="width: 74%;"></div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 font-telemetry-sm text-telemetry-sm text-on-surface whitespace-nowrap">
+              7 experts noted this
+            </span>
+</div>
+</div>
+<!-- Warning 5 -->
+<div class="rounded-xl bg-surface-container-lowest/80 border border-outline-variant/30 hover:border-outline p-4 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-surface-variant border border-outline-variant/50 text-outline font-headline-sm font-bold flex items-center justify-center flex-shrink-0">
+              5
+            </div>
+<div>
+<div class="flex items-center gap-2.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Cold-Start Marketplace Liquidity</h4>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-outline font-telemetry-sm text-[11px] border border-outline-variant/30">Severity 6.9/10</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Underwriting speed means nothing if customer acquisition CAC exceeds LTV.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-4 self-end md:self-center">
+<div class="w-28 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container to-[#FFB74D]" style="width: 69%;"></div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 font-telemetry-sm text-telemetry-sm text-on-surface whitespace-nowrap">
+              6 experts noted this
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: 'THE 5 KILL QUESTIONS' (Dark Tactical Glass Cards) -->
+<section class="space-y-4">
+<div>
+<span class="font-label-caps text-label-caps text-error tracking-wider uppercase">FATAL INQUIRY DOSSIER</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">The 5 Kill Questions</h2>
+<p class="font-body-sm text-body-sm text-outline">Uncompromising existential questions posed by the synthetic council that must be resolved prior to funding.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Kill Question 01 -->
+<div class="rounded-xl bg-[#0B0D14]/90 backdrop-blur-md border border-outline-variant/30 hover:border-error/50 p-5 flex flex-col justify-between transition-all group">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-error">01</span>
+<span class="font-label-caps text-[9px] px-2 py-0.5 rounded bg-error/10 border border-error/30 text-error">COUNTERPARTY THEFT</span>
+</div>
+<p class="font-headline-sm text-[15px] leading-snug text-on-surface font-medium">
+              If an exporter fakes a NetSuite bill of lading, who absorbs the 100% loss within the 90-second instant payout window?
+            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-telemetry-sm text-[11px]">
+<span>SURFACE: UNDERWRITING</span>
+<span class="text-error font-mono">UNMITIGATED</span>
+</div>
+</div>
+<!-- Kill Question 02 -->
+<div class="rounded-xl bg-[#0B0D14]/90 backdrop-blur-md border border-outline-variant/30 hover:border-error/50 p-5 flex flex-col justify-between transition-all group">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-error">02</span>
+<span class="font-label-caps text-[9px] px-2 py-0.5 rounded bg-error/10 border border-error/30 text-error">BANK PRIVILEGE</span>
+</div>
+<p class="font-headline-sm text-[15px] leading-snug text-on-surface font-medium">
+              Why would a CFO give third-party API write-access to their accounts receivable without a banking charter guarantee?
+            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-telemetry-sm text-[11px]">
+<span>SURFACE: TRUST / GOV</span>
+<span class="text-error font-mono">HIGH FRICTION</span>
+</div>
+</div>
+<!-- Kill Question 03 -->
+<div class="rounded-xl bg-[#0B0D14]/90 backdrop-blur-md border border-outline-variant/30 hover:border-[#FFB74D]/50 p-5 flex flex-col justify-between transition-all group">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-[#FFB74D]">03</span>
+<span class="font-label-caps text-[9px] px-2 py-0.5 rounded bg-[#FFB74D]/10 border border-[#FFB74D]/30 text-[#FFB74D]">ACQUISITION BURDEN</span>
+</div>
+<p class="font-headline-sm text-[15px] leading-snug text-on-surface font-medium">
+              How will you keep CAC under $1,200 when every existing B2B factoring incumbent employs high-commission field sales?
+            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-telemetry-sm text-[11px]">
+<span>SURFACE: GTM RUNWAY</span>
+<span class="text-[#FFB74D] font-mono">QUESTIONABLE</span>
+</div>
+</div>
+<!-- Kill Question 04 -->
+<div class="rounded-xl bg-[#0B0D14]/90 backdrop-blur-md border border-outline-variant/30 hover:border-[#FFB74D]/50 p-5 flex flex-col justify-between transition-all group">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-[#FFB74D]">04</span>
+<span class="font-label-caps text-[9px] px-2 py-0.5 rounded bg-[#FFB74D]/10 border border-[#FFB74D]/30 text-[#FFB74D]">PLATFORM COMMODITIZATION</span>
+</div>
+<p class="font-headline-sm text-[15px] leading-snug text-on-surface font-medium">
+              What prevents Stripe or Brex from turning this feature on as a free add-on to their existing corporate card accounts?
+            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-telemetry-sm text-[11px]">
+<span>SURFACE: MOAT DEFENSE</span>
+<span class="text-[#FFB74D] font-mono">MODERATE RISK</span>
+</div>
+</div>
+<!-- Kill Question 05 -->
+<div class="rounded-xl bg-[#0B0D14]/90 backdrop-blur-md border border-outline-variant/30 hover:border-error/50 p-5 flex flex-col justify-between transition-all group lg:col-span-2">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-error">05</span>
+<span class="font-label-caps text-[9px] px-2 py-0.5 rounded bg-error/10 border border-error/30 text-error">CAPITAL STRUCTURE RISK</span>
+</div>
+<p class="font-headline-sm text-[15px] leading-snug text-on-surface font-medium">
+              When partner bank repo rates spike 150 bps, does your warehouse credit line immediately margin-call your float?
+            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-telemetry-sm text-[11px]">
+<span>SURFACE: DEBT SPREAD SENSITIVITY</span>
+<span class="text-error font-mono">LIQUIDITY CHOKEPOINT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CONSENSUS VS DISAGREEMENT MAP -->
+<section class="space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase">DIALECTIC DISCORD</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Consensus vs Disagreement Map</h2>
+</div>
+<!-- Agreement Chips -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-secondary/10 border border-secondary/30 text-secondary font-telemetry-sm text-[11px] flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Unanimous: Instant AI Underwriting is Defensible
+          </span>
+<span class="px-2.5 py-1 rounded bg-[#FFB74D]/10 border border-[#FFB74D]/30 text-[#FFB74D] font-telemetry-sm text-[11px] flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FFB74D]"></span>
+            Split: Self-Serve SME Onboarding Feasibility
+          </span>
+</div>
+</div>
+<!-- Two Side-by-Side Opposing Expert Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Left: Bull Case -->
+<div class="rounded-2xl bg-surface-container-low/80 backdrop-blur-md border border-secondary/30 p-6 flex flex-col justify-between relative shadow-[0_0_20px_rgba(175,248,51,0.06)]">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary border border-secondary/40 font-label-caps text-label-caps uppercase">
+                BULL CASE // VIRAL DISTRIBUTION POTENTIAL
+              </span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary font-semibold">CONVICTION: 8.4</span>
+</div>
+<div class="flex items-center gap-3.5 pt-2">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest border border-secondary/40 flex items-center justify-center font-headline-sm font-bold text-secondary shadow-[0_0_12px_rgba(175,248,51,0.2)]">
+                PG
+              </div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Paul Graham</h4>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Founder, Y Combinator</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest/80 border border-outline-variant/30 text-on-surface-variant font-body-md italic leading-relaxed">
+              "If the instant discount is 100 bps cheaper than factoring sharks, word-of-mouth among Mexican apparel exporters will outpace sales teams."
+            </div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-outline font-telemetry-sm text-[11px]">
+<span>ARGUMENT: ORGANIC PRICE ARBITRAGE</span>
+<span class="text-secondary font-mono">SUPPORTS IMMEDIATE LAUNCH</span>
+</div>
+</div>
+<!-- Right: Bear Case -->
+<div class="rounded-2xl bg-surface-container-low/80 backdrop-blur-md border border-error/30 p-6 flex flex-col justify-between relative shadow-[0_0_20px_rgba(255,92,92,0.06)]">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-error/15 text-error border border-error/40 font-label-caps text-label-caps uppercase">
+                BEAR CASE // ENTERPRISE SALES QUAGMIRE
+              </span>
+<span class="font-telemetry-sm text-telemetry-sm text-error font-semibold">CONVICTION: 4.8</span>
+</div>
+<div class="flex items-center gap-3.5 pt-2">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest border border-error/40 flex items-center justify-center font-headline-sm font-bold text-error shadow-[0_0_12px_rgba(255,92,92,0.2)]">
+                GR
+              </div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Geoff Ralston</h4>
+<p class="font-telemetry-sm text-telemetry-sm text-outline">Former President, Y Combinator</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest/80 border border-outline-variant/30 text-on-surface-variant font-body-md italic leading-relaxed">
+              "SME supply chain heads don't switch factoring rails without multi-signature compliance signoffs. Self-serve growth will stall in month two."
+            </div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-outline font-telemetry-sm text-[11px]">
+<span>ARGUMENT: PROCUREMENT BUREAUCRACY</span>
+<span class="text-error font-mono">MANDATES ENTERPRISE FIELD SALES</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: 30 / 90 / 180-DAY ROADMAP (Three-column tactical timeline) -->
+<section class="space-y-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary-container tracking-wider uppercase">SURVIVAL SEQUENCING</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">30 / 90 / 180-Day Tactical Roadmap</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- 30 Days -->
+<div class="rounded-2xl bg-surface-container-lowest/80 border border-primary-container/40 p-6 flex flex-col justify-between relative shadow-[0_0_20px_rgba(0,229,255,0.08)]">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-primary-container/20 text-primary-container border border-primary-container/40 font-telemetry-sm text-telemetry-sm font-bold">
+                T + 30 DAYS
+              </span>
+<span class="font-label-caps text-label-caps text-error">PHASE: TRIAGE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Immediate Triage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Manual concierge factoring for 10 exporters; eliminate multi-currency code.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 space-y-2 text-outline font-telemetry-sm text-[11px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-primary-container" data-icon="radio_button_checked">radio_button_checked</span>
+<span>Halt Euro / LATAM corridor dev</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-primary-container" data-icon="radio_button_checked">radio_button_checked</span>
+<span>Founder-led manual invoice auditing</span>
+</div>
+</div>
+</div>
+<!-- 90 Days -->
+<div class="rounded-2xl bg-surface-container-lowest/80 border border-secondary/40 p-6 flex flex-col justify-between relative shadow-[0_0_20px_rgba(175,248,51,0.08)]">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-secondary/20 text-secondary border border-secondary/40 font-telemetry-sm text-telemetry-sm font-bold">
+                T + 90 DAYS
+              </span>
+<span class="font-label-caps text-label-caps text-secondary">PHASE: VALIDATION</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Moat Validation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Implement double-factoring fraud graph; secure $5M institutional debt warehouse.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 space-y-2 text-outline font-telemetry-sm text-[11px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="radio_button_checked">radio_button_checked</span>
+<span>ERP cryptographic invoice hash ledger</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="radio_button_checked">radio_button_checked</span>
+<span>Close non-dilutive credit facility</span>
+</div>
+</div>
+</div>
+<!-- 180 Days -->
+<div class="rounded-2xl bg-surface-container-lowest/80 border border-outline-variant/40 p-6 flex flex-col justify-between relative">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-surface-container-high text-outline border border-outline-variant/50 font-telemetry-sm text-telemetry-sm font-bold">
+                T + 180 DAYS
+              </span>
+<span class="font-label-caps text-label-caps text-outline">PHASE: SCALING</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Scale &amp; Expansion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Launch self-serve NetSuite app integration; test secondary cross-border corridor.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 space-y-2 text-outline font-telemetry-sm text-[11px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-outline" data-icon="radio_button_checked">radio_button_checked</span>
+<span>1-click ERP marketplace app store listing</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-outline" data-icon="radio_button_checked">radio_button_checked</span>
+<span>Expand to US-Mexico automotive corridor</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: 'EXPERT ROSTER' INTERACTIVE TABLE -->
+<section class="space-y-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase">SYNTHETIC PANEL DISCLOSURE</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Expert Roster</h2>
+</div>
+<!-- Filter Chips & Sort Controls -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- Filter chips -->
+<button class="px-3 py-1 rounded-full bg-primary-container text-surface-container-lowest font-telemetry-sm text-telemetry-sm font-bold shadow-[0_0_10px_rgba(0,229,255,0.4)]">
+            All (22)
+          </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-high text-outline hover:text-on-surface font-telemetry-sm text-telemetry-sm border border-outline-variant/30 transition-all">
+            Fintech (6)
+          </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-high text-outline hover:text-on-surface font-telemetry-sm text-telemetry-sm border border-outline-variant/30 transition-all">
+            Software (5)
+          </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-high text-outline hover:text-on-surface font-telemetry-sm text-telemetry-sm border border-outline-variant/30 transition-all">
+            Capital &amp; Economics (6)
+          </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-high text-outline hover:text-on-surface font-telemetry-sm text-telemetry-sm border border-outline-variant/30 transition-all">
+            Operations (5)
+          </button>
+<div class="h-4 w-px bg-outline-variant/40 mx-1 hidden sm:block"></div>
+<!-- Sort Select -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-outline font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
+<select class="bg-transparent text-on-surface font-telemetry-sm text-telemetry-sm focus:outline-none cursor-pointer">
+<option value="highest">Highest Conviction</option>
+<option value="critical">Most Critical</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Clean Table / High-Density Grid Container -->
+<div class="rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 overflow-hidden shadow-2xl">
+<div class="overflow-x-auto custom-scroll">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/30 bg-surface-container-high/40 text-outline font-label-caps text-label-caps uppercase">
+<th class="py-3 px-5">EXPERT IDENT</th>
+<th class="py-3 px-4">DOMAIN SECTOR</th>
+<th class="py-3 px-4">SCORE</th>
+<th class="py-3 px-5">PRIMARY CRITICAL ADVISORY</th>
+<th class="py-3 px-4 text-right">ACTION</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm">
+<!-- Row 1: Patrick Collison -->
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 border border-primary-container/30 flex items-center justify-center font-telemetry-sm font-bold text-primary-container">
+                      PC
+                    </div>
+<div>
+<div class="font-headline-sm text-sm text-on-surface font-semibold">Patrick Collison</div>
+<div class="text-[11px] text-outline font-telemetry-sm">CEO, Stripe</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#B6FF3B]/10 border border-[#B6FF3B]/30 text-secondary font-telemetry-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Fintech
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">
+<span class="text-primary-container">7.6</span> / 10
+                </td>
+<td class="py-3.5 px-5 text-on-surface-variant">
+                  "API underwriting is pristine; banking float escrow is a critical path bottleneck."
+                </td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-primary-container hover:text-white font-telemetry-sm text-xs underline">Audit Note</button>
+</td>
+</tr>
+<!-- Row 2: Paul Graham -->
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-secondary/10 border border-secondary/30 flex items-center justify-center font-telemetry-sm font-bold text-secondary">
+                      PG
+                    </div>
+<div>
+<div class="font-headline-sm text-sm text-on-surface font-semibold">Paul Graham</div>
+<div class="text-[11px] text-outline font-telemetry-sm">Y Combinator</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container/10 border border-primary-container/30 text-primary-container font-telemetry-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Strategy
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">
+<span class="text-secondary">8.4</span> / 10
+                </td>
+<td class="py-3.5 px-5 text-on-surface-variant">
+                  "Do things that don't scale—manually underwrite 10 exporters before writing banking integrations."
+                </td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-primary-container hover:text-white font-telemetry-sm text-xs underline">Audit Note</button>
+</td>
+</tr>
+<!-- Row 3: Kunal Shah -->
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#FFB74D]/10 border border-[#FFB74D]/30 flex items-center justify-center font-telemetry-sm font-bold text-[#FFB74D]">
+                      KS
+                    </div>
+<div>
+<div class="font-headline-sm text-sm text-on-surface font-semibold">Kunal Shah</div>
+<div class="text-[11px] text-outline font-telemetry-sm">Founder, CRED</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#B6FF3B]/10 border border-[#B6FF3B]/30 text-secondary font-telemetry-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Fintech
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">
+<span class="text-[#FFB74D]">6.9</span> / 10
+                </td>
+<td class="py-3.5 px-5 text-on-surface-variant">
+                  "Delta 4 efficiency is zero if supplier onboarding takes longer than 24 hours."
+                </td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-primary-container hover:text-white font-telemetry-sm text-xs underline">Audit Note</button>
+</td>
+</tr>
+<!-- Row 4: Michael Seibel -->
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#FF5C5C]/10 border border-[#FF5C5C]/30 flex items-center justify-center font-telemetry-sm font-bold text-error">
+                      MS
+                    </div>
+<div>
+<div class="font-headline-sm text-sm text-on-surface font-semibold">Michael Seibel</div>
+<div class="text-[11px] text-outline font-telemetry-sm">Managing Director, YC</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#38BDF8]/10 border border-[#38BDF8]/30 text-[#38BDF8] font-telemetry-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span> B2B SaaS
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">
+<span class="text-error">6.2</span> / 10
+                </td>
+<td class="py-3.5 px-5 text-on-surface-variant">
+                  "Talk to 50 exporters who were rejected by traditional factors before building automation."
+                </td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-primary-container hover:text-white font-telemetry-sm text-xs underline">Audit Note</button>
+</td>
+</tr>
+<!-- Row 5: Nithin Kamath -->
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 border border-primary-container/30 flex items-center justify-center font-telemetry-sm font-bold text-primary-container">
+                      NK
+                    </div>
+<div>
+<div class="font-headline-sm text-sm text-on-surface font-semibold">Nithin Kamath</div>
+<div class="text-[11px] text-outline font-telemetry-sm">Founder, Zerodha</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#B6FF3B]/10 border border-[#B6FF3B]/30 text-secondary font-telemetry-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Capital/Fintech
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">
+<span class="text-primary-container">7.8</span> / 10
+                </td>
+<td class="py-3.5 px-5 text-on-surface-variant">
+                  "Keep float overhead near zero; do not rely on VC equity to fund credit lines."
+                </td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-primary-container hover:text-white font-telemetry-sm text-xs underline">Audit Note</button>
+</td>
+</tr>
+<!-- Row 6: Bill Gurley -->
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-3.5 px-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#FFB74D]/10 border border-[#FFB74D]/30 flex items-center justify-center font-telemetry-sm font-bold text-[#FFB74D]">
+                      BG
+                    </div>
+<div>
+<div class="font-headline-sm text-sm text-on-surface font-semibold">Bill Gurley</div>
+<div class="text-[11px] text-outline font-telemetry-sm">Benchmark Capital</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#38BDF8]/10 border border-[#38BDF8]/30 text-[#38BDF8] font-telemetry-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span> Marketplaces
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">
+<span class="text-[#FFB74D]">6.5</span> / 10
+                </td>
+<td class="py-3.5 px-5 text-on-surface-variant">
+                  "Take-rate compressions will occur as soon as volume increases; protect your 85 bps."
+                </td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-primary-container hover:text-white font-telemetry-sm text-xs underline">Audit Note</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- SECTION: BOTTOM ACTION BAR & EXPORTS -->
+<section class="rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/30 p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+<div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+<!-- Secondary Actions: Export PDF & Markdown -->
+<button class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 hover:border-primary-container/40 text-on-surface font-telemetry-sm text-telemetry-sm flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-base" data-icon="picture_as_pdf">picture_as_pdf</span>
+          Download PDF Dossier
+        </button>
+<button class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 hover:border-primary-container/40 text-on-surface font-telemetry-sm text-telemetry-sm flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-base" data-icon="description">description</span>
+          Download Markdown
+        </button>
+</div>
+<!-- Centered / Prominent Primary CTA -->
+<button class="w-full md:w-auto px-8 py-3 rounded-xl bg-primary-container hover:brightness-110 active:scale-95 text-[#05060A] font-headline-sm text-sm font-bold tracking-tight shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_28px_rgba(0,229,255,0.6)] flex items-center justify-center gap-2.5 transition-all">
+<span>View Individual Expert Reviews</span>
+<span class="material-symbols-outlined text-base font-bold" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</section>
+</main>
+<!-- PERSISTENT FOOTER (Shared Components: Tactical Command Bar) -->
+<footer class="fixed bottom-0 left-0 w-full z-40 bg-surface-container-lowest/90 backdrop-blur-sm border-t border-outline-variant/20 h-9 flex items-center justify-between px-6">
+<div class="flex items-center gap-2 text-outline font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-xs text-primary-container animate-pulse" data-icon="lock">lock</span>
+<span class="hidden sm:inline">AI-simulated perspectives inspired by public work. Not actual statements by these individuals.</span>
+<span class="sm:hidden text-[10px]">AI-simulated • Not actual statements</span>
+</div>
+<div class="flex items-center gap-4 text-outline font-telemetry-sm text-telemetry-sm">
+<span class="hover:text-primary-fixed-dim transition-colors cursor-pointer hidden md:inline">SYSTEM DIAGNOSTICS</span>
+<span class="hidden md:inline text-outline-variant">•</span>
+<span class="hover:text-primary-fixed-dim transition-colors cursor-pointer hidden sm:inline">CLEARANCE LEVEL 4</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="text-secondary font-mono flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        SECURITY AUDIT // VERIFIED
+      </span>
+</div>
+</footer>
+</body></html>

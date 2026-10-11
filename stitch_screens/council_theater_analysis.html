@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QUORUM // The Council Theater - Keyframe 2: Expert Analysis</title>
+<!-- Typography: Space Grotesk, JetBrains Mono, Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#05060A",
+            "surface-container": "#0D0F18",
+            "surface-container-high": "#131622",
+            "surface-container-lowest": "#030407",
+            "outline": "#849396",
+            "outline-variant": "#232838",
+            "on-surface": "#E3E2E9",
+            "on-surface-variant": "#9CA3AF",
+            "primary": "#C3F5FF",
+            "primary-container": "#00E5FF",
+            "secondary": "#B6FF3B",
+            "secondary-dim": "#8CD818",
+            "warning": "#FFC400"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk", "sans-serif"],
+            "telemetry": ["JetBrains Mono", "monospace"],
+            "body": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @keyframes pulse-lime {
+      0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 6px #B6FF3B); }
+      50% { opacity: 0.4; transform: scale(0.9); filter: drop-shadow(0 0 1px #B6FF3B); }
+    }
+    @keyframes cursor-blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .animate-lime-dot {
+      animation: pulse-lime 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    .blinking-cursor {
+      animation: cursor-blink 0.85s infinite;
+    }
+    .tactical-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+    .lime-glow-active {
+      box-shadow: 0 0 32px -4px rgba(182, 255, 59, 0.25), 0 0 1px 1px rgba(182, 255, 59, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    }
+    .cyan-glow-pill {
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-[#05060A] text-on-surface antialiased overflow-hidden select-none h-screen w-screen relative font-body">
+<!-- Fullscreen 3D Scene: Zoomed into the lime Fintech Lobe -->
+<!-- STITCH_THREEJS_START:ANIMATION_8 class="absolute inset-0 w-full h-full bg-transparent" -->
+<div class="absolute inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_8" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_8');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const container = document.getElementById('threejs-container-ANIMATION_KEYFRAME_2') || document.body;
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x05060a, 0.0025);
+
+// Camera placed close into the Fintech Lobe cluster (macro / zoom perspective)
+const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 1500);
+camera.position.set(0, 10, 120);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.3;
+container.appendChild(renderer.domElement);
+
+const fintechColor = new THREE.Color(0xB6FF3B); // #B6FF3B Lime
+const completedColor = new THREE.Color(0x98FF44); 
+const pendingColor = new THREE.Color(0x314818); // Dim olive/green
+const bgDimSector = new THREE.Color(0x00E5FF); // Background distant tech cyan
+
+// Main Fintech Sub-Cluster Group
+const lobeGroup = new THREE.Group();
+lobeGroup.position.set(0, 0, 0);
+scene.add(lobeGroup);
+
+// Define specific expert node 3D positions in the cluster
+// 0: Patrick Collison (Active target node where orb sits)
+// 1: Nithin Kamath (Completed)
+// 2: Kunal Shah (Completed)
+// 3: Vijay Shekhar Sharma (Completed)
+// 4-15: Additional pending and completed nodes in the local network
+const expertNodes = [
+  { id: 'patrick', pos: new THREE.Vector3(-18, 14, 18), status: 'active', name: 'Patrick Collison' },
+  { id: 'nithin', pos: new THREE.Vector3(42, 28, -8), status: 'completed', score: '7.8' },
+  { id: 'kunal', pos: new THREE.Vector3(52, -18, 5), status: 'completed', score: '6.9' },
+  { id: 'vijay', pos: new THREE.Vector3(-46, -22, -12), status: 'completed', score: '7.4' },
+  { id: 'fred', pos: new THREE.Vector3(-25, 42, -20), status: 'completed', score: '8.1' },
+  { id: 'gurley', pos: new THREE.Vector3(22, 48, -15), status: 'completed', score: '6.5' },
+  { id: 'seibel', pos: new THREE.Vector3(-55, 12, -25), status: 'completed', score: '7.0' },
+  { id: 'graham', pos: new THREE.Vector3(10, -42, -10), status: 'completed', score: '8.4' },
+  { id: 'caldwell', pos: new THREE.Vector3(-38, 30, 2), status: 'completed', score: '7.2' },
+  { id: 'pending1', pos: new THREE.Vector3(30, -32, -35), status: 'pending' },
+  { id: 'pending2', pos: new THREE.Vector3(-12, -38, -40), status: 'pending' },
+  { id: 'pending3', pos: new THREE.Vector3(60, 15, -45), status: 'pending' },
+  { id: 'pending4', pos: new THREE.Vector3(-62, -8, -50), status: 'pending' }
+];
+
+// Generate Dense Ambient Synaptic Web of Fintech Neurons
+const DENSE_NEURONS = 1800;
+const neuronPositions = new Float32Array(DENSE_NEURONS * 3);
+const neuronColors = new Float32Array(DENSE_NEURONS * 3);
+const neuronSizes = new Float32Array(DENSE_NEURONS);
+const neuronVectors = [];
+
+for (let i = 0; i < DENSE_NEURONS; i++) {
+  // Cluster around center with ellipsoid spread
+  const u = Math.random();
+  const v = Math.random();
+  const theta = u * 2.0 * Math.PI;
+  const phi = Math.acos(2.0 * v - 1.0);
+  const r = Math.cbrt(Math.random()) * 85;
+
+  const px = r * Math.sin(phi) * Math.cos(theta) * 1.15;
+  const py = r * Math.sin(phi) * Math.sin(theta) * 0.9;
+  const pz = r * Math.cos(phi) * 0.85;
+
+  neuronPositions[i * 3] = px;
+  neuronPositions[i * 3 + 1] = py;
+  neuronPositions[i * 3 + 2] = pz;
+  neuronVectors.push(new THREE.Vector3(px, py, pz));
+
+  // Determine brightness based on proximity to active/completed zones
+  const isNearbyActive = (Math.hypot(px - (-18), py - 14, pz - 18) < 35);
+  const col = fintechColor.clone();
+  if (isNearbyActive) {
+    col.multiplyScalar(1.2 + Math.random() * 0.4);
+    neuronSizes[i] = 2.4 + Math.random() * 2.2;
+  } else if (Math.random() > 0.4) {
+    // completed cluster ambient glow
+    col.multiplyScalar(0.7);
+    neuronSizes[i] = 1.4 + Math.random() * 1.2;
+  } else {
+    // pending / deep brain nodes
+    col.copy(pendingColor);
+    neuronSizes[i] = 0.8 + Math.random() * 0.8;
+  }
+
+  neuronColors[i * 3] = col.r;
+  neuronColors[i * 3 + 1] = col.g;
+  neuronColors[i * 3 + 2] = col.b;
+}
+
+const neuronGeometry = new THREE.BufferGeometry();
+neuronGeometry.setAttribute('position', new THREE.BufferAttribute(neuronPositions, 3));
+neuronGeometry.setAttribute('color', new THREE.BufferAttribute(neuronColors, 3));
+neuronGeometry.setAttribute('size', new THREE.BufferAttribute(neuronSizes, 1));
+
+const nodeVertexShader = `
+  attribute float size;
+  varying vec3 vColor;
+  void main() {
+    vColor = color;
+    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+    gl_PointSize = size * (240.0 / -mvPosition.z);
+    gl_Position = projectionMatrix * mvPosition;
+  }
+`;
+
+const nodeFragmentShader = `
+  varying vec3 vColor;
+  void main() {
+    float dist = length(gl_PointCoord - vec2(0.5));
+    if (dist > 0.5) discard;
+    float glow = pow(1.0 - dist * 2.0, 1.8);
+    gl_FragColor = vec4(vColor * 1.4, glow * 0.95);
+  }
+`;
+
+const neuronMaterial = new THREE.ShaderMaterial({
+  vertexShader: nodeVertexShader,
+  fragmentShader: nodeFragmentShader,
+  vertexColors: true,
+  transparent: true,
+  blending: THREE.AdditiveBlending,
+  depthWrite: false
+});
+
+const neuronPoints = new THREE.Points(neuronGeometry, neuronMaterial);
+lobeGroup.add(neuronPoints);
+
+// Inter-Neural Axon Lines
+const linePos = [];
+const lineCols = [];
+let edgeCount = 0;
+const MAX_LOCAL_EDGES = 2200;
+
+for (let i = 0; i < DENSE_NEURONS && edgeCount < MAX_LOCAL_EDGES; i += 3) {
+  for (let j = i + 1; j < Math.min(i + 12, DENSE_NEURONS); j++) {
+    const p1 = neuronVectors[i];
+    const p2 = neuronVectors[j];
+    const d = p1.distanceTo(p2);
+    if (d < 16.0) {
+      linePos.push(p1.x, p1.y, p1.z);
+      linePos.push(p2.x, p2.y, p2.z);
+
+      const c = fintechColor.clone();
+      const nearCenter = (p1.distanceTo(expertNodes[0].pos) < 40 || p2.distanceTo(expertNodes[0].pos) < 40);
+      c.multiplyScalar(nearCenter ? 0.45 : 0.15);
+      lineCols.push(c.r, c.g, c.b);
+      lineCols.push(c.r, c.g, c.b);
+      edgeCount++;
+    }
+  }
+}
+
+const lineGeometry = new THREE.BufferGeometry();
+lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePos, 3));
+lineGeometry.setAttribute('color', new THREE.Float32BufferAttribute(lineCols, 3));
+const lineMat = new THREE.LineBasicMaterial({
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.42,
+  blending: THREE.AdditiveBlending,
+  depthWrite: false
+});
+const lineMesh = new THREE.LineSegments(lineGeometry, lineMat);
+lobeGroup.add(lineMesh);
+
+// Expert Node Markers (Distinct Spheres with volumetric rings)
+const activeNodePos = expertNodes[0].pos; // Patrick Collison
+
+// Primary Orb sitting at Patrick's Node
+const orbGroup = new THREE.Group();
+orbGroup.position.copy(activeNodePos);
+scene.add(orbGroup);
+
+// Orb Core
+const orbCore = new THREE.Mesh(
+  new THREE.SphereGeometry(3.2, 32, 32),
+  new THREE.MeshBasicMaterial({ color: 0xFFFFFF, blending: THREE.AdditiveBlending })
+);
+orbGroup.add(orbCore);
+
+// Orb Pulsing Halo
+const orbHalo = new THREE.Mesh(
+  new THREE.SphereGeometry(6.8, 32, 32),
+  new THREE.MeshBasicMaterial({ color: 0xB6FF3B, transparent: true, opacity: 0.78, blending: THREE.AdditiveBlending })
+);
+orbGroup.add(orbHalo);
+
+// Orb Outer Corona
+const orbCorona = new THREE.Mesh(
+  new THREE.SphereGeometry(11.5, 24, 24),
+  new THREE.MeshBasicMaterial({ color: 0x00E5FF, transparent: true, opacity: 0.32, blending: THREE.AdditiveBlending })
+);
+orbGroup.add(orbCorona);
+
+// Orbiting Luminous Ring around the Orb
+const ringOrbGeom = new THREE.TorusGeometry(8.2, 0.35, 16, 64);
+const ringOrbMat = new THREE.MeshBasicMaterial({ color: 0xB6FF3B, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending });
+const ringOrb = new THREE.Mesh(ringOrbGeom, ringOrbMat);
+ringOrb.rotation.x = Math.PI * 0.35;
+orbGroup.add(ringOrb);
+
+// Completed Expert Spheres (Brightly Lit)
+const completedSpheresGroup = new THREE.Group();
+lobeGroup.add(completedSpheresGroup);
+
+expertNodes.forEach((node, idx) => {
+  if (idx === 0) return; // Patrick is handled by orbGroup
+  const isCompleted = node.status === 'completed';
+  const radius = isCompleted ? 2.4 : 1.2;
+  const colHex = isCompleted ? 0xB6FF3B : 0x243810;
+  
+  const sphere = new THREE.Mesh(
+    new THREE.SphereGeometry(radius, 16, 16),
+    new THREE.MeshBasicMaterial({
+      color: colHex,
+      transparent: true,
+      opacity: isCompleted ? 0.95 : 0.35,
+      blending: THREE.AdditiveBlending
+    })
+  );
+  sphere.position.copy(node.pos);
+  completedSpheresGroup.add(sphere);
+
+  if (isCompleted) {
+    // Add pulsing micro-halo ring
+    const miniRing = new THREE.Mesh(
+      new THREE.RingGeometry(3.0, 3.6, 24),
+      new THREE.MeshBasicMaterial({ color: 0xB6FF3B, transparent: true, opacity: 0.5, side: THREE.DoubleSide, blending: THREE.AdditiveBlending })
+    );
+    miniRing.position.copy(node.pos);
+    miniRing.rotation.x = Math.PI * 0.5;
+    completedSpheresGroup.add(miniRing);
+
+    // Dynamic Synaptic Filament connecting from Orb to each completed node
+    const curve = new THREE.QuadraticBezierCurve3(
+      activeNodePos,
+      new THREE.Vector3((activeNodePos.x + node.pos.x) * 0.5 + (Math.random() - 0.5) * 12, (activeNodePos.y + node.pos.y) * 0.5 + 8, (activeNodePos.z + node.pos.z) * 0.5),
+      node.pos
+    );
+    const tubeGeom = new THREE.TubeGeometry(curve, 24, 0.32, 6, false);
+    const tubeMat = new THREE.MeshBasicMaterial({
+      color: 0xB6FF3B,
+      transparent: true,
+      opacity: 0.28,
+      blending: THREE.AdditiveBlending
+    });
+    lobeGroup.add(new THREE.Mesh(tubeGeom, tubeMat));
+  }
+});
+
+// Ambient Tactical Depth Particles (Lime + Cyan sparks)
+const SPARK_COUNT = 380;
+const sparkGeo = new THREE.BufferGeometry();
+const sparkPos = new Float32Array(SPARK_COUNT * 3);
+for (let i = 0; i < SPARK_COUNT * 3; i += 3) {
+  sparkPos[i] = (Math.random() - 0.5) * 220;
+  sparkPos[i + 1] = (Math.random() - 0.5) * 180;
+  sparkPos[i + 2] = (Math.random() - 0.5) * 160;
+}
+sparkGeo.setAttribute('position', new THREE.BufferAttribute(sparkPos, 3));
+const sparkMat = new THREE.PointsMaterial({
+  color: 0xB6FF3B,
+  size: 1.6,
+  transparent: true,
+  opacity: 0.45,
+  blending: THREE.AdditiveBlending
+});
+const sparkPoints = new THREE.Points(sparkGeo, sparkMat);
+scene.add(sparkPoints);
+
+// Lighting setup
+const ambientLight = new THREE.AmbientLight(0x060912, 1.5);
+scene.add(ambientLight);
+
+const pointLightOrb = new THREE.PointLight(0xB6FF3B, 3.8, 140);
+pointLightOrb.position.copy(activeNodePos);
+scene.add(pointLightOrb);
+
+const pointLightAmbient = new THREE.PointLight(0x00E5FF, 1.2, 180);
+pointLightAmbient.position.set(60, 40, -50);
+scene.add(pointLightAmbient);
+
+// Interactive Parallax
+let mouseX = 0;
+let mouseY = 0;
+window.addEventListener('mousemove', (e) => {
+  mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+  mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+});
+
+// Animation Loop
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsed = clock.getElapsedTime();
+
+  // Subtle breathing undulation of the fintech cluster
+  lobeGroup.rotation.y = Math.sin(elapsed * 0.15) * 0.08;
+  lobeGroup.rotation.x = Math.cos(elapsed * 0.12) * 0.04;
+
+  // Orb pulsation & spin
+  const pulse = 1.0 + Math.sin(elapsed * 4.8) * 0.09;
+  orbHalo.scale.set(pulse, pulse, pulse);
+  orbCorona.scale.set(pulse * 1.06, pulse * 1.06, pulse * 1.06);
+  ringOrb.rotation.z += 0.012;
+  ringOrb.rotation.y += 0.008;
+
+  // Camera parallax tracking
+  camera.position.x += (mouseX * 12 - camera.position.x) * 0.04;
+  camera.position.y += (-mouseY * 8 + 10 - camera.position.y) * 0.04;
+  camera.lookAt(-5, 8, 5);
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_8 -->
+<!-- Precision Tactical Grid & Vignette Overlay -->
+<div class="absolute inset-0 tactical-grid pointer-events-none z-10 opacity-70"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(5,6,10,0.85)_100%)] pointer-events-none z-10"></div>
+<!-- HUD SVG Vector Connectors Layer (Anchoring Glass Cards to 3D Nodes) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-20" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="limeGradLine" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#B6FF3B" stop-opacity="0.95"></stop>
+<stop offset="100%" stop-color="#B6FF3B" stop-opacity="0.15"></stop>
+</lineargradient>
+<lineargradient id="cyanGradLine" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#B6FF3B" stop-opacity="0.2"></stop>
+</lineargradient>
+<filter height="200%" id="glow-dot" width="200%" x="-50%" y="-50%">
+<fegaussianblur in="SourceGraphic" result="blur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Connector: Active Card (Patrick Collison) to 3D Orb Node -->
+<path d="M 450 360 L 530 380 L 585 410" fill="none" stroke="url(#limeGradLine)" stroke-dasharray="4 3" stroke-width="1.75"></path>
+<circle cx="585" cy="410" fill="#B6FF3B" filter="url(#glow-dot)" r="5"></circle>
+<circle cx="585" cy="410" fill="none" opacity="0.6" r="11" stroke="#B6FF3B" stroke-width="1"></circle>
+<!-- Connector: Card A (Nithin Kamath) to Completed Node -->
+<path d="M 1030 185 L 940 215 L 880 235" fill="none" opacity="0.85" stroke="url(#limeGradLine)" stroke-dasharray="3 3" stroke-width="1.2"></path>
+<circle cx="880" cy="235" fill="#B6FF3B" r="3.5"></circle>
+<!-- Connector: Card B (Kunal Shah) to Completed Node -->
+<path d="M 1030 370 L 930 385 L 850 405" fill="none" opacity="0.85" stroke="url(#limeGradLine)" stroke-dasharray="3 3" stroke-width="1.2"></path>
+<circle cx="850" cy="405" fill="#B6FF3B" r="3.5"></circle>
+<!-- Connector: Card C (Vijay Shekhar Sharma) to Completed Node -->
+<path d="M 1030 555 L 920 545 L 820 530" fill="none" opacity="0.85" stroke="url(#limeGradLine)" stroke-dasharray="3 3" stroke-width="1.2"></path>
+<circle cx="820" cy="530" fill="#B6FF3B"></circle>
+</svg>
+<!-- TOP BAR (QUORUM Design Standard) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 max-w-[1440px] mx-auto h-14 bg-[#121318]/85 backdrop-blur-md border-b border-[#232838] shadow-2xl">
+<!-- Left: Brand Logo & Session Badge -->
+<div class="flex items-center gap-4">
+<div class="font-headline text-[18px] tracking-wider uppercase text-primary font-bold flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-primary-container rounded-xs shadow-[0_0_8px_#00E5FF]"></span>
+<span>QUORUM</span>
+</div>
+<div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-lowest/90 border border-outline-variant/60">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-lime-dot"></span>
+<span class="font-telemetry text-[11px] text-on-surface-variant uppercase tracking-wider">
+          NEURAL ORCHESTRATION // 03 COUNCIL - EXPERT DELIBERATION
+        </span>
+</div>
+</div>
+<!-- Center: Step Progress Navigation -->
+<nav class="hidden md:flex items-center gap-7">
+<div class="flex items-center gap-1.5 font-telemetry text-[11px] text-outline hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>01 SUBMIT</span>
+</div>
+<span class="text-outline-variant text-[10px]">&gt;</span>
+<div class="flex items-center gap-1.5 font-telemetry text-[11px] text-outline hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>02 WAR ROOM</span>
+</div>
+<span class="text-outline-variant text-[10px]">&gt;</span>
+<div class="flex items-center gap-1.5 text-primary-container font-telemetry text-[11px] font-semibold border-b-2 border-primary-container pb-1 drop-shadow-[0_0_8px_rgba(0,229,255,0.4)] cursor-pointer">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span>03 COUNCIL</span>
+</div>
+<span class="text-outline-variant text-[10px]">&gt;</span>
+<div class="font-telemetry text-[11px] text-outline hover:text-on-surface transition-colors pb-1 cursor-pointer">
+<span>04 REPORT</span>
+</div>
+</nav>
+<!-- Right: Telemetry, Audio and Actions -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-3 px-2.5 py-1 rounded bg-surface-container-lowest/80 border border-outline-variant/40 text-outline">
+<span class="font-telemetry text-[11px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">speed</span> 9ms
+        </span>
+<span class="text-outline-variant">|</span>
+<button class="font-telemetry text-[11px] hover:text-on-surface flex items-center gap-1 text-on-surface-variant transition-colors" title="Toggle Synthesizer Frequency">
+<span class="material-symbols-outlined text-[13px] text-primary-container">graphic_eq</span>
+<span class="hidden sm:inline">AUDIO ON // 48kHz</span>
+</button>
+</div>
+<button class="font-telemetry text-[11px] uppercase px-3 py-1.5 rounded bg-surface-container-high hover:bg-[#1a1e2e] text-on-surface border border-outline-variant/60 hover:border-primary-container/40 transition-all active:scale-95 flex items-center gap-1">
+<span>SKIP ANIMATION</span>
+<span class="text-primary-container font-bold">&gt;&gt;</span>
+</button>
+</div>
+</header>
+<!-- TOP-CENTER FLOATING COUNTER PILL -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-40">
+<div class="flex items-center gap-3 px-4 py-2 rounded-full bg-[#080B12]/90 backdrop-blur-md border border-secondary/40 shadow-[0_0_24px_rgba(182,255,59,0.22)]">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-headline text-[13px] text-on-surface font-semibold tracking-wide">
+          18 of 22 Experts Responded
+        </span>
+</div>
+<span class="h-3.5 w-px bg-outline-variant"></span>
+<span class="font-telemetry text-[10px] text-secondary font-bold tracking-wider px-2 py-0.5 rounded bg-secondary/10 border border-secondary/30">
+        81.8% QUORUM THRESHOLD REACHED
+      </span>
+</div>
+</div>
+<!-- MAIN SCENE OVERLAY: FLOATING GLASS CARDS ANCHORED TO NODES -->
+<main class="relative z-30 w-full h-[calc(100vh-100px)] mt-14 px-8 max-w-[1440px] mx-auto pointer-events-none">
+<!-- 1. ACTIVE EXPERT CARD (Large, glowing lime border #B6FF3B, Center-Left) -->
+<div class="absolute left-6 lg:left-12 top-24 w-[420px] pointer-events-auto rounded-xl bg-[#090C14]/88 backdrop-blur-xl border border-secondary/90 lime-glow-active transition-all">
+<!-- Card Status Header -->
+<div class="flex items-center justify-between px-4 py-2.5 border-b border-outline-variant/40 bg-surface-container-lowest/80 rounded-t-xl">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded font-telemetry text-[10px] uppercase bg-secondary/15 text-secondary border border-secondary/40 flex items-center gap-1.5 font-bold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-lime-dot"></span>
+            ACTIVE DELIBERATION // NODE #01
+          </span>
+</div>
+<div class="flex items-center gap-1.5 text-outline">
+<span class="font-telemetry text-[11px] text-secondary font-mono font-medium">FINTECH LOBE</span>
+</div>
+</div>
+<!-- Expert Identity Details -->
+<div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<!-- Monogram Avatar -->
+<div class="w-11 h-11 rounded-lg bg-surface-container-high border border-secondary/60 flex items-center justify-center text-secondary font-headline text-[16px] font-bold shadow-[0_0_12px_rgba(182,255,59,0.3)]">
+              PC
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline text-[18px] text-on-surface font-bold tracking-tight">Patrick Collison</h2>
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#B6FF3B]" title="Fintech Core Node"></span>
+</div>
+<p class="font-body text-[12px] text-outline">Founder, Stripe <span class="text-outline-variant">•</span> Global Payments Infrastructure</p>
+</div>
+</div>
+<!-- Target Status Badge -->
+<div class="text-right">
+<span class="font-telemetry text-[10px] text-outline block uppercase tracking-wider">TARGET VECTOR</span>
+<span class="font-telemetry text-[11px] text-primary-container font-mono font-semibold">STRESS TEST 02</span>
+</div>
+</div>
+<!-- Live Interrogation Stream Feed -->
+<div class="p-4 rounded-lg bg-surface-container-lowest/95 border border-outline-variant/50 mb-4">
+<div class="flex items-center gap-2 mb-2 text-outline font-telemetry text-[10px] tracking-wider uppercase">
+<span class="material-symbols-outlined text-[13px] text-secondary">terminal</span>
+<span>REAL-TIME SCRUTINY STREAM</span>
+</div>
+<p class="font-body text-[14px] text-on-surface leading-relaxed font-normal">
+            "Patrick Collison is analyzing payments infrastructure risk and market timing..."
+            <span class="inline-block w-2 h-4 ml-1 bg-secondary blinking-cursor align-middle shadow-[0_0_8px_#B6FF3B]"></span>
+</p>
+</div>
+<!-- Telemetry Metrics Grid -->
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<div class="p-2.5 rounded bg-[#10131E]/80 border border-outline-variant/40">
+<span class="block font-telemetry text-[10px] text-outline uppercase tracking-wider">Scrutiny Angle</span>
+<span class="font-body text-[12px] text-on-surface font-medium">Regulatory Moats &amp; Float Arbitrage</span>
+</div>
+<div class="p-2.5 rounded bg-[#10131E]/80 border border-outline-variant/40">
+<span class="block font-telemetry text-[10px] text-outline uppercase tracking-wider">Inference Latency</span>
+<span class="font-telemetry text-[12px] text-primary-container font-mono font-semibold">420ms (P99)</span>
+</div>
+<div class="p-2.5 rounded bg-[#10131E]/80 border border-outline-variant/40 col-span-2 flex items-center justify-between">
+<div>
+<span class="block font-telemetry text-[10px] text-outline uppercase tracking-wider">Live Confidence</span>
+<span class="font-telemetry text-[15px] text-secondary font-bold">78.4%</span>
+</div>
+<!-- Segmented Meter -->
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-3.5 rounded-xs bg-secondary"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-secondary"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-secondary"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-secondary"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-secondary"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-secondary"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-secondary"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-secondary/80"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-outline-variant/40"></span>
+<span class="w-2.5 h-3.5 rounded-xs bg-outline-variant/30"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Card Bottom Anchor Tag -->
+<div class="px-5 py-2 rounded-b-xl bg-surface-container-lowest/80 border-t border-outline-variant/30 flex items-center justify-between font-telemetry text-[11px] text-outline">
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          ORB DOCKED: FINTECH_CORE_PATRICK
+        </span>
+<span class="text-secondary font-mono font-medium">ID: #0082-ALPHA</span>
+</div>
+</div>
+<!-- 2. NODE CLUSTER HUD STATUS PILL (Right Top Annotation) -->
+<div class="absolute right-6 lg:right-12 top-20 pointer-events-auto flex items-center gap-2 bg-[#080B12]/90 backdrop-blur-md p-1.5 rounded-lg border border-outline-variant/50 shadow-xl">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded bg-secondary/10 border border-secondary/30">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#B6FF3B]"></span>
+<span class="font-telemetry text-[10px] text-secondary font-bold uppercase tracking-wider">18 PRIMED &amp; SCORED</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded bg-[#131622] border border-outline-variant/40">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-telemetry text-[10px] text-outline uppercase font-semibold tracking-wider">4 AWAITING SYNTHESIS</span>
+</div>
+</div>
+<!-- 3. COMPLETED EXPERT CARDS (Compact Stack on Right Side) -->
+<div class="absolute right-6 lg:right-12 top-32 w-80 lg:w-[360px] space-y-3 pointer-events-auto">
+<!-- CARD A: Nithin Kamath -->
+<div class="rounded-xl bg-[#090C14]/85 backdrop-blur-md border border-outline-variant/50 hover:border-secondary/60 transition-all p-3.5 shadow-xl hover:shadow-[0_0_16px_rgba(182,255,59,0.15)]">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant/60 flex items-center justify-center font-telemetry text-[11px] font-bold text-on-surface">
+              NK
+            </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline text-[14px] text-on-surface font-bold leading-tight">Nithin Kamath</h3>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<p class="font-telemetry text-[11px] text-outline">Founder, Zerodha</p>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded-full bg-secondary/20 border border-secondary/40 text-secondary font-telemetry text-[11px] font-bold shadow-[0_0_8px_rgba(182,255,59,0.3)]">
+            7.8
+          </div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/30">
+<p class="font-body text-[12px] text-on-surface-variant italic leading-snug">
+            "Float income is defensible if settlement cycles remain under 24 hours, but watch Indian/SE Asian repo spreads."
+          </p>
+</div>
+</div>
+<!-- CARD B: Kunal Shah -->
+<div class="rounded-xl bg-[#090C14]/85 backdrop-blur-md border border-outline-variant/50 hover:border-secondary/60 transition-all p-3.5 shadow-xl hover:shadow-[0_0_16px_rgba(182,255,59,0.15)]">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant/60 flex items-center justify-center font-telemetry text-[11px] font-bold text-on-surface">
+              KS
+            </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline text-[14px] text-on-surface font-bold leading-tight">Kunal Shah</h3>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<p class="font-telemetry text-[11px] text-outline">Founder, CRED</p>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 font-telemetry text-[11px] font-bold">
+            6.9
+          </div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/30">
+<p class="font-body text-[12px] text-on-surface-variant italic leading-snug">
+            "Delta 4 efficiency is dubious if onboarding still needs manual invoice verification."
+          </p>
+</div>
+</div>
+<!-- CARD C: Vijay Shekhar Sharma -->
+<div class="rounded-xl bg-[#090C14]/85 backdrop-blur-md border border-outline-variant/50 hover:border-secondary/60 transition-all p-3.5 shadow-xl hover:shadow-[0_0_16px_rgba(182,255,59,0.15)]">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant/60 flex items-center justify-center font-telemetry text-[11px] font-bold text-on-surface">
+              VS
+            </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline text-[14px] text-on-surface font-bold leading-tight">Vijay Shekhar Sharma</h3>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<p class="font-telemetry text-[11px] text-outline">Founder, Paytm</p>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded-full bg-secondary/20 border border-secondary/40 text-secondary font-telemetry text-[11px] font-bold shadow-[0_0_8px_rgba(182,255,59,0.3)]">
+            7.4
+          </div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest/80 border border-outline-variant/30">
+<p class="font-body text-[12px] text-on-surface-variant italic leading-snug">
+            "Instant liquidity will face severe bank partner escrow friction in cross-border corridors."
+          </p>
+</div>
+</div>
+</div>
+</main>
+<!-- BOTTOM CONTROLS & TIMELINE PROGRESS RAIL (Keyframe 2 of 7) -->
+<footer class="fixed bottom-9 left-0 w-full z-40 px-8 max-w-[1440px] mx-auto pointer-events-auto">
+<div class="p-3 rounded-xl bg-[#080B12]/92 backdrop-blur-md border border-outline-variant/50 shadow-2xl">
+<!-- Scrub Bar Status Header -->
+<div class="flex items-center justify-between text-telemetry text-[11px] mb-2 px-1">
+<div class="flex items-center gap-3">
+<button class="w-5 h-5 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 text-on-surface">
+<span class="material-symbols-outlined text-[13px]">pause</span>
+</button>
+<span class="text-secondary font-semibold font-mono">
+            Keyframe 2 of 7 // Elapsed 00:08.2s
+          </span>
+<span class="text-outline-variant">|</span>
+<span class="text-outline uppercase tracking-wider font-mono">
+            STAGE: ADVERSARIAL EXPERT DELIBERATION
+          </span>
+</div>
+<div class="flex items-center gap-4 text-outline font-mono">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            BUFFERED: 100%
+          </span>
+<span>|</span>
+<span class="text-primary-container font-semibold">60 FPS // HD-NEURAL</span>
+</div>
+</div>
+<!-- Segmented Rail Steps -->
+<div class="relative pt-1 pb-1">
+<!-- Background Track -->
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-primary-container rounded-full" style="width: 32%;"></div>
+</div>
+<!-- Phase Checkpoints -->
+<div class="flex items-center justify-between mt-2.5 px-0.5 text-telemetry text-[10px] tracking-wider uppercase">
+<!-- 01 ENTRY -->
+<div class="flex flex-col items-center gap-1 opacity-75">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-on-surface-variant">01 ENTRY</span>
+</div>
+<!-- 02 ROUTING -->
+<div class="flex flex-col items-center gap-1 opacity-75">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-on-surface-variant">02 ROUTING</span>
+</div>
+<!-- 03 ANALYSIS (ACTIVE) -->
+<div class="flex flex-col items-center gap-1">
+<div class="relative flex h-3 w-3 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary shadow-[0_0_8px_#B6FF3B]"></span>
+</div>
+<span class="text-secondary font-bold border-b border-secondary pb-0.5 shadow-[0_0_6px_rgba(182,255,59,0.3)]">03 ANALYSIS</span>
+</div>
+<!-- 04 CROSS-DOMAIN -->
+<div class="flex flex-col items-center gap-1 opacity-40">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<span class="text-outline">04 CROSS-DOMAIN</span>
+</div>
+<!-- 05 SYNTHESIS -->
+<div class="flex flex-col items-center gap-1 opacity-40">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<span class="text-outline">05 SYNTHESIS</span>
+</div>
+<!-- 06 EXIT -->
+<div class="flex flex-col items-center gap-1 opacity-40">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<span class="text-outline">06 EXIT</span>
+</div>
+<!-- 07 REPORT -->
+<div class="flex flex-col items-center gap-1 opacity-40">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<span class="text-outline">07 REPORT</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- PERSISTENT FOOTER DISCLAIMER -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex items-center justify-between px-6 h-9 bg-[#040508]/95 border-t border-outline-variant/30 text-telemetry text-[11px] text-outline">
+<div class="flex items-center gap-4">
+<span class="hover:text-primary-container transition-colors cursor-pointer">SYSTEM DIAGNOSTICS</span>
+<span class="text-outline-variant">•</span>
+<span class="hover:text-primary-container transition-colors cursor-pointer">CLEARANCE LEVEL 4</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-secondary">lock</span>
+<span>AI-simulated perspectives inspired by public work. Not actual statements by these individuals.</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-mono text-secondary">SECURITY AUDIT // VERIFIED</span>
+</div>
+</div>
+</body>
+</html>

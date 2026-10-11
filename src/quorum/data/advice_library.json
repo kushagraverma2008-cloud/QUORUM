@@ -1,0 +1,99 @@
+{
+  "Paul Graham": {
+    "name": "Paul Graham",
+    "topics": [
+      "Startup ideas, ambition, and early founder judgment"
+    ],
+    "sources": [
+      "Paul Graham On Startups, Ambition, and Great Founders"
+    ],
+    "advice": [
+      "Choose a problem that feels difficult enough to matter. The most consequential startup ideas often look intimidating before they look inevitable.",
+      "Examine the founder's motivation as seriously as the market story. Serious ambition needs persistence, curiosity, and willingness to work through uncertainty.",
+      "Use new technical capability as a prompt to look again at old constraints, rather than assuming the technology itself is the company."
+    ],
+    "warnings": [
+      "Do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity.",
+      "Do not mistake ambition for a large market-size story without a credible path through the hard parts."
+    ],
+    "questions": [
+      "What makes this problem hard enough that others have avoided solving it?",
+      "Why will this founding team continue pursuing it when progress becomes slow or uncertain?"
+    ]
+  },
+  "Michael Seibel": {
+    "name": "Michael Seibel",
+    "topics": [
+      "Startup idea testing and early product execution"
+    ],
+    "sources": [
+      "How to Get and Test Startup Ideas",
+      "How To Build Product As A Small Startup"
+    ],
+    "advice": [
+      "Begin with a problem, preferably one you understand personally or are unusually well placed to solve.",
+      "After finding a promising problem, build a minimum viable product and put it in front of initial users quickly.",
+      "Use early conversations and early use to test whether the problem is real before investing heavily in features.",
+      "Use a repeatable product-release rhythm rather than treating product work as an endless feature list.",
+      "Give one person clear product ownership and connect each product cycle to a measurable outcome.",
+      "Turn ideas, bugs, and experiments into an explicit backlog; estimate effort, choose deliberately, assign work, test, and ship.",
+      "Tackle consequential difficult work rather than filling the roadmap with only easy tasks."
+    ],
+    "warnings": [
+      "A polished idea without a clear problem or an initial-user path is weak evidence of demand.",
+      "Do not wait for perfect certainty before testing; the first useful evidence comes from real users.",
+      "Feature accumulation without a KPI or product theme creates activity without learning.",
+      "A small team can lose momentum when nobody owns the product decision process."
+    ],
+    "questions": [
+      "Why are you qualified to work on this problem?",
+      "Who will use the first version, and how will you reach them?",
+      "Which measurable customer or business outcome should this product cycle improve?",
+      "What hard work are we avoiding, and is it the work that matters most?"
+    ]
+  },
+  "Dalton Caldwell": {
+    "name": "Dalton Caldwell",
+    "topics": [
+      "Founder communication and accelerator readiness"
+    ],
+    "sources": [
+      "How to Apply and Succeed at Y Combinator"
+    ],
+    "advice": [
+      "Explain what you are building plainly. Clear communication signals clear thinking and makes it easier for others to understand the opportunity.",
+      "Tell a coherent founder-and-problem story: what happened, what you learned, what you are building, and why your team is suited to do it.",
+      "Do not assume that lacking a famous network prevents progress; make the work and evidence understandable on their own merits."
+    ],
+    "warnings": [
+      "Avoid vague language, jargon, and claims that conceal the actual product, customer, or progress.",
+      "Do not treat fundraising or an application as a substitute for building evidence with users."
+    ],
+    "questions": [
+      "Can a stranger understand the product, customer, and traction in a few sentences?",
+      "Does the story show evidence, or only aspiration?"
+    ]
+  },
+  "Geoff Ralston": {
+    "name": "Geoff Ralston",
+    "topics": [
+      "Founder persistence and customer-focused startup building"
+    ],
+    "sources": [
+      "Geoff Ralston Parting Advice"
+    ],
+    "advice": [
+      "Keep the work centered on making something people want; it is the discipline that should survive changing plans and startup pressure.",
+      "Treat startup progress as a continuing practice: keep learning from customers, keep improving the product, and keep moving forward after a program or milestone ends.",
+      "Use founder communities for momentum and feedback, but maintain responsibility for the actual customer problem."
+    ],
+    "warnings": [
+      "A completed course, accelerator, pitch, or launch is not proof that the company has found product-market fit.",
+      "Do not let external validation replace persistent contact with the people the product is meant to serve."
+    ],
+    "questions": [
+      "What evidence says that people want this now?",
+      "What will you do next week that gets the product closer to users?"
+    ]
+  }
+}

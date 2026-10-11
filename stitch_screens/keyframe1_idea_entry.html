@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QUORUM // The Council Theater: Idea Entry</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-container": "#00626e",
+            "on-secondary-fixed-variant": "#334f00",
+            "surface": "#121318",
+            "surface-bright": "#38393e",
+            "inverse-on-surface": "#2f3036",
+            "on-surface": "#e3e2e9",
+            "secondary-fixed-dim": "#95da03",
+            "surface-variant": "#33343a",
+            "on-secondary": "#223600",
+            "on-tertiary": "#00354a",
+            "background": "#121318",
+            "on-background": "#e3e2e9",
+            "inverse-primary": "#006875",
+            "surface-tint": "#00daf3",
+            "on-primary-fixed-variant": "#004f58",
+            "tertiary": "#dbf0ff",
+            "surface-container-highest": "#33343a",
+            "primary-container": "#00e5ff",
+            "inverse-surface": "#e3e2e9",
+            "surface-dim": "#121318",
+            "on-error": "#690005",
+            "on-primary-fixed": "#001f24",
+            "on-error-container": "#ffdad6",
+            "on-surface-variant": "#bac9cc",
+            "on-tertiary-fixed-variant": "#004c69",
+            "on-tertiary-fixed": "#001e2c",
+            "error-container": "#93000a",
+            "primary": "#c3f5ff",
+            "secondary-fixed": "#aff833",
+            "surface-container": "#1e1f25",
+            "on-primary": "#00363d",
+            "surface-container-low": "#1a1b20",
+            "tertiary-container": "#99d9ff",
+            "tertiary-fixed": "#c4e7ff",
+            "surface-container-high": "#292a2f",
+            "secondary": "#aff833",
+            "primary-fixed-dim": "#00daf3",
+            "on-tertiary-container": "#006083",
+            "outline-variant": "#3b494c",
+            "secondary-container": "#95da03",
+            "on-secondary-container": "#3c5b00",
+            "outline": "#849396",
+            "error": "#ffb4ab",
+            "tertiary-fixed-dim": "#7bd0ff",
+            "primary-fixed": "#9cf0ff",
+            "surface-container-lowest": "#0d0e13",
+            "on-secondary-fixed": "#121f00"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "headline-lg": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "body-sm": ["Inter"],
+            "display-hero": ["Space Grotesk"],
+            "telemetry-md": ["JetBrains Mono"],
+            "telemetry-lg": ["JetBrains Mono"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-md": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "display-hero-mobile": ["Space Grotesk"],
+            "body-lg": ["Inter"],
+            "telemetry-sm": ["JetBrains Mono"]
+          },
+          fontSize: {
+            "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }],
+            "display-hero": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "700" }],
+            "telemetry-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }],
+            "telemetry-lg": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "label-caps": ["10px", { lineHeight: "14px", letterSpacing: "0.12em", fontWeight: "700" }],
+            "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }],
+            "display-hero-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "telemetry-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Obsidian base and subtle tactical grid */
+    body {
+      background-color: #05060A;
+      overflow: hidden;
+      user-select: none;
+    }
+    .grid-mesh {
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 70%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 32px 32px, 32px 32px;
+    }
+    .theater-vignette {
+      background: radial-gradient(circle at center, transparent 35%, rgba(5, 6, 10, 0.65) 75%, rgba(5, 6, 10, 0.96) 100%);
+    }
+    .hud-glass {
+      background: rgba(13, 17, 27, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .hud-glow-cyan {
+      box-shadow: 0 0 24px -2px rgba(0, 229, 255, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    }
+    .hud-glow-lime {
+      box-shadow: 0 0 24px -2px rgba(182, 255, 59, 0.28), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+    }
+    @keyframes tacticalPulse {
+      0%, 100% { opacity: 0.9; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.96); }
+    }
+    .pulse-tactical {
+      animation: tacticalPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(1000%); }
+    }
+    .animate-scan {
+      animation: scanline 8s linear infinite;
+    }
+  </style>
+</head>
+<body class="relative w-screen h-screen m-0 p-0 text-on-surface font-body-md overflow-hidden bg-surface-dim antialiased selection:bg-primary-container selection:text-surface-dim">
+<!-- LAYER 0: Canvas Grid & Depth Field -->
+<div class="absolute inset-0 grid-mesh pointer-events-none z-0"></div>
+<!-- LAYER 1: Core 3D Theater Experience -->
+<div class="absolute inset-0 w-full h-full z-10 overflow-hidden">
+<!-- STITCH_THREEJS_START:ANIMATION_6 class="absolute inset-0 w-full h-full bg-transparent" -->
+<div class="absolute inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_6" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_6');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js interactive scene for QUORUM: The Council Theater (Keyframe 1: Idea Entry)
+const container = document.getElementById('scene-container') || document.body;
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x05060a, 0.0018);
+
+const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 2000);
+camera.position.set(0, 15, 230);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.25;
+container.appendChild(renderer.domElement);
+
+// Sector Colors defined in design system:
+// Technology & Software: #00E5FF (Cyan)
+// Fintech: #B6FF3B (Lime)
+// Consumer Goods: #FF4FD8 (Magenta)
+// Healthcare & Biotech: #FF5C5C (Red)
+// Energy & Climate: #FFC400 (Amber)
+// Education & Media: #9B6BFF (Violet)
+// Mobility & Logistics: #2DFFA8 (Mint)
+// Functional Domains: #E2F1FF (White-Blue)
+
+const sectorColors = [
+  new THREE.Color(0x00E5FF), // Tech (Cyan)
+  new THREE.Color(0xB6FF3B), // Fintech (Lime Green) - ACTIVE TARGET
+  new THREE.Color(0xFF4FD8), // Consumer (Magenta)
+  new THREE.Color(0xFF5C5C), // Healthcare (Red)
+  new THREE.Color(0xFFC400), // Energy (Amber)
+  new THREE.Color(0x9B6BFF), // Media/Edu (Violet)
+  new THREE.Color(0x2DFFA8), // Mobility (Mint)
+];
+
+const whiteBlueColor = new THREE.Color(0xD8F0FF);
+
+// Lobe centers in 3D brain arrangement (ellipsoidal brain hemisphere topology)
+const lobeCenters = [
+  new THREE.Vector3(25, 28, 10),   // 0: Tech (Upper Left Front)
+  new THREE.Vector3(-28, 12, 22),  // 1: Fintech (Front Left Central - TARGET)
+  new THREE.Vector3(38, -15, 15),  // 2: Consumer (Right Front Low)
+  new THREE.Vector3(-36, -20, -10),// 3: Healthcare (Left Low Back)
+  new THREE.Vector3(15, -28, -25), // 4: Energy (Base Back)
+  new THREE.Vector3(-15, 32, -20), // 5: Education (Upper Back)
+  new THREE.Vector3(30, 10, -30),  // 6: Mobility (Right Back)
+];
+
+// Group for the entire brain assembly
+const brainGroup = new THREE.Group();
+brainGroup.position.set(32, 4, 0); // slightly right of center to balance ingestion pipe on left
+scene.add(brainGroup);
+
+// Generate Nodes & Edges
+const TOTAL_NODES = 2600;
+const nodePositions = new Float32Array(TOTAL_NODES * 3);
+const nodeColors = new Float32Array(TOTAL_NODES * 3);
+const nodeSizes = new Float32Array(TOTAL_NODES);
+
+const nodesArray = [];
+
+for (let i = 0; i < TOTAL_NODES; i++) {
+  // pick a lobe
+  const lobeIdx = Math.floor(Math.random() * lobeCenters.length);
+  const center = lobeCenters[lobeIdx];
+  const isFintech = (lobeIdx === 1);
+  
+  // Spread in lobe cluster with organic falloff
+  const radius = 18 + Math.random() * 22;
+  const theta = Math.random() * Math.PI * 2;
+  const phi = Math.acos(2 * Math.random() - 1);
+  
+  // Ellipsoid stretch
+  const px = center.x + radius * Math.sin(phi) * Math.cos(theta) * 0.95;
+  const py = center.y + radius * Math.sin(phi) * Math.sin(theta) * 0.85;
+  const pz = center.z + radius * Math.cos(phi) * 1.1;
+
+  nodePositions[i * 3] = px;
+  nodePositions[i * 3 + 1] = py;
+  nodePositions[i * 3 + 2] = pz;
+
+  const baseCol = sectorColors[lobeIdx].clone();
+  
+  // Non-fintech lobes are significantly dimmed as specified
+  if (!isFintech) {
+    baseCol.multiplyScalar(0.24); // dimmed ambient state
+  } else {
+    baseCol.multiplyScalar(1.4);  // active glowing fintech lobe
+  }
+
+  nodeColors[i * 3] = baseCol.r;
+  nodeColors[i * 3 + 1] = baseCol.g;
+  nodeColors[i * 3 + 2] = baseCol.b;
+
+  nodeSizes[i] = isFintech ? (2.8 + Math.random() * 3.5) : (1.4 + Math.random() * 1.8);
+
+  nodesArray.push(new THREE.Vector3(px, py, pz));
+}
+
+// Node Points Geometry
+const nodesGeometry = new THREE.BufferGeometry();
+nodesGeometry.setAttribute('position', new THREE.BufferAttribute(nodePositions, 3));
+nodesGeometry.setAttribute('color', new THREE.BufferAttribute(nodeColors, 3));
+nodesGeometry.setAttribute('size', new THREE.BufferAttribute(nodeSizes, 1));
+
+// Custom Shader for glowing soft circular particles
+const nodeVertexShader = `
+  attribute float size;
+  varying vec3 vColor;
+  void main() {
+    vColor = color;
+    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+    gl_PointSize = size * (260.0 / -mvPosition.z);
+    gl_Position = projectionMatrix * mvPosition;
+  }
+`;
+
+const nodeFragmentShader = `
+  varying vec3 vColor;
+  void main() {
+    float dist = length(gl_PointCoord - vec2(0.5));
+    if (dist > 0.5) discard;
+    float glow = pow(1.0 - dist * 2.0, 1.6);
+    gl_FragColor = vec4(vColor * 1.5, glow * 0.95);
+  }
+`;
+
+const nodeMaterial = new THREE.ShaderMaterial({
+  vertexShader: nodeVertexShader,
+  fragmentShader: nodeFragmentShader,
+  vertexColors: true,
+  transparent: true,
+  blending: THREE.AdditiveBlending,
+  depthWrite: false
+});
+
+const nodePoints = new THREE.Points(nodesGeometry, nodeMaterial);
+brainGroup.add(nodePoints);
+
+// Synaptic Inter-Neural Lines (Edges)
+const linePositions = [];
+const lineColors = [];
+const MAX_EDGES = 3200;
+let edgesCount = 0;
+
+for (let i = 0; i < TOTAL_NODES && edgesCount < MAX_EDGES; i += 2) {
+  for (let j = i + 1; j < Math.min(i + 14, TOTAL_NODES); j++) {
+    const p1 = nodesArray[i];
+    const p2 = nodesArray[j];
+    const dist = p1.distanceTo(p2);
+    if (dist < 11.5) {
+      linePositions.push(p1.x, p1.y, p1.z);
+      linePositions.push(p2.x, p2.y, p2.z);
+
+      const c1 = new THREE.Color(nodeColors[i * 3], nodeColors[i * 3 + 1], nodeColors[i * 3 + 2]);
+      const c2 = new THREE.Color(nodeColors[j * 3], nodeColors[j * 3 + 1], nodeColors[j * 3 + 2]);
+      
+      c1.multiplyScalar(0.45);
+      c2.multiplyScalar(0.45);
+      
+      lineColors.push(c1.r, c1.g, c1.b);
+      lineColors.push(c2.r, c2.g, c2.b);
+      edgesCount++;
+    }
+  }
+}
+
+const lineGeometry = new THREE.BufferGeometry();
+lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
+lineGeometry.setAttribute('color', new THREE.Float32BufferAttribute(lineColors, 3));
+
+const lineMaterial = new THREE.LineBasicMaterial({
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.38,
+  blending: THREE.AdditiveBlending,
+  depthWrite: false
+});
+const lineSegments = new THREE.LineSegments(lineGeometry, lineMaterial);
+brainGroup.add(lineSegments);
+
+// Orbiting White-Blue Functional Domains Ring
+const ringGroup = new THREE.Group();
+brainGroup.add(ringGroup);
+
+const RING_RADIUS = 78;
+const RING_NODES = 160;
+const ringPositions = new Float32Array(RING_NODES * 3);
+const ringColorsArray = new Float32Array(RING_NODES * 3);
+const ringSizes = new Float32Array(RING_NODES);
+const ringNodeVectors = [];
+
+for (let i = 0; i < RING_NODES; i++) {
+  const angle = (i / RING_NODES) * Math.PI * 2;
+  const rx = Math.cos(angle) * RING_RADIUS;
+  const ry = Math.sin(angle * 3.0) * 8.5; // wavy orbital inclination
+  const rz = Math.sin(angle) * RING_RADIUS;
+
+  ringPositions[i * 3] = rx;
+  ringPositions[i * 3 + 1] = ry;
+  ringPositions[i * 3 + 2] = rz;
+
+  ringColorsArray[i * 3] = whiteBlueColor.r * 1.3;
+  ringColorsArray[i * 3 + 1] = whiteBlueColor.g * 1.3;
+  ringColorsArray[i * 3 + 2] = whiteBlueColor.b * 1.5;
+
+  ringSizes[i] = (i % 8 === 0) ? 4.5 : 2.0; // Major domain satellites vs micro nodes
+  ringNodeVectors.push(new THREE.Vector3(rx, ry, rz));
+}
+
+const ringGeometry = new THREE.BufferGeometry();
+ringGeometry.setAttribute('position', new THREE.BufferAttribute(ringPositions, 3));
+ringGeometry.setAttribute('color', new THREE.BufferAttribute(ringColorsArray, 3));
+ringGeometry.setAttribute('size', new THREE.BufferAttribute(ringSizes, 1));
+
+const ringPoints = new THREE.Points(ringGeometry, nodeMaterial);
+ringGroup.add(ringPoints);
+
+// Smooth orbital halo spline line
+const ringSplineCurve = new THREE.CatmullRomCurve3(ringNodeVectors, true);
+const ringTubeGeom = new THREE.TubeGeometry(ringSplineCurve, 120, 0.45, 6, true);
+const ringTubeMat = new THREE.MeshBasicMaterial({
+  color: 0x98D2FF,
+  transparent: true,
+  opacity: 0.28,
+  blending: THREE.AdditiveBlending
+});
+const ringHaloMesh = new THREE.Mesh(ringTubeGeom, ringTubeMat);
+ringGroup.add(ringHaloMesh);
+
+// Tilt the orbital ring with dramatic cinematic angle
+ringGroup.rotation.x = 0.55;
+ringGroup.rotation.z = -0.35;
+
+// Ingestion Conduit / Glass Pipeline on Left
+// Curve starts offscreen left and leads near the brain threshold
+const pipePoints = [
+  new THREE.Vector3(-190, 18, 50),
+  new THREE.Vector3(-150, 16, 42),
+  new THREE.Vector3(-110, 14, 30),
+  new THREE.Vector3(-75, 12, 18),
+  new THREE.Vector3(-45, 10, 8)
+];
+const pipeCurve = new THREE.CatmullRomCurve3(pipePoints);
+
+// Glass Tube Geometry
+const pipeTubeGeom = new THREE.TubeGeometry(pipeCurve, 70, 7.5, 24, false);
+const pipeGlassMat = new THREE.MeshPhysicalMaterial({
+  color: 0x00E5FF,
+  transparent: true,
+  opacity: 0.18,
+  roughness: 0.05,
+  metalness: 0.1,
+  transmission: 0.85,
+  ior: 1.4,
+  depthWrite: false,
+  blending: THREE.AdditiveBlending,
+  side: THREE.DoubleSide
+});
+const glassTubeMesh = new THREE.Mesh(pipeTubeGeom, pipeGlassMat);
+scene.add(glassTubeMesh);
+
+// Luminous Ring Ribs along the tube
+for (let t = 0.05; t <= 0.95; t += 0.12) {
+  const pt = pipeCurve.getPoint(t);
+  const tangent = pipeCurve.getTangent(t);
+  const ringGeom = new THREE.TorusGeometry(7.7, 0.35, 12, 32);
+  const ringMat = new THREE.MeshBasicMaterial({
+    color: 0x00E5FF,
+    transparent: true,
+    opacity: 0.55,
+    blending: THREE.AdditiveBlending
+  });
+  const torus = new THREE.Mesh(ringGeom, ringMat);
+  torus.position.copy(pt);
+  torus.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), tangent);
+  scene.add(torus);
+}
+
+// Ingestion Luminous Orb inside the tube
+const orbGroup = new THREE.Group();
+scene.add(orbGroup);
+
+// Position orb at ~65% progress down the pipe (Keyframe 1: Idea Entry)
+const ORB_T = 0.68;
+const orbOrigin = pipeCurve.getPoint(ORB_T);
+orbGroup.position.copy(orbOrigin);
+
+// Core Glow Sphere
+const orbCoreGeom = new THREE.SphereGeometry(3.6, 32, 32);
+const orbCoreMat = new THREE.MeshBasicMaterial({
+  color: 0xFFFFFF,
+  blending: THREE.AdditiveBlending
+});
+const orbCore = new THREE.Mesh(orbCoreGeom, orbCoreMat);
+orbGroup.add(orbCore);
+
+// Outer Halo Glow
+const orbHaloGeom = new THREE.SphereGeometry(6.5, 32, 32);
+const orbHaloMat = new THREE.MeshBasicMaterial({
+  color: 0xB6FF3B, // Lime fintech surge glow
+  transparent: true,
+  opacity: 0.75,
+  blending: THREE.AdditiveBlending
+});
+const orbHalo = new THREE.Mesh(orbHaloGeom, orbHaloMat);
+orbGroup.add(orbHalo);
+
+// Corona Aura
+const orbCoronaGeom = new THREE.SphereGeometry(10.5, 24, 24);
+const orbCoronaMat = new THREE.MeshBasicMaterial({
+  color: 0x00E5FF, // Cyan secondary aura
+  transparent: true,
+  opacity: 0.28,
+  blending: THREE.AdditiveBlending
+});
+const orbCorona = new THREE.Mesh(orbCoronaGeom, orbCoronaMat);
+orbGroup.add(orbCorona);
+
+// Light Trail trailing behind the orb inside the tube
+const trailCount = 35;
+const trailPos = [];
+const trailCol = [];
+for (let i = 0; i < trailCount; i++) {
+  const trailT = Math.max(0.01, ORB_T - (i * 0.014));
+  const pt = pipeCurve.getPoint(trailT);
+  // Add small noise
+  pt.x += (Math.random() - 0.5) * 1.5;
+  pt.y += (Math.random() - 0.5) * 1.5;
+  pt.z += (Math.random() - 0.5) * 1.5;
+  trailPos.push(pt.x, pt.y, pt.z);
+
+  const factor = 1.0 - (i / trailCount);
+  trailCol.push(0.7 * factor, 1.0 * factor, 0.4 * factor);
+}
+const trailGeom = new THREE.BufferGeometry();
+trailGeom.setAttribute('position', new THREE.Float32BufferAttribute(trailPos, 3));
+trailGeom.setAttribute('color', new THREE.Float32BufferAttribute(trailCol, 3));
+const trailMat = new THREE.LineBasicMaterial({
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.75,
+  blending: THREE.AdditiveBlending,
+  linewidth: 2
+});
+const trailLine = new THREE.Line(trailGeom, trailMat);
+scene.add(trailLine);
+
+// Dynamic Energy Beams splitting from Orb to Brain
+// 1. Bright Thick Lime Beam -> Fintech Lobe
+const fintechWorldTarget = lobeCenters[1].clone().add(brainGroup.position);
+const fintechBeamCurve = new THREE.QuadraticBezierCurve3(
+  orbOrigin,
+  new THREE.Vector3((orbOrigin.x + fintechWorldTarget.x) * 0.5 - 5, orbOrigin.y + 12, (orbOrigin.z + fintechWorldTarget.z) * 0.5 + 10),
+  fintechWorldTarget
+);
+
+const beamTubeGeom = new THREE.TubeGeometry(fintechBeamCurve, 40, 1.25, 12, false);
+const beamTubeMat = new THREE.MeshBasicMaterial({
+  color: 0xB6FF3B,
+  transparent: true,
+  opacity: 0.88,
+  blending: THREE.AdditiveBlending
+});
+const fintechBeamMesh = new THREE.Mesh(beamTubeGeom, beamTubeMat);
+scene.add(fintechBeamMesh);
+
+// Outer beam glow sleeve
+const beamSleeveGeom = new THREE.TubeGeometry(fintechBeamCurve, 40, 3.2, 12, false);
+const beamSleeveMat = new THREE.MeshBasicMaterial({
+  color: 0xB6FF3B,
+  transparent: true,
+  opacity: 0.28,
+  blending: THREE.AdditiveBlending
+});
+const fintechBeamSleeve = new THREE.Mesh(beamSleeveGeom, beamSleeveMat);
+scene.add(fintechBeamSleeve);
+
+// 2. Thinner Beams splitting to the Functional Domains Ring (White-Blue)
+const ringTargets = [
+  new THREE.Vector3(ringPositions[0], ringPositions[1], ringPositions[2]).applyMatrix4(ringGroup.matrixWorld),
+  new THREE.Vector3(ringPositions[40 * 3], ringPositions[40 * 3 + 1], ringPositions[40 * 3 + 2]).applyMatrix4(ringGroup.matrixWorld),
+  new THREE.Vector3(ringPositions[100 * 3], ringPositions[100 * 3 + 1], ringPositions[100 * 3 + 2]).applyMatrix4(ringGroup.matrixWorld)
+];
+
+ringTargets.forEach((targetPos, idx) => {
+  const curve = new THREE.QuadraticBezierCurve3(
+    orbOrigin,
+    new THREE.Vector3((orbOrigin.x + targetPos.x) * 0.5, orbOrigin.y - 8 + idx * 6, (orbOrigin.z + targetPos.z) * 0.5),
+    targetPos
+  );
+  const ringBeamGeom = new THREE.TubeGeometry(curve, 30, 0.45, 8, false);
+  const ringBeamMat = new THREE.MeshBasicMaterial({
+    color: 0xD8F0FF,
+    transparent: true,
+    opacity: 0.52,
+    blending: THREE.AdditiveBlending
+  });
+  const mesh = new THREE.Mesh(ringBeamGeom, ringBeamMat);
+  scene.add(mesh);
+});
+
+// Ambient Tactical Dust Particles
+const DUST_COUNT = 450;
+const dustGeo = new THREE.BufferGeometry();
+const dustPos = new Float32Array(DUST_COUNT * 3);
+for (let i = 0; i < DUST_COUNT * 3; i += 3) {
+  dustPos[i] = (Math.random() - 0.5) * 450;
+  dustPos[i + 1] = (Math.random() - 0.5) * 260;
+  dustPos[i + 2] = (Math.random() - 0.5) * 350;
+}
+dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
+const dustMat = new THREE.PointsMaterial({
+  color: 0x00E5FF,
+  size: 1.2,
+  transparent: true,
+  opacity: 0.35,
+  blending: THREE.AdditiveBlending
+});
+const dustPoints = new THREE.Points(dustGeo, dustMat);
+scene.add(dustPoints);
+
+// Lighting setup
+const ambientLight = new THREE.AmbientLight(0x060912, 1.2);
+scene.add(ambientLight);
+
+const pointLightLime = new THREE.PointLight(0xB6FF3B, 2.8, 180);
+pointLightLime.position.copy(orbOrigin);
+scene.add(pointLightLime);
+
+const pointLightFintechLobe = new THREE.PointLight(0xB6FF3B, 3.5, 220);
+pointLightFintechLobe.position.copy(fintechWorldTarget);
+scene.add(pointLightFintechLobe);
+
+const pointLightTech = new THREE.PointLight(0x00E5FF, 1.2, 160);
+pointLightTech.position.set(40, 30, 40);
+scene.add(pointLightTech);
+
+// Interactive Mouse Parallax
+let mouseX = 0;
+let mouseY = 0;
+window.addEventListener('mousemove', (e) => {
+  mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+  mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+});
+
+// Animation Loop
+let clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  // Subtle natural brain undulation & slow rotation
+  brainGroup.rotation.y = Math.sin(elapsedTime * 0.18) * 0.12;
+  brainGroup.rotation.x = Math.cos(elapsedTime * 0.14) * 0.06;
+
+  // Ring rotation
+  ringGroup.rotation.y += 0.0035;
+
+  // Orb pulsation
+  const pulse = 1.0 + Math.sin(elapsedTime * 5.2) * 0.08;
+  orbHalo.scale.set(pulse, pulse, pulse);
+  orbCorona.scale.set(pulse * 1.05, pulse * 1.05, pulse * 1.05);
+
+  // Fintech beam energy shimmer
+  beamTubeMat.opacity = 0.75 + Math.sin(elapsedTime * 8.0) * 0.18;
+  beamSleeveMat.opacity = 0.22 + Math.cos(elapsedTime * 7.5) * 0.1;
+
+  // Subtle camera tracking with mouse
+  camera.position.x += (mouseX * 18 - camera.position.x) * 0.04;
+  camera.position.y += (-mouseY * 12 + 15 - camera.position.y) * 0.04;
+  camera.lookAt(10, 4, 0);
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_6 -->
+</div>
+<!-- LAYER 2: Cinematic Theater Vignette & Fog Overlay -->
+<div class="absolute inset-0 theater-vignette pointer-events-none z-20"></div>
+<!-- LAYER 3: Reticle Accents & Subtle Coordinate Crosshairs -->
+<div class="absolute inset-0 pointer-events-none z-25 flex flex-col justify-between p-6 opacity-30 text-outline">
+<div class="flex justify-between items-center text-telemetry-sm font-telemetry-sm">
+<span>LAT: 47.6062° N // DELIBERATION GRID MATRIX</span>
+<span>NODE_ID: TH-ORCHESTRATOR-01</span>
+</div>
+<div class="flex justify-between items-center text-telemetry-sm font-telemetry-sm">
+<span>RENDER_ENGINE: QUANTUM_GL_v4.2</span>
+<span>STATUS: DYNAMIC INTERROGATION RUNNING</span>
+</div>
+</div>
+<!-- LAYER 4: Tactical UI Chrome & HUD Elements -->
+<!-- Top Navigation Bar (Shared Shell Component Implementation) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 max-w-[1440px] mx-auto h-14 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 shadow-2xl">
+<!-- Left: Minimalist QUORUM Brand + Live Convene Telemetry -->
+<div class="flex items-center gap-4">
+<div class="text-headline-sm font-headline-sm tracking-wider uppercase text-primary flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed pulse-tactical shadow-[0_0_8px_#aff833]"></span>
+        QUORUM
+      </div>
+<div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest/80 border border-outline-variant/30 text-telemetry-sm font-telemetry-sm text-secondary">
+<span class="material-symbols-outlined text-[13px]" data-icon="hub">hub</span>
+<span>[NEURAL ORCHESTRATION // LIVE CONVENE]</span>
+</div>
+</div>
+<!-- Center: 4-Step Tactical Indicator with 03 COUNCIL Active -->
+<nav class="hidden md:flex items-center space-x-7">
+<!-- 01 SUBMIT (Completed) -->
+<div class="flex items-center gap-1.5 text-outline font-telemetry-sm text-telemetry-sm hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span>01 SUBMIT</span>
+</div>
+<span class="text-outline-variant text-[12px] font-telemetry-sm">/</span>
+<!-- 02 WAR ROOM (Completed) -->
+<div class="flex items-center gap-1.5 text-outline font-telemetry-sm text-telemetry-sm hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span>02 WAR ROOM</span>
+</div>
+<span class="text-outline-variant text-[12px] font-telemetry-sm">/</span>
+<!-- 03 COUNCIL (Active Keyframe State) -->
+<div class="text-primary-container font-telemetry-sm text-telemetry-sm border-b-2 border-primary-container pb-1 drop-shadow-[0_0_8px_rgba(0,229,255,0.4)] flex items-center gap-1.5 cursor-pointer">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span>03 COUNCIL</span>
+</div>
+<span class="text-outline-variant text-[12px] font-telemetry-sm">/</span>
+<!-- 04 REPORT (Upcoming) -->
+<div class="text-outline font-telemetry-sm text-telemetry-sm hover:text-on-surface transition-colors pb-1 cursor-pointer">
+<span>04 REPORT</span>
+</div>
+</nav>
+<!-- Right Controls: Skip, Audio Toggle, Diagnostic Latency -->
+<div class="flex items-center gap-3">
+<!-- Diagnostic Ping Latency -->
+<div class="hidden lg:flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest/60 border border-outline-variant/30 text-telemetry-sm font-telemetry-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-primary" data-icon="vital_signs">vital_signs</span>
+<span>9ms</span>
+</div>
+<!-- Audio Sound Toggle Pill -->
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full hud-glass hover:border-primary/50 text-telemetry-sm font-telemetry-sm text-on-surface transition-all duration-150 cursor-pointer active:scale-95" title="Audio Stream Status">
+<span class="material-symbols-outlined text-[15px] text-primary" data-icon="graphic_eq">graphic_eq</span>
+<span class="tracking-wide">AUDIO ON // 48kHz</span>
+</button>
+<!-- Skip Animation Tactical Glass Pill -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container/10 border border-primary-container/40 text-primary-container font-label-caps text-label-caps hover:bg-primary-container/20 hover:border-primary-container transition-all duration-150 cursor-pointer active:scale-95 shadow-[0_0_12px_rgba(0,229,255,0.2)]">
+<span>SKIP ANIMATION</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="fast_forward">fast_forward</span>
+</button>
+</div>
+</header>
+<!-- Left Float HUD: Ingestion Conduit & Thesis Callout -->
+<aside class="fixed top-24 left-8 z-30 w-[380px] max-w-[calc(100vw-3rem)] pointer-events-auto">
+<div class="hud-glass hud-glow-lime rounded-xl p-5 relative overflow-hidden backdrop-blur-xl">
+<!-- Top Micro-Edge Indicator -->
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-secondary-fixed via-primary-container to-transparent opacity-80"></div>
+<!-- Packet Ingestion Badge & Telemetry Bar -->
+<div class="flex items-center justify-between gap-2 mb-3.5">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-lowest/90 border border-secondary/40 text-secondary text-label-caps font-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_#b6ff3b]"></span>
+<span>INGESTION PHASE // PACKET #0482</span>
+</div>
+<span class="text-telemetry-sm font-telemetry-sm text-outline">00:03.4s</span>
+</div>
+<!-- Thesis Header & Architecture Title -->
+<h1 class="text-headline-md font-headline-md text-primary tracking-tight mb-1">
+        Invoice Financing for SMEs
+      </h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+        B2B Cross-Border Factoring • 85 bps Float Engine
+      </p>
+<!-- Routing Status Segment -->
+<div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-secondary/25 mb-3.5 flex flex-col gap-1.5 shadow-inner">
+<div class="flex items-center justify-between text-telemetry-sm font-telemetry-sm">
+<span class="text-outline">TARGET CONDUIT:</span>
+<span class="text-secondary font-semibold">100% INJECTION READY</span>
+</div>
+<div class="flex items-center gap-2 text-telemetry-sm font-telemetry-sm text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="bolt">bolt</span>
+<span>PRIMARY ROUTE: FINTECH LOBE (#B6FF3B)</span>
+</div>
+</div>
+<!-- Secondary Telemetry Stream -->
+<div class="pt-2 border-t border-outline-variant/20 flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-telemetry-sm font-telemetry-sm text-outline">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container" data-icon="share">share</span>
+<span>3 SATELLITE BEAMS ROUTED TO FUNCTIONAL DOMAINS</span>
+</div>
+<div class="flex items-center gap-2 text-label-caps font-label-caps text-on-surface-variant pl-5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30">FUNDRAISING</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30">UNIT ECONOMICS</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30">DISTRIBUTION</span>
+</div>
+</div>
+<!-- Optical Tube Indicator Anchor Pin -->
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 hidden md:flex items-center">
+<div class="w-4 h-[1px] bg-secondary/60"></div>
+<div class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_#b6ff3b]"></div>
+</div>
+</div>
+</aside>
+<!-- Right Float HUD: Neural Brain Sector Legend & Telemetry -->
+<aside class="fixed top-24 right-8 z-30 w-[340px] max-w-[calc(100vw-3rem)] pointer-events-auto">
+<div class="hud-glass rounded-xl p-4.5 backdrop-blur-xl relative">
+<!-- HUD Title & Mode -->
+<div class="flex items-center justify-between pb-2.5 mb-2.5 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="psychology">psychology</span>
+<span class="text-label-caps font-label-caps text-on-surface uppercase tracking-wider">NEURAL LOBES // STATUS MATRIX</span>
+</div>
+<span class="text-label-caps font-label-caps text-secondary px-1.5 py-0.2 rounded bg-surface-container-lowest border border-secondary/30">ACTIVE EXCITATION</span>
+</div>
+<!-- 7 Lobes Dynamic Telemetry List -->
+<div class="space-y-1.5 text-telemetry-sm font-telemetry-sm">
+<!-- Fintech (ACTIVE // 100% EXCITATION) -->
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-lowest/80 border border-secondary/40 shadow-[0_0_12px_rgba(182,255,59,0.18)]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#B6FF3B] shadow-[0_0_8px_#B6FF3B] animate-pulse"></span>
+<span class="font-semibold text-[#B6FF3B]">Fintech</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps text-[#B6FF3B]">ACTIVE // 100%</span>
+<div class="w-12 h-1.5 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-full h-full bg-[#B6FF3B]"></div>
+</div>
+</div>
+</div>
+<!-- Technology & Software -->
+<div class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-high/40 transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00E5FF] opacity-60"></span>
+<span class="text-on-surface-variant">Technology &amp; Software</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps text-outline">STANDBY // 20%</span>
+<div class="w-10 h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[20%] h-full bg-[#00E5FF] opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Energy & Climate -->
+<div class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-high/40 transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FFC400] opacity-50"></span>
+<span class="text-on-surface-variant">Energy &amp; Climate</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps text-outline">STANDBY // 15%</span>
+<div class="w-10 h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[15%] h-full bg-[#FFC400] opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Mobility & Logistics -->
+<div class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-high/40 transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2DFFA8] opacity-50"></span>
+<span class="text-on-surface-variant">Mobility &amp; Logistics</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps text-outline">STANDBY // 15%</span>
+<div class="w-10 h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[15%] h-full bg-[#2DFFA8] opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Healthcare & Biotech -->
+<div class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-high/40 transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF5C5C] opacity-50"></span>
+<span class="text-on-surface-variant">Healthcare &amp; Biotech</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps text-outline">STANDBY // 10%</span>
+<div class="w-10 h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[10%] h-full bg-[#FF5C5C] opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Education & Media -->
+<div class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-high/40 transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#9B6BFF] opacity-50"></span>
+<span class="text-on-surface-variant">Education &amp; Media</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps text-outline">STANDBY // 10%</span>
+<div class="w-10 h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[10%] h-full bg-[#9B6BFF] opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Consumer Goods -->
+<div class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-high/40 transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF4FD8] opacity-50"></span>
+<span class="text-on-surface-variant">Consumer Goods</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps text-outline">STANDBY // 10%</span>
+<div class="w-10 h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-[10%] h-full bg-[#FF4FD8] opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Functional Ring Integration -->
+<div class="pt-2 mt-2 border-t border-outline-variant/20 flex items-center justify-between px-1 text-telemetry-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary" data-icon="sync">sync</span>
+<span class="text-tertiary">Functional Ring</span>
+</div>
+<span class="text-label-caps font-label-caps text-secondary font-medium tracking-wide">
+            [SYNCHRONIZED // 3 NODES]
+          </span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Bottom Floating Progress Rail & Phase Timeline HUD -->
+<section class="fixed bottom-12 left-1/2 -translate-x-1/2 z-30 w-full max-w-[1280px] px-6 pointer-events-auto">
+<div class="hud-glass rounded-xl p-4 shadow-2xl backdrop-blur-xl border border-outline-variant/30">
+<!-- Timeline Metadata & Interactive Playback Controls -->
+<div class="flex items-center justify-between mb-3 text-telemetry-sm font-telemetry-sm">
+<div class="flex items-center gap-3">
+<!-- Play / Pause Button -->
+<button class="w-7 h-7 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-primary hover:border-primary transition-colors cursor-pointer" title="Pause Deliberation Stream">
+<span class="material-symbols-outlined text-[16px]" data-icon="pause">pause</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="text-secondary font-semibold">Keyframe 1 of 7</span>
+<span class="text-outline-variant">//</span>
+<span class="text-on-surface">Elapsed 00:03.4s</span>
+<span class="text-outline-variant">//</span>
+<span class="text-outline">STAGE: INGESTION CONDUIT</span>
+</div>
+</div>
+<!-- Quick Scrubber / Resolution Telemetry -->
+<div class="hidden sm:flex items-center gap-3 text-outline">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            BUFFERED: 100%
+          </span>
+<span class="text-outline-variant">|</span>
+<span class="text-primary-container">60 FPS // HD-NEURAL</span>
+</div>
+</div>
+<!-- 7 Phase Nodes Linear Matrix -->
+<div class="relative w-full">
+<!-- Background Track Line -->
+<div class="absolute top-1/2 left-0 w-full h-[2px] -translate-y-1/2 bg-outline-variant/30 z-0"></div>
+<!-- Active Progress Line (Current Keyframe: 01 ENTRY) -->
+<div class="absolute top-1/2 left-0 w-[8%] h-[2px] -translate-y-1/2 bg-secondary shadow-[0_0_8px_#aff833] z-0"></div>
+<!-- Node Anchor Points -->
+<div class="relative z-10 flex items-center justify-between">
+<!-- Node 1: 01 ENTRY (ACTIVE) -->
+<div class="flex flex-col items-center gap-1.5 group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-7 h-7 rounded-full bg-secondary/20 animate-ping"></span>
+<div class="w-4 h-4 rounded-full bg-secondary border-2 border-surface-container-lowest shadow-[0_0_12px_#aff833] flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+</div>
+<span class="text-label-caps font-label-caps text-secondary font-bold tracking-wider">
+              01 ENTRY
+            </span>
+</div>
+<!-- Node 2: 02 ROUTING (Next) -->
+<div class="flex flex-col items-center gap-1.5 group cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant border border-outline hover:border-primary-container transition-colors"></div>
+<span class="text-label-caps font-label-caps text-outline group-hover:text-on-surface">
+              02 ROUTING
+            </span>
+</div>
+<!-- Node 3: 03 ANALYSIS -->
+<div class="flex flex-col items-center gap-1.5 group cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant border border-outline"></div>
+<span class="text-label-caps font-label-caps text-outline">
+              03 ANALYSIS
+            </span>
+</div>
+<!-- Node 4: 04 CROSS-DOMAIN -->
+<div class="flex flex-col items-center gap-1.5 group cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant border border-outline"></div>
+<span class="text-label-caps font-label-caps text-outline">
+              04 CROSS-DOMAIN
+            </span>
+</div>
+<!-- Node 5: 05 SYNTHESIS -->
+<div class="flex flex-col items-center gap-1.5 group cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant border border-outline"></div>
+<span class="text-label-caps font-label-caps text-outline">
+              05 SYNTHESIS
+            </span>
+</div>
+<!-- Node 6: 06 EXIT -->
+<div class="flex flex-col items-center gap-1.5 group cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant border border-outline"></div>
+<span class="text-label-caps font-label-caps text-outline">
+              06 EXIT
+            </span>
+</div>
+<!-- Node 7: 07 REPORT -->
+<div class="flex flex-col items-center gap-1.5 group cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant border border-outline"></div>
+<span class="text-label-caps font-label-caps text-outline">
+              07 REPORT
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Persistent Tactical Disclaimer Footer (Shared Shell Component) -->
+<footer class="fixed bottom-0 left-0 w-full z-40 flex items-center justify-between px-6 h-9 bg-surface-container-lowest/90 backdrop-blur-sm border-t border-outline-variant/20 text-telemetry-sm font-telemetry-sm">
+<div class="hidden sm:flex items-center gap-3">
+<span class="text-telemetry-sm font-telemetry-sm text-outline">SYSTEM DIAGNOSTICS</span>
+<span class="text-outline-variant">•</span>
+<span class="text-outline hover:text-primary-fixed-dim transition-colors cursor-pointer">CLEARANCE LEVEL 4</span>
+</div>
+<!-- Centered Disclaimer Mandatory Anchor -->
+<div class="flex items-center gap-1.5 mx-auto text-outline">
+<span class="material-symbols-outlined text-[13px] text-secondary pulse-tactical" data-icon="lock" data-weight="fill">lock</span>
+<span>AI-simulated perspectives inspired by public work. Not actual statements by these individuals.</span>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>SECURITY AUDIT // VERIFIED</span>
+</div>
+</footer>
+<!-- Ambient Interactive Micro-Script -->
+<script>
+    // Lightweight cinematic micro-interactions
+    document.addEventListener('DOMContentLoaded', () => {
+      // Audio toggle state management
+      const audioBtn = document.querySelector('header button[title="Audio Stream Status"]');
+      let audioActive = true;
+      if (audioBtn) {
+        audioBtn.addEventListener('click', () => {
+          audioActive = !audioActive;
+          const label = audioBtn.querySelector('span:last-child');
+          const icon = audioBtn.querySelector('.material-symbols-outlined');
+          if (audioActive) {
+            label.textContent = 'AUDIO ON // 48kHz';
+            icon.textContent = 'graphic_eq';
+            audioBtn.classList.remove('opacity-60');
+          } else {
+            label.textContent = 'AUDIO MUTED';
+            icon.textContent = 'volume_off';
+            audioBtn.classList.add('opacity-60');
+          }
+        });
+      }
+
+      // Play / Pause simulation
+      const playbackBtn = document.querySelector('section button[title="Pause Deliberation Stream"]');
+      let playing = true;
+      if (playbackBtn) {
+        playbackBtn.addEventListener('click', () => {
+          playing = !playing;
+          const icon = playbackBtn.querySelector('.material-symbols-outlined');
+          icon.textContent = playing ? 'pause' : 'play_arrow';
+        });
+      }
+    });
+  </script>
+</body></html>
