@@ -33,6 +33,12 @@ class ExpertStore:
             with open(catalog_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
             self.profiles = [ExpertProfile(**p) for p in data]
+            from quorum.ingestion.library import LibraryIngestor
+            self.profiles = LibraryIngestor.enrich_with_distilled_knowledge(self.profiles)
+            # Save enriched catalog to keep on-disk cache fresh
+            with open(catalog_path, "w", encoding="utf-8") as f:
+                json.dump([p.model_dump() for p in self.profiles], f, indent=2, ensure_ascii=False)
+
 
         for p in self.profiles:
             self._profiles_by_id[p.id] = p

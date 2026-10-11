@@ -69,13 +69,16 @@ class GeminiBrainAdapter:
                 print(f"[GeminiBrainAdapter] Chat call failed: {e}. Falling back to profile response.")
 
         # Heuristic fallback chat
-        quote = expert.core_principles[0] if expert.core_principles else "focus relentlessly on real customer traction"
+        quote = expert.signature_quotes[0] if expert.signature_quotes else (expert.core_principles[0] if expert.core_principles else "focus relentlessly on real customer traction")
         warning = expert.common_warnings[0] if expert.common_warnings else "avoid building vanity features"
+        contrarian = f" Remember: {expert.contrarian_theses[0]}" if expert.contrarian_theses else ""
+        lens = expert.adversarial_lens or expert.stance_archetype
         return (
-            f"Speaking from my experience in {expert.primary_sector}: my fundamental rule is '{quote}'. "
-            f"Looking at what you asked: {user_message.strip()} — you must {warning.lower()}. "
-            f"If you cannot prove users want this immediately without friction, nothing else matters."
+            f"Speaking from my perspective ({lens}): my guiding principle is '{quote}'. "
+            f"Addressing your question '{user_message.strip()}': {warning}.{contrarian} "
+            f"If you cannot prove users need this immediately without friction, nothing else matters."
         )
+
 
     def _parse_verdict_data(self, expert: ExpertProfile, data: Dict[str, Any]) -> ExpertVerdict:
         pillars = data.get("pillar_ratings", {})
@@ -154,12 +157,16 @@ class GeminiBrainAdapter:
             f"Why will {brief.target_customer} switch away from their existing workflow right now?"
         )
 
+        quote_part = f" As I always emphasize: \"{expert.signature_quotes[0]}\"." if expert.signature_quotes else ""
+        contrarian_part = f" Keep this contrarian truth in mind: {expert.contrarian_theses[0]}." if expert.contrarian_theses else ""
+        lens_label = expert.adversarial_lens or expert.stance_archetype
+
         critique = (
-            f"As {expert.name}, looking at '{brief.title}', the premise addresses an interesting gap in {brief.problem_statement}. "
-            f"However, the immediate danger lies in {warnings[0].lower()}. "
-            f"In my experience, founders often underestimate the friction of habit change. "
-            f"My advice is simple: {tips[0]}."
+            f"Through my lens of {lens_label}, looking at '{brief.title}': while {brief.solution_description} tackles {brief.problem_statement}, "
+            f"the fatal vulnerability is {warnings[0]}.{quote_part} "
+            f"My recommendation is unambiguous: {tips[0]}.{contrarian_part}"
         )
+
 
         citations = expert.high_value_sources[:2] if expert.high_value_sources else [
             f"Published operating principles on {expert.primary_sector}"

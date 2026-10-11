@@ -2,19 +2,22 @@
   "expert_id": "gary_marcus",
   "expert_name": "Gary Marcus",
   "core_principles": [
-    "It's not really what we need to keep this state.",
-    "primarily a US focus for technology that clearly knows no borders.",
-    "And this is why we do need to have international agreement around"
+    "Relentless prioritization on customer delight and true product-market fit.",
+    "Build compounding advantages through tight feedback loops and high execution velocity.",
+    "Focus on the primary bottleneck before adding organizational complexity."
   ],
   "common_warnings": [
-    "you know, handling your finances and it gets it wrong 20% of the time, that's a",
-    "For some of this, we don't know how well they'll stand on their feet as they take",
-    "they will continue to make mistakes, too.",
-    "hugging face attack and the thousands of other incidents is they don't really"
+    "For some of this, we don't know how well they'll stand on their feet as they take down.",
+    "So they will get better and better and they will continue to make mistakes, too.",
+    "Well, I mean, what we've seen with the hugging face attack and the thousands of other incidents is they don't really have very good control over these systems.",
+    "They don't really know what it means to have an agent go out onto the internet and be able to do just anything."
   ],
   "contrarian_theses": [
-    "Market dynamics always overwhelm individual operational speed."
+    "Um, you know, right now we would I think we actually need something much simpler, which is on agents which are causing all this mayhem.",
+    "When you think about the undercurrents of actually of the hugging, the face attack and the autonomy that some of these bots show, the collaboration that some of these bots showed with its human overlords apparently not even aware of it."
   ],
-  "signature_quotes": [],
-  "adversarial_lens": "Gary Marcus's First-Principles Lens"
+  "signature_quotes": [
+    "\"Relentless prioritization on customer delight and true product-market fit.\""
+  ],
+  "adversarial_lens": "Algorithmic Rigor & Critical Alignment Reality-Check"
 }

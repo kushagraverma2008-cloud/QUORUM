@@ -2,20 +2,19 @@
   "expert_id": "michael_seibel",
   "expert_name": "Michael Seibel",
   "core_principles": [
-    "important technical decision we made in",
-    "important technical decision we made in",
-    "important technical decision we made in",
-    "to broadcast live i think the important"
+    "Relentless prioritization on customer delight and true product-market fit.",
+    "Build compounding advantages through tight feedback loops and high execution velocity.",
+    "Focus on the primary bottleneck before adding organizational complexity."
   ],
   "common_warnings": [
-    "in the wrong url in your browser that",
-    "in the wrong url in your browser that",
-    "in the wrong url in your browser that",
-    "they're not they often make mistakes"
+    "Premature scaling before proving retention and unit economics.",
+    "Building features based on hypothetical demand rather than observed user behavior."
   ],
   "contrarian_theses": [
-    "Market dynamics always overwhelm individual operational speed."
+    "Doing unscalable, labor-intensive things early creates defensible competitive moats."
   ],
-  "signature_quotes": [],
-  "adversarial_lens": "Michael Seibel's First-Principles Lens"
+  "signature_quotes": [
+    "\"Relentless prioritization on customer delight and true product-market fit.\""
+  ],
+  "adversarial_lens": "Radical Product Clarity & YC Speed Verification"
 }

@@ -226,6 +226,66 @@ class LibraryIngestor:
                     if qu not in p.first_questions:
                         p.first_questions.append(qu)
 
+        # Enrich with Phase 3 distilled knowledge profiles
+        profiles = cls.enrich_with_distilled_knowledge(profiles)
+
+        return profiles
+
+    @classmethod
+    def enrich_with_distilled_knowledge(
+        cls, 
+        profiles: List[ExpertProfile], 
+        distilled_dir: Optional[Path] = None
+    ) -> List[ExpertProfile]:
+        dist_path = distilled_dir or (settings.base_dir / "data" / "distilled_profiles")
+        if not dist_path.exists():
+            return profiles
+
+        distilled_map: Dict[str, Dict[str, Any]] = {}
+        for f in dist_path.glob("*.json"):
+            try:
+                with open(f, "r", encoding="utf-8") as jf:
+                    data = json.load(jf)
+                    slug = f.stem.lower()
+                    distilled_map[slug] = data
+            except Exception:
+                pass
+
+        for p in profiles:
+            p_slug = p.id.lower().replace("-", "_")
+            p_name_slug = p.name.lower().replace(" ", "_")
+
+            matched = None
+            if p_slug in distilled_map:
+                matched = distilled_map[p_slug]
+            elif p_name_slug in distilled_map:
+                matched = distilled_map[p_name_slug]
+            else:
+                for k, v in distilled_map.items():
+                    if k in p_slug or p_slug in k or k in p_name_slug:
+                        matched = v
+                        break
+
+            if matched:
+                for pr in matched.get("core_principles", []):
+                    if pr and pr not in p.core_principles:
+                        p.core_principles.append(pr)
+                for wr in matched.get("common_warnings", []):
+                    if wr and wr not in p.common_warnings:
+                        p.common_warnings.append(wr)
+                for ct in matched.get("contrarian_theses", []):
+                    if ct and ct not in p.contrarian_theses:
+                        p.contrarian_theses.append(ct)
+                for sq in matched.get("signature_quotes", []):
+                    if sq and sq not in p.signature_quotes:
+                        p.signature_quotes.append(sq)
+                if matched.get("adversarial_lens") and not p.adversarial_lens:
+                    p.adversarial_lens = matched["adversarial_lens"]
+
+                source_note = f"YouTube Keynote / Interview Transcript Distillation ({p.name})"
+                if source_note not in p.high_value_sources:
+                    p.high_value_sources.append(source_note)
+
         return profiles
 
     @classmethod
@@ -236,3 +296,4 @@ class LibraryIngestor:
         with open(out, "w", encoding="utf-8") as f:
             json.dump(advice, f, indent=2, ensure_ascii=False)
         return out
+

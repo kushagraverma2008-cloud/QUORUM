@@ -7,8 +7,9 @@ echo ===========================================================================
 echo                QUORUM // WAR ROOM - AI EXPERT COUNCIL PLATFORM
 echo ===============================================================================
 echo.
-echo [1/3] Initializing environment and verifying dependencies...
+echo [1/4] Initializing environment and paths...
 cd /d "%~dp0"
+set PYTHONPATH=src
 
 if not exist ".env" (
     if exist ".env.example" (
@@ -17,7 +18,7 @@ if not exist ".env" (
     )
 )
 
-echo [2/3] Checking Python installation...
+echo [2/4] Checking Python runtime...
 python --version >nul 2>&1
 if errorlevel 1 (
     echo [ERROR] Python is not installed or not in your system PATH.
@@ -26,17 +27,17 @@ if errorlevel 1 (
     exit /b 1
 )
 
-echo [3/3] Launching FastAPI backend server with Obsidian War Room UI...
+echo [3/4] Readying Quorum AI Engine...
 echo.
 echo -------------------------------------------------------------------------------
 echo  * Quorum UI:    http://localhost:8000
-echo  * API Swagger:  http://localhost:8000/docs
-echo  * Loaded Base:  520+ Expert Personas, 8-Pillar Scoring, 3D Network Graph
+echo  * API Docs:     http://localhost:8000/docs
+echo  * Loaded Base:  709 Expert Personas, 36 Distilled Vectors, 8-Pillar Scoring
 echo -------------------------------------------------------------------------------
 echo.
-echo Launching your default browser in 2 seconds...
-start "" timeout /t 2 /nobreak >nul & start http://localhost:8000
+echo [4/4] Launching browser and starting FastAPI / Uvicorn server...
+start http://localhost:8000
 
-python -m uvicorn quorum.api.main:app --host 0.0.0.0 --port 8000 --app-dir src --reload
+python -m uvicorn quorum.api.main:app --host 127.0.0.1 --port 8000 --reload
 
 pause

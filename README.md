@@ -78,12 +78,29 @@ GEMINI_MODEL=gemini-2.5-flash
 ```
 *(Get your free API key at [Google AI Studio](https://aistudio.google.com/))*
 
-### 3. Start the Backend Server
+### 3. Start the Platform (One-Click or CLI)
+
+**Option A — Windows One-Click (Recommended):**
+Double-click `launch.bat` in the root folder. It sets up the environment and opens the browser automatically.
+
+**Option B — Command Line:**
 ```bash
-python -m uvicorn quorum.api.main:app --reload --port 8000
+# Windows PowerShell:
+$env:PYTHONPATH = "src"
+python -m uvicorn quorum.api.main:app --host 127.0.0.1 --port 8000 --reload
+
+# Linux / macOS:
+PYTHONPATH=src python -m uvicorn quorum.api.main:app --host 127.0.0.1 --port 8000 --reload
 ```
-Visit the interactive Swagger API documentation at:  
-👉 **http://localhost:8000/docs**
+
+Visit the interactive web platform:  
+- **Home / Pitch Portal:** http://localhost:8000  
+- **Brief Curation:** http://localhost:8000/curation  
+- **War Room Console:** http://localhost:8000/war-room  
+- **Council Deliberation Theater:** http://localhost:8000/theater  
+- **Executive Verdict Report:** http://localhost:8000/report  
+- **Interactive API Swagger:** http://localhost:8000/docs  
+
 
 ---
 

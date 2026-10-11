@@ -1,4 +1,4 @@
-﻿# QUORUM — Autonomous War Room // Roadmap Progress
+# QUORUM — Autonomous War Room // Roadmap Progress
 
 > AI Startup Expert Council & Pressure-Test Engine
 > Last Updated: 2026-10-11
@@ -39,33 +39,37 @@
 
 ---
 
-## PHASE 3 — Test Suite (COMPLETE) — 5/5 PASSED
+## PHASE 3 — Knowledge Distillation & Backend Integration (COMPLETE)
 
-- test_store_and_catalog: PASSED
-- test_router_and_brief_generation: PASSED
-- test_council_evaluation_and_3d_network_graph: PASSED
-- test_api_endpoints: PASSED (all routes 200 OK)
-- test_ui_backend_wiring: PASSED (all 5 HTML wiring verified)
+| Component | Status | Notes |
+|-----------|--------|-------|
+| Transcript Harvesting | DONE | 93 video transcripts across 36 distinct tech/AI founders & researchers |
+| Precision NLP Distiller | DONE | Sentence boundary tokenizer, noise filtering, heuristic classification |
+| Vector Generation | DONE | 36 structured persona files in `data/distilled_profiles/*.json` |
+| Persona Schema Expansion | DONE | Added `contrarian_theses`, `signature_quotes`, `adversarial_lens` to `ExpertProfile` |
+| Library Ingestion Pipeline | DONE | `LibraryIngestor.enrich_with_distilled_knowledge` integrates vectors |
+| Expert Store Auto-Enrichment | DONE | `ExpertStore` auto-loads & enriches all 709 profiles with distilled vectors |
+| Brain & Prompt Integration | DONE | `PersonaPromptBuilder` & `GeminiBrainAdapter` weave authentic quotes & lenses |
+| Test Suite Verification | DONE | 5/5 PASSED in `tests/test_quorum_pipeline.py` |
 
-Run time: 27.51s
+---
+
+## Test Suite Status — 5/5 PASSED ✅
+
+- `test_store_and_catalog`: PASSED (709 experts verified + distillation metadata)
+- `test_router_and_brief_generation`: PASSED
+- `test_council_evaluation_and_3d_network_graph`: PASSED
+- `test_api_endpoints`: PASSED (all static & REST endpoints 200 OK)
+- `test_ui_backend_wiring`: PASSED (all 5 HTML interactive flows verified)
 
 ---
 
 ## How to Run
 
-  Set PYTHONPATH=src
-  python -m uvicorn quorum.api.main:app --host 127.0.0.1 --port 8000 --reload
+```powershell
+$env:PYTHONPATH = "src"
+python -m uvicorn quorum.api.main:app --host 127.0.0.1 --port 8000 --reload
+```
 
-  App URL: http://127.0.0.1:8000
+App URL: http://127.0.0.1:8000
 
----
-
-## Next Phase Options
-
-| Feature | Priority |
-|---------|----------|
-| Migrate to google.genai SDK (fix FutureWarning) | High |
-| YouTube transcript harvesting pipeline | Medium |
-| Additional expert batch distillation | Medium |
-| PDF export | Low |
-| Persistent session storage | Low |

@@ -2,20 +2,25 @@
   "expert_id": "margaret_mitchell",
   "expert_name": "Margaret Mitchell",
   "core_principles": [
-    "the more we are ceding our control. And so it's critical to always maintain",
-    "at the top of the food chain here, then it's important for us",
-    "rather than as like an afterthought? So this is one of the reasons why secure environments are really important to have. You could potentially have a system that writes and executes its own code",
-    "as well, that we can't foresee. We need to be able to put in place"
+    "I think it's the price you pay for a higher quality of life where you can do more with less with technology.",
+    "And so it's critical to always maintain some level of human control.",
+    "And it might be the case that a broadcasting corporation wants to have some sort of control over the quality.",
+    "We're always innovating new things and working together and sharing.",
+    "Because education is really, you know, a key here to make sure that we mitigate as much foreseeable harm as we can."
   ],
   "common_warnings": [
-    "well beyond where we are now. There are huge dangers with autonomous AI",
-    "you can physically restrain them. You know, we're analog, we're not digital. Whereas you don't have",
-    "very dangerous territory. And I think this is also something",
-    "in terms of being able to share and replicate. If you don't understand"
+    "We\u2019ll discuss the risks of full autonomy, the security threats that AI agents pose, and whether governments should step in before it\u2019s too late.",
+    "There are huge dangers with autonomous AI if it reaches a certain point, because unlike a human being, which people argue, well, if I've got an AI agent, it can do a job better than a human.",
+    "Whereas you don't have that physicality with an AI.",
+    "So you are getting into very, very dangerous territory."
   ],
   "contrarian_theses": [
-    "Market dynamics always overwhelm individual operational speed."
+    "With Manus in particular, which is really been a big, buzzy one in the AI world, you can actually see the code that it's going to execute.",
+    "So how do we actually ensure that security is being built in to these agents from the beginning, rather than as like an afterthought?",
+    "It's within the realm of society, within the realm of what is actually sort of desired for, for people's interest or just, because they're trying to be better artists that sort of thing."
   ],
-  "signature_quotes": [],
-  "adversarial_lens": "Margaret Mitchell's First-Principles Lens"
+  "signature_quotes": [
+    "\"I think it's the price you pay for a higher quality of life where you can do more with less with technology.\""
+  ],
+  "adversarial_lens": "Algorithmic Rigor & Critical Alignment Reality-Check"
 }

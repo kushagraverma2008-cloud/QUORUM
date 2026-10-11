@@ -2,20 +2,25 @@
   "expert_id": "emily_bender",
   "expert_name": "Emily Bender",
   "core_principles": [
-    "ground this conversation, we need to say what we",
-    "important things that we do. - Of course. But also think there's the argument that AI doesn't have to be",
-    "that, but you know what I mean. That were slated to be taken offline, but they're still being run because we need to be able to",
-    "about what they must believe about their intended audience,"
+    "Another is, it would be lovely to imagine that we can just build something that will solve all of the crises that we're facing right now, right?",
+    "And then against that background, we ask ourselves what must they have been trying to convey by choosing those words and in that order?",
+    "So, I think it's the best practice to always think, okay, who is this person telling me this and should I really trust them or not?",
+    "As you said they are created in a way to be kind and nice and gentle and something that you just always want to go go back to.",
+    "I always try and I always eat my tongue saying that."
   ],
   "common_warnings": [
-    "inevitable godlike entity. Is she a prophet, or is she just wrong? (light groovy music) Emily Bender is a director of Computational Linguistics Laboratory at the University of Washington,",
-    "some coordination. - One to two years, that's not very long. That's a bold claim. - Yeah, but I don't know if it's just part of the theatrics, right? That they're saying, \"Oh,",
-    "- Is there something else you have in mind? - Yes, exactly. Yeah. - And also, we don't have a",
-    "know they're being tested. So how do you explain that? - I don't think any of that"
+    "But on the other side, if AI is going to be an existential risk, we are looking at kind of a pandemic 2.0 level of unpreparedness here that it's going to be crazy.",
+    "And even at Davos earlier this year, I think it was Demis Hassabis and Dario Amodei, the CEOs of Anthropic and DeepMind, who were talking about that we might only have one to two years left until we get to AI so powerful that it's an existential risk.",
+    "Yeah, but I don't know if it's just part of the theatrics, right?",
+    "And also, we don't have a definition of intelligence."
   ],
   "contrarian_theses": [
-    "Market dynamics always overwhelm individual operational speed."
+    "We actually have a little bit of that interview, so let's take a listen.",
+    "So, Emily, I know you've said previously that there's no kind of \"I\" behind these systems; it's just something which makes them feel more human, makes them sound more human, and is actually a bit of a design issue.",
+    "I don't think any of that research actually stands up."
   ],
-  "signature_quotes": [],
-  "adversarial_lens": "Emily Bender's First-Principles Lens"
+  "signature_quotes": [
+    "\"Another is, it would be lovely to imagine that we can just build something that will solve all of the crises that we're facing right now, right?\""
+  ],
+  "adversarial_lens": "Algorithmic Rigor & Critical Alignment Reality-Check"
 }

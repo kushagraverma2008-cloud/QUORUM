@@ -19,6 +19,10 @@ class ExpertProfile(BaseModel):
     common_warnings: List[str] = Field(default_factory=list)
     decision_heuristics: List[str] = Field(default_factory=list)
     first_questions: List[str] = Field(default_factory=list)
+    contrarian_theses: List[str] = Field(default_factory=list)
+    signature_quotes: List[str] = Field(default_factory=list)
+    adversarial_lens: Optional[str] = None
     high_value_sources: List[str] = Field(default_factory=list)
     bio_snippet: Optional[str] = None
     avatar_url: Optional[str] = None
+
