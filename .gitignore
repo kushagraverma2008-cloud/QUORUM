@@ -1,9 +1,10 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
+
+# Distribution / packaging
 build/
 develop-eggs/
 dist/
@@ -20,31 +21,39 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environments
+# Virtual environments
 .venv/
 venv/
 ENV/
 env/
 
-# Environment Variables & Secrets
+# Environment Variables & Secrets (CRITICAL)
 .env
-.env.local
+.env.*
+!.env.example
 *.key
-*API KEYS*
 credentials.json
 
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Test & Coverage
+# Caches and runtime state
+.cache/
 .pytest_cache/
 .coverage
 htmlcov/
-
-# Logs & Temp
 *.log
-_render_tech_batch1/
+
+# Large build-time raw data artifacts
+tools/raw_transcripts/
+tools/*.xlsx
+tools/*.docx
+tools/transcript_extraction_progress.json
+
+# Local backup copies
+QUORUM_backup*
+QUORUM_final_backup*
+
+# System & IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 scratch/
