@@ -1,193 +1,205 @@
-# Quorum (Expert Council) 🏛️⚡
+# QUORUM
 
-> **An AI platform where anyone submits an idea and receives a brutally honest, multi-expert evaluation drawn from the published principles, warnings, and heuristics of 700+ real industry leaders.**
-
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com)
-[![Google Gemini Flash](https://img.shields.io/badge/AI%20Engine-Gemini%202.5%20Flash-4285F4.svg)](https://aistudio.google.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+> **Adversarial Pre-Mortem Co-Pilot Agent for Early-Stage Founders**  
+> *Stress-test your startup thesis before writing a single line of code.*
 
 ---
 
-## 🌟 Vision & Overview
+## The Problem
 
-Millions of founders and students have ideas but lack direct access to world-class domain practitioners. Traditional feedback is either politely unhelpful (friends and family) or prohibitively expensive (consultants and selective incubators).
+Over 90% of early-stage startups fail—not because founders lack technical ability, but because they build things customers do not urgently need. Friends and mentors give polite encouragement, and standard AI assistants offer flattering validation. By the time reality hits, the founder has spent months and burned their savings.
 
-**Quorum** solves this by assembling a virtual council of iconic operators, founders, and investors (e.g., *Paul Graham, Michael Seibel, Jensen Huang, Dalton Caldwell, Tobi Lütke, Melanie Perkins, Sam Altman*):
-- **Grounded Wisdom:** Digital brains are constructed strictly from verifiable public talks, books, essays, shareholder letters, and interviews.
-- **Zero Sugar-Coating:** Personas are instructed to uncover hidden risks, flawed unit economics, and weak wedges before praising potential.
-- **8-Pillar Weighted Scoring:** Market Demand, Differentiation, Feasibility, Financial Viability, Execution Risk, Legal Safety, Market Timing, and Defensibility.
-- **Cinematic 3D Network Graph:** Exports spherical/orbital 3D coordinates `(x, y, z)` and tension telemetry for sci-fi network visualizers (Three.js / WebGL / Google Stitch).
+**QUORUM eliminates this polite lie.** It simulates a Silicon Valley pre-mortem council: convening a panel of 5 to 7 adversarial domain icons grounded in 500+ curated expert philosophies across 30+ sectors. Instead of generic praise, QUORUM evaluates your pitch across 8 fundamental pillars, surfaces fatal existential risks, and challenges you with a lethal "kill question" per expert.
 
 ---
 
-## 🚀 Key Features
+## Target Vertical
 
-1. **Free for All (High Token Allowance)**:
-   - Uses **Google Gemini 2.5 / 2.0 Flash** via the free API tier. Enjoy high RPM/TPM and a 1M+ token context window without spending a dollar.
-   - Built-in graceful offline simulation mode allows running tests or local evaluations even without an API key.
-
-2. **Digital Document Ingestion**:
-   - Ingests pitches via raw text, PDF pitch decks, and Word (`.docx`) business plans.
-   - Speech-to-text dependencies have been eliminated for a lightweight, instant installation footprint.
-
-3. **700+ Curated Experts across 19+ Sectors**:
-   - Spanning *Technology & Software, AI/ML, Telecom, Deep Tech & Space, Manufacturing, E-commerce, Fintech, FMCG, Fashion & Beauty, Healthcare, Agritech*, and more.
-   - Pre-compiled in-memory index (`src/quorum/data/expert_catalog.json`) loads in under 30ms.
-
-4. **Deliberation Theater (Server-Sent Events)**:
-   - Real-time streaming endpoints deliver live telemetry as experts deliberate in parallel.
-
-5. **3D Cinematic Visualizer Ready**:
-   - Evaluated reports include a `network_graph` payload with node coordinates `(x, y, z)`, animation pulses, and edge tension indices ready for Google Stitch or WebGL renderers.
-
-6. **1-on-1 Interactive Follow-Up**:
-   - Founders can cross-examine any individual expert with follow-up questions directly grounded in their documented heuristics.
+- **Student Builders & Hackers**: Validating project ideas before committing academic or semester resources.
+- **Solo Founders & Bootstrappers**: Stress-testing customer acquisition payback and distribution wedges on limited budgets.
+- **Pre-Seed & Angel Pitchers**: Discovering existential objections before entering formal investor meetings.
 
 ---
 
-## 🛠️ Quickstart (1 Minute Setup)
+## System Architecture & Data Flow
 
-### 1. Clone & Set Up Environment
+```mermaid
+flowchart TD
+    A["Founder Input<br/>Pitch / Deck Upload + Context Pills"] --> B["CouncilRouter"]
+    B -->|"Deterministic Archetype Balance<br/>Product, Economics, Skeptic, Contrarian"| C["5-7 Expert Council"]
+    
+    subgraph Engine ["Evaluation Engine"]
+        C --> D["GeminiBrainAdapter<br/>Google Gemini 2.5 Flash / Offline Heuristic"]
+        D -->|"Structured Output Schema"| E["8 Pillar Scores + Kill Questions"]
+        E --> F["CouncilSynthesizer"]
+        F -->|"Consensus Math & Tension Analysis"| G["CouncilReport"]
+    end
+    
+    G --> H["Modern UI Client (&lt;60KB)"]
+    H --> I["2D Interactive Tension Graph"]
+    H --> J["30-60-90 Day Tactical Roadmap"]
+    H --> K["Live Rebuttal Loop &amp; 1-on-1 Chat"]
+    
+    K -->|"Answer Kill Question"| D
+```
+
+---
+
+## Core Logic & Methodology
+
+### 1. The 8 Evaluation Pillars
+Every expert evaluates the startup across 8 standardized dimensions (scored 0.0 to 10.0):
+1. **Market Demand**: True customer urgency vs. "nice-to-have" luxury.
+2. **Differentiation**: Defensibility against incumbents and copycats.
+3. **Feasibility**: Technical and operational complexity to launch.
+4. **Financial Viability**: Unit economics, margins, and payback horizon.
+5. **Execution Risk**: Operational bottlenecks, founder dependency, and hiring hurdles.
+6. **Regulatory & Legal Risk**: Compliance, platform dependency, and liability.
+7. **Market Timing**: Why now? Technological or behavioral tailwinds.
+8. **Defensibility & Scale**: Moats, network effects, and switching costs.
+
+### 2. Consensus Tension Math
+QUORUM quantifies disagreement across the panel:
+- **Tension Index**: Computed from variance in scores across experts on identical pillars.
+- **Consensus Percentage**: $100\% - (\text{Overall Tension} \times 60\%)$, bounded between 20% and 100%.
+- **2D Visual Force Graph**: Nodes represent experts, with repulsion proportional to score divergence.
+
+### 3. Context-Aware Personalization
+The council dynamically shifts its scrutiny based on founder constraints:
+- **Team Size**: Solo founders receive early-stage distribution mentors (e.g. Paul Graham, Michael Seibel).
+- **Runway & Budget**: Bootstrapped projects pull unit economics and capital efficiency hawks (e.g. Chamath Palihapitiya).
+- **Stage**: Concept stages are evaluated on demand signals; MVPs on retention and unit payback.
+
+### 4. Interactive Live Rebuttal Loop
+Founders can directly defend their startup against any expert's kill question. The engine re-scores the relevant pillar and updates the collective verdict in real time.
+
+---
+
+## Honest Offline Resilience
+
+QUORUM features a zero-dependency **Honest Offline Heuristic Engine**:
+- If `GEMINI_API_KEY` is not present, or if API quotas are exhausted (429/Resource Exhausted), the system gracefully switches to offline mode.
+- Every generated response explicitly stamps its provenance (`source: "llm"` vs `source: "offline"`).
+- Offline evaluations remain persona-grounded, deterministic, and fully functional.
+
+---
+
+## Security & Reliability Engineering
+
+- **Prompt Injection Defense**: Untrusted founder input is isolated within structured delimiters with strict system role framing. Suspicious override prompts trigger an automated warning banner (`is_suspicious_input`).
+- **In-Memory Document Safety**: Uploaded decks (.pdf, .docx, .txt, .md) are validated with magic-byte checks (`%PDF-`, `PK\x03\x04`), capped at 30 pages and 50,000 characters, and parsed strictly in-memory without persistent disk writes.
+- **Denial-of-Service Rate Limiter**: Token-bucket algorithm (20 requests/minute per client IP) on LLM-backed endpoints.
+- **OWASP HTTP Security Headers**: Configured with strict Content-Security-Policy, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, and `Referrer-Policy: strict-origin-when-cross-origin`.
+- **Zero Known Vulnerabilities**: Verified via `pip-audit`.
+
+---
+
+## Accessibility (WCAG 2.1 AA)
+
+- **Keyboard Trapping & Modals**: Accessible focus-trap on rebuttal and chat modals with `Escape` dismiss and focus restoration.
+- **Screen Reader Support**: Live status alerts using `aria-live="polite"`, skip-to-content anchor, semantic HTML landmarks, and accessible data table alternatives (`table.sr-only`) for all vector charts.
+- **High Contrast**: Theme palette strictly satisfies minimum 4.5:1 text contrast ratios.
+- **Reduced Motion**: Respects `prefers-reduced-motion: reduce` for all UI transitions and animations.
+
+---
+
+## 3-Step Quickstart
+
+### Prerequisites
+- Python 3.10 or higher.
+
+### Step 1: Clone and Enter Repository
 ```bash
 git clone https://github.com/your-username/quorum.git
 cd quorum
-
-# Create virtual environment
-python -m venv .venv
-
-# Activate virtual environment
-# Windows:
-.venv\Scripts\activate
-# Linux / macOS:
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
-### 2. Configure Your API Key
-Copy the template `.env.example` to `.env`:
+### Step 2: Configure Environment (Optional)
 ```bash
 cp .env.example .env
-```
-Open `.env` and paste your free Google Gemini API key:
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.5-flash
-```
-*(Get your free API key at [Google AI Studio](https://aistudio.google.com/))*
-
-### 3. Start the Platform (One-Click or CLI)
-
-**Option A — Windows One-Click (Recommended):**
-Double-click `launch.bat` in the root folder. It sets up the environment and opens the browser automatically.
-
-**Option B — Command Line:**
-```bash
-# Windows PowerShell:
-$env:PYTHONPATH = "src"
-python -m uvicorn quorum.api.main:app --host 127.0.0.1 --port 8000 --reload
-
-# Linux / macOS:
-PYTHONPATH=src python -m uvicorn quorum.api.main:app --host 127.0.0.1 --port 8000 --reload
+# Open .env and add your GEMINI_API_KEY (optional - runs offline if omitted)
 ```
 
-Visit the interactive web platform:  
-- **Home / Pitch Portal:** http://localhost:8000  
-- **Brief Curation:** http://localhost:8000/curation  
-- **War Room Console:** http://localhost:8000/war-room  
-- **Council Deliberation Theater:** http://localhost:8000/theater  
-- **Executive Verdict Report:** http://localhost:8000/report  
-- **Interactive API Swagger:** http://localhost:8000/docs  
+### Step 3: Launch Application
+- **On Windows**:
+  ```cmd
+  launch.bat
+  ```
+- **On Linux / macOS**:
+  ```bash
+  chmod +x run.sh
+  ./run.sh
+  ```
+- **With Docker**:
+  ```bash
+  docker build -t quorum .
+  docker run -p 8000:8000 quorum
+  ```
 
+Open your browser at `http://localhost:8000`.
 
 ---
 
-## 🧪 Run Automated Tests
+## Environment Variables
 
-Quorum comes with an end-to-end test suite verifying ingestion, routing, Gemini evaluation, 3D graph synthesis, and API routes:
-
-```bash
-pytest tests/ -v
-```
+| Variable Name | Required | Default | Purpose |
+| :--- | :--- | :--- | :--- |
+| `GEMINI_API_KEY` | No | *None* | Google Gemini API key for live LLM reasoning (runs offline if unset). |
+| `GEMINI_MODEL` | No | `gemini-2.5-flash` | Primary Gemini model identifier. |
+| `GEMINI_FALLBACK_MODEL` | No | `gemini-2.0-flash` | Fallback model if primary model is unavailable. |
+| `MAX_UPLOAD_MB` | No | `10` | Maximum file upload ceiling for pitch decks. |
+| `APP_DEBUG` | No | `False` | Debug mode toggle. |
 
 ---
 
-## 📡 API Reference (Ready for Google Stitch)
+## Repository Map
 
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/api/health` | Health check & count of active expert profiles |
-| `GET` | `/api/sectors` | Lists all 19 sectors and expert counts |
-| `GET` | `/api/experts` | Search and filter 700+ expert profiles |
-| `POST` | `/api/ideas/analyze` | Normalizes text pitch into a structured `IdeaBrief` |
-| `POST` | `/api/ideas/upload-and-analyze` | Uploads PDF/DOCX files and creates an `IdeaBrief` |
-| `POST` | `/api/council/recommend-panel` | Returns curated panel of domain and functional experts |
-| `POST` | `/api/council/evaluate` | Synchronous evaluation generating full `CouncilReport` |
-| `POST` | `/api/council/evaluate/stream` | Server-Sent Events (SSE) stream for live deliberation UI |
-| `POST` | `/api/council/expert-chat` | Interactive 1-on-1 Q&A with any expert persona |
-
-### Sample Evaluation Response (`CouncilReport`)
-```json
-{
-  "id": "rep_a1b2c3d4",
-  "title": "QuikD2C AI",
-  "overall_score": 7.1,
-  "verdict_label": "Promising",
-  "consensus_percentage": 84.5,
-  "pillar_scores": {
-    "market_demand": 7.4,
-    "differentiation": 5.8,
-    "feasibility": 8.0,
-    "financial_viability": 6.2,
-    "execution_risk": 6.0,
-    "regulatory_legal_risk": 8.5,
-    "market_timing": 7.2,
-    "defensibility_scale": 5.2
-  },
-  "top_warnings": [
-    {
-      "warning": "High customer acquisition cost in this market",
-      "severity": "Critical",
-      "experts_count": 5,
-      "flagged_by": ["Paul Graham", "Michael Seibel", "Dalton Caldwell"]
-    }
-  ],
-  "kill_questions": [
-    {
-      "question": "Who wants this so urgently that they would use a broken prototype?",
-      "raised_by": "Paul Graham",
-      "rationale": "Highlighted by Paul Graham as a decisive make-or-break hurdle."
-    }
-  ],
-  "network_graph": {
-    "nodes": [
-      {
-        "id": "core_idea",
-        "label": "QuikD2C AI",
-        "category": "idea",
-        "radius": 24.0,
-        "coords": { "x": 0.0, "y": 0.0, "z": 0.0 }
-      }
-    ],
-    "edges": [...]
-  }
-}
+```
+QUORUM/
+├── data/
+│   └── distilled_profiles/          # Modular curated expert mental models
+├── docs/
+│   ├── DEMO.md                      # 90-second video demo script
+│   ├── SUBMISSION.md                # Hackathon submission summary
+│   └── screenshots/                 # UI interface previews
+├── examples/
+│   ├── sample_report_1.json         # Reference healthtech report
+│   └── sample_report_2.json         # Reference logistics report
+├── src/
+│   └── quorum/
+│       ├── api/                     # FastAPI routing and middleware
+│       ├── data/                    # 500+ curated expert mental models (expert_catalog.json)
+│       ├── engine/                  # Router, Evaluator, Persona, Synthesizer
+│       ├── parser/                  # In-memory document extraction
+│       ├── static/                  # Vanilla HTML5/CSS/JS frontend (<60KB)
+│       ├── config.py                # Pydantic application settings
+│       └── schemas.py               # Core data structures
+├── tests/
+│   └── test_quorum_pipeline.py      # Comprehensive pytest suite (14 tests)
+├── tools/                           # Ingestion & maintenance utilities
+├── Dockerfile                       # Multi-stage container definition
+├── launch.bat                       # Windows launcher
+├── run.sh                           # Linux/macOS launcher
+├── pyproject.toml                   # Project metadata & ruff config
+├── requirements.txt                 # Runtime dependencies
+└── requirements-dev.txt             # Development & testing dependencies
 ```
 
 ---
 
-## 🎨 Google Stitch Frontend Architecture
+## Acknowledgments & Technology Attribution
 
-When creating your UI in **Google Stitch**:
-1. **Screen 1 (Submission):** Form with text pitch and file uploader bound to `POST /api/ideas/analyze` or `/api/ideas/upload-and-analyze`.
-2. **Screen 2 (Panel Curation):** Grid of cards bound to `POST /api/council/recommend-panel`.
-3. **Screen 3 (Deliberation Theater):** Connects to `POST /api/council/evaluate/stream` to animate live progress.
-4. **Screen 4 (Executive Dashboard):** Renders the 8 pillar scorecards, kill questions, top warnings, and the **3D Force/Orbital Graph** using the `coords` in `network_graph`.
-5. **Screen 5 (Expert Dossier & Chat):** Click any expert card to open their drawer and chat via `POST /api/council/expert-chat`.
+- Powered by **Google Gemini 2.5 Flash** via the `google-genai` Python SDK.
+- Developed with assistance from **Google DeepMind Antigravity**.
 
 ---
 
-## 📄 License
-MIT License. Built for founders, students, and operators worldwide.
+## Disclaimer
+
+QUORUM is an AI-assisted ideation and advisory simulation tool. Analysis produced by simulated personas reflects synthesized public principles and does not constitute certified legal, financial, accounting, or professional investment advice.
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).

@@ -1,0 +1,619 @@
+{
+  "id": "rep_770806c9",
+  "idea_id": "idea_0892ea61",
+  "title": "AegisHealth AI",
+  "source": "offline",
+  "overall_score": 5.7,
+  "verdict_label": "Promising but risky",
+  "confidence_index": 0.88,
+  "consensus_percentage": 72.4,
+  "executive_summary": "Council Verdict: Promising but risky (5.7/10.0). Evaluated across 8 pillars by 6 domain personas. Primary strengths centered on Feasibility (6.9/10), while primary risk concentrated in Defensibility at Scale (4.5/10).",
+  "council_in_one_paragraph": "Aravind Ravichandran: \"As Aravind Ravichandran, my core rule is 'Demand unvarnished customer reality before building.'. For 'AegisHealth AI', y...\" | Paul Graham: \"As Paul Graham, my core rule is 'I was so delighted when I realized that one was happening.'. For 'AegisHealth AI', your...\" | Vivek Tiwari: \"As Vivek Tiwari, my core rule is 'Demand unvarnished customer reality before building.'. For 'AegisHealth AI', your wedg...\"",
+  "pillar_scores": {
+    "market_demand": 6.3,
+    "differentiation": 5.2,
+    "feasibility": 6.9,
+    "financial_viability": 5.1,
+    "execution_risk": 4.6,
+    "regulatory_legal_risk": 6.5,
+    "market_timing": 6.2,
+    "defensibility_scale": 4.5
+  },
+  "top_warnings": [
+    {
+      "warning": "Premature scaling will burn cash before true PMF is discovered.",
+      "severity": "Critical",
+      "experts_count": 2,
+      "flagged_by": [
+        "Aravind Ravichandran",
+        "Vivek Tiwari"
+      ]
+    },
+    {
+      "warning": "Do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity.",
+      "severity": "Critical",
+      "experts_count": 1,
+      "flagged_by": [
+        "Paul Graham"
+      ]
+    },
+    {
+      "warning": "Do not mistake ambition for a large market-size story without a credible path through the hard parts.",
+      "severity": "Critical",
+      "experts_count": 1,
+      "flagged_by": [
+        "Paul Graham"
+      ]
+    },
+    {
+      "warning": "A polished idea without a clear problem or an initial-user path is weak evidence of demand.",
+      "severity": "Critical",
+      "experts_count": 1,
+      "flagged_by": [
+        "Michael Seibel"
+      ]
+    },
+    {
+      "warning": "Do not wait for perfect certainty before testing; the first useful evidence comes from real users.",
+      "severity": "Critical",
+      "experts_count": 1,
+      "flagged_by": [
+        "Michael Seibel"
+      ]
+    }
+  ],
+  "top_tips": [
+    {
+      "tip": "First principles reasoning is essential.",
+      "experts_count": 2,
+      "recommended_by": [
+        "Aravind Ravichandran",
+        "Vivek Tiwari"
+      ]
+    },
+    {
+      "tip": "Choose a problem that feels difficult enough to matter. The most consequential startup ideas often look intimidating before they look inevitable.",
+      "experts_count": 1,
+      "recommended_by": [
+        "Paul Graham"
+      ]
+    },
+    {
+      "tip": "Examine the founder's motivation as seriously as the market story. Serious ambition needs persistence, curiosity, and willingness to work through uncertainty.",
+      "experts_count": 1,
+      "recommended_by": [
+        "Paul Graham"
+      ]
+    },
+    {
+      "tip": "Begin with a problem, preferably one you understand personally or are unusually well placed to solve.",
+      "experts_count": 1,
+      "recommended_by": [
+        "Michael Seibel"
+      ]
+    },
+    {
+      "tip": "After finding a promising problem, build a minimum viable product and put it in front of initial users quickly.",
+      "experts_count": 1,
+      "recommended_by": [
+        "Michael Seibel"
+      ]
+    }
+  ],
+  "kill_questions": [
+    {
+      "question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "raised_by": "Aravind Ravichandran",
+      "rationale": "Stance: Capital & Growth Strategist. Score: 6.0/10."
+    },
+    {
+      "question": "What makes this problem hard enough that others have avoided solving it?",
+      "raised_by": "Paul Graham",
+      "rationale": "Stance: Contrarian Philosopher. Score: 6.6/10."
+    },
+    {
+      "question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "raised_by": "Vivek Tiwari",
+      "rationale": "Stance: Analytical Founder. Score: 6.3/10."
+    },
+    {
+      "question": "Why are you qualified to work on this problem?",
+      "raised_by": "Michael Seibel",
+      "rationale": "Stance: Rigorous Operator. Score: 6.2/10."
+    },
+    {
+      "question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "raised_by": "Joe Gebbia",
+      "rationale": "Stance: Product Wedge Specialist. Score: 6.6/10."
+    },
+    {
+      "question": "What prevents an incumbent from copying this?",
+      "raised_by": "Gary Marcus",
+      "rationale": "Stance: Risk & Moat Skeptic. Score: 2.2/10."
+    }
+  ],
+  "tailored_actions": [
+    "As a solo founder, avoid premature automation. Personally execute initial customer interactions in North America before writing scalable code.",
+    "With bootstrapped runway, aim for negative cashflow duration under 60 days. Demand upfront deposits or pre-orders to self-fund delivery.",
+    "Immediate validation priority: interview 15 target users in North America focused on testing: 'If a dominant incumbent copies this feature next month, why do your customers stay?'."
+  ],
+  "is_suspicious_input": false,
+  "consensus_dissent": {
+    "consensus_points": [
+      "The council concurs with an average score of 4.5/10 on Defensibility at Scale."
+    ],
+    "sharp_disagreements": [
+      {
+        "topic": "Feasibility Split (1.0 vs 8.9)",
+        "optimist_view": "Joe Gebbia views feasibility as a distinct competitive strength (8.9/10).",
+        "optimists": [
+          "Joe Gebbia"
+        ],
+        "skeptic_view": "Gary Marcus flags major structural vulnerability in feasibility (1.0/10).",
+        "skeptics": [
+          "Gary Marcus"
+        ]
+      },
+      {
+        "topic": "Financial Viability Split (2.0 vs 6.8)",
+        "optimist_view": "Vivek Tiwari views financial viability as a distinct competitive strength (6.8/10).",
+        "optimists": [
+          "Vivek Tiwari"
+        ],
+        "skeptic_view": "Gary Marcus flags major structural vulnerability in financial viability (2.0/10).",
+        "skeptics": [
+          "Gary Marcus"
+        ]
+      },
+      {
+        "topic": "Execution Risk Split (0.0 vs 6.6)",
+        "optimist_view": "Michael Seibel views execution risk as a distinct competitive strength (6.6/10).",
+        "optimists": [
+          "Michael Seibel"
+        ],
+        "skeptic_view": "Gary Marcus flags major structural vulnerability in execution risk (0.0/10).",
+        "skeptics": [
+          "Gary Marcus"
+        ]
+      },
+      {
+        "topic": "Regulatory & Legal Safety Split (0.0 vs 8.3)",
+        "optimist_view": "Aravind Ravichandran views regulatory & legal safety as a distinct competitive strength (8.3/10).",
+        "optimists": [
+          "Aravind Ravichandran"
+        ],
+        "skeptic_view": "Gary Marcus flags major structural vulnerability in regulatory & legal safety (0.0/10).",
+        "skeptics": [
+          "Gary Marcus"
+        ]
+      }
+    ]
+  },
+  "tactical_roadmap": {
+    "days_30": [
+      "Directly stress-test primary kill question: \"If a dominant incumbent copies this feature next month, why do your customers stay?\"",
+      "First principles reasoning is essential.",
+      "De-risk existential warning: Premature scaling will burn cash before true PMF is discovered."
+    ],
+    "days_90": [
+      "Choose a problem that feels difficult enough to matter. The most consequential startup ideas often look intimidating before they look inevitable.",
+      "Overcome secondary friction point: Do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity.",
+      "Establish quantifiable moat against copycats."
+    ],
+    "days_180": [
+      "Formalize proprietary data loops and compounding distribution advantages.",
+      "Scale gross margins above 70% while defending against competitor price-slashing."
+    ]
+  },
+  "expert_roster": [
+    {
+      "expert_id": "aravind_ravichandran",
+      "expert_name": "Aravind Ravichandran",
+      "role_or_title": "Industry Leader in Deep Tech, Space & Defence",
+      "stance_archetype": "Capital & Growth Strategist",
+      "profile_depth": "basic",
+      "source": "offline",
+      "overall_score": 6.0,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 6.7,
+        "differentiation": 4.8,
+        "feasibility": 7.7,
+        "financial_viability": 3.4,
+        "execution_risk": 5.3,
+        "regulatory_legal_risk": 8.3,
+        "market_timing": 7.3,
+        "defensibility_scale": 4.2
+      },
+      "opinion_critique": "As Aravind Ravichandran, my core rule is 'Demand unvarnished customer reality before building.'. For 'AegisHealth AI', your wedge must overcome customer inertia. My primary concern is that premature scaling will burn cash before true pmf is discovered. Validate willingness to pay immediately before scaling.",
+      "specific_warnings": [
+        "Premature scaling will burn cash before true PMF is discovered."
+      ],
+      "actionable_tips": [
+        "First principles reasoning is essential."
+      ],
+      "kill_question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "Newsletter, talks, podcast appearances"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    },
+    {
+      "expert_id": "paul_graham",
+      "expert_name": "Paul Graham",
+      "role_or_title": "Co-founder, Y Combinator",
+      "stance_archetype": "Contrarian Philosopher",
+      "profile_depth": "deep",
+      "source": "offline",
+      "overall_score": 6.6,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 6.3,
+        "differentiation": 6.1,
+        "feasibility": 8.0,
+        "financial_viability": 6.4,
+        "execution_risk": 5.4,
+        "regulatory_legal_risk": 7.8,
+        "market_timing": 6.4,
+        "defensibility_scale": 6.3
+      },
+      "opinion_critique": "As Paul Graham, my core rule is 'I was so delighted when I realized that one was happening.'. For 'AegisHealth AI', your wedge must overcome customer inertia. My primary concern is that do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity. Validate willingness to pay immediately before scaling.",
+      "specific_warnings": [
+        "Do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity.",
+        "Do not mistake ambition for a large market-size story without a credible path through the hard parts."
+      ],
+      "actionable_tips": [
+        "Choose a problem that feels difficult enough to matter. The most consequential startup ideas often look intimidating before they look inevitable.",
+        "Examine the founder's motivation as seriously as the market story. Serious ambition needs persistence, curiosity, and willingness to work through uncertainty."
+      ],
+      "kill_question": "What makes this problem hard enough that others have avoided solving it?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "Essays, YC talks/interviews, Hackers & Painters",
+        "Paul Graham On Startups, Ambition, and Great Founders"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    },
+    {
+      "expert_id": "vivek_tiwari",
+      "expert_name": "Vivek Tiwari",
+      "role_or_title": "Industry Leader in Healthcare & Life Sciences",
+      "stance_archetype": "Analytical Founder",
+      "profile_depth": "basic",
+      "source": "offline",
+      "overall_score": 6.3,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 5.9,
+        "differentiation": 5.0,
+        "feasibility": 8.3,
+        "financial_viability": 6.8,
+        "execution_risk": 5.2,
+        "regulatory_legal_risk": 8.0,
+        "market_timing": 6.0,
+        "defensibility_scale": 5.5
+      },
+      "opinion_critique": "As Vivek Tiwari, my core rule is 'Demand unvarnished customer reality before building.'. For 'AegisHealth AI', your wedge must overcome customer inertia. My primary concern is that premature scaling will burn cash before true pmf is discovered. Validate willingness to pay immediately before scaling.",
+      "specific_warnings": [
+        "Premature scaling will burn cash before true PMF is discovered."
+      ],
+      "actionable_tips": [
+        "First principles reasoning is essential."
+      ],
+      "kill_question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "Do not activate: identity/source base not sufficiently precise"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    },
+    {
+      "expert_id": "michael_seibel",
+      "expert_name": "Michael Seibel",
+      "role_or_title": "Managing Director YC / Co-founder Twitch & Socialcam",
+      "stance_archetype": "Rigorous Operator",
+      "profile_depth": "deep",
+      "source": "offline",
+      "overall_score": 6.2,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 5.9,
+        "differentiation": 5.7,
+        "feasibility": 7.4,
+        "financial_viability": 6.1,
+        "execution_risk": 6.6,
+        "regulatory_legal_risk": 7.2,
+        "market_timing": 6.2,
+        "defensibility_scale": 4.7
+      },
+      "opinion_critique": "As Michael Seibel, my core rule is '\"Relentless prioritization on customer delight and true product-market fit.\"'. For 'AegisHealth AI', your wedge must overcome customer inertia. My primary concern is that a polished idea without a clear problem or an initial-user path is weak evidence of demand. Validate willingness to pay immediately before scaling.",
+      "specific_warnings": [
+        "A polished idea without a clear problem or an initial-user path is weak evidence of demand.",
+        "Do not wait for perfect certainty before testing; the first useful evidence comes from real users."
+      ],
+      "actionable_tips": [
+        "Begin with a problem, preferably one you understand personally or are unusually well placed to solve.",
+        "After finding a promising problem, build a minimum viable product and put it in front of initial users quickly."
+      ],
+      "kill_question": "Why are you qualified to work on this problem?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "YC talks, Startup School lectures, interviews",
+        "How to Get and Test Startup Ideas"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    },
+    {
+      "expert_id": "joe_gebbia",
+      "expert_name": "Joe Gebbia",
+      "role_or_title": "Industry Leader in technology and software",
+      "stance_archetype": "Product Wedge Specialist",
+      "profile_depth": "deep",
+      "source": "offline",
+      "overall_score": 6.6,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 6.9,
+        "differentiation": 5.5,
+        "feasibility": 8.9,
+        "financial_viability": 5.9,
+        "execution_risk": 5.2,
+        "regulatory_legal_risk": 7.8,
+        "market_timing": 7.2,
+        "defensibility_scale": 5.1
+      },
+      "opinion_critique": "As Joe Gebbia, my core rule is 'I love that I learned yesterday this room used to occupy the founding documents of our nation.'. For 'AegisHealth AI', your wedge must overcome customer inertia. My primary concern is that as i motion for the tab, i make the mistake of asking him, \"so where are you staying tonight?\" and he makes it worse by saying, \"actually, i don't have a place.\" and i'm thinking,",
+      "specific_warnings": [
+        "As I motion for the tab, I make the mistake of asking him, \"So where are you staying tonight?\" And he makes it worse by saying, \"Actually, I don't have a place.\" And I'm thinking, \"Oh, man!\" What do you do?",
+        "But, I just met him -- I mean, he says he's going to the Peace Corps, but I don't really know if he's going to the Peace Corps and I don't want to end up kidnapped in the trunk of a Miata."
+      ],
+      "actionable_tips": [
+        "And I've always believed that turning fear into fun is the gift of creativity.",
+        "I always thought it's a little unusual that shouldn't anyone just want to be able to retire when they want to retire, not get stuck in a backlog, >> right?"
+      ],
+      "kill_question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "Airbnb talks, design interviews, podcast appearances",
+        "YouTube Keynote / Interview Transcript Distillation (Joe Gebbia)"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    },
+    {
+      "expert_id": "gary_marcus",
+      "expert_name": "Gary Marcus",
+      "role_or_title": "Industry Leader in A.I. M.L. DATA SCIENCE",
+      "stance_archetype": "Risk & Moat Skeptic",
+      "profile_depth": "deep",
+      "source": "llm",
+      "overall_score": 2.2,
+      "verdict_label": "Do not build as-is",
+      "pillar_ratings": {
+        "market_demand": 6.0,
+        "differentiation": 4.0,
+        "feasibility": 1.0,
+        "financial_viability": 2.0,
+        "execution_risk": 0.0,
+        "regulatory_legal_risk": 0.0,
+        "market_timing": 4.0,
+        "defensibility_scale": 1.0
+      },
+      "opinion_critique": "This is a house of cards built on sand. Current AI lacks the reliability and control necessary for critical medical applications. A solo founder cannot possibly manage the immense regulatory, security, and liability risks, let alone build a truly robust system. 'We don't know how well they'll stand on their feet as they take down.' This is a recipe for disaster, not customer delight.",
+      "specific_warnings": [
+        "AI reliability in critical medical contexts is a catastrophic unknown.",
+        "Regulatory and legal liability for AI errors are insurmountable for a solo founder.",
+        "Solo founder capacity is utterly insufficient for this level of complexity and risk."
+      ],
+      "actionable_tips": [
+        "Drastically narrow scope to a non-critical, non-patient data problem.",
+        "Prove 'willingness to pay' for a manual, human-powered version first."
+      ],
+      "kill_question": "What prevents an incumbent from copying this?",
+      "first_question_to_founder": "Given current AI's known limitations, how do you ensure 'very good control over these systems' when patient lives are at stake?",
+      "cited_sources": [
+        "The Next Decade in AI: Four Steps Towards Robust Artificial Intelligence",
+        "The AI Winter is Always Coming"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    }
+  ],
+  "network_graph": {
+    "nodes": [
+      {
+        "id": "aravind_ravichandran",
+        "name": "Aravind Ravichandran",
+        "archetype": "Capital & Growth Strategist",
+        "score": 6.0,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      },
+      {
+        "id": "paul_graham",
+        "name": "Paul Graham",
+        "archetype": "Contrarian Philosopher",
+        "score": 6.6,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      },
+      {
+        "id": "vivek_tiwari",
+        "name": "Vivek Tiwari",
+        "archetype": "Analytical Founder",
+        "score": 6.3,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      },
+      {
+        "id": "michael_seibel",
+        "name": "Michael Seibel",
+        "archetype": "Rigorous Operator",
+        "score": 6.2,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      },
+      {
+        "id": "joe_gebbia",
+        "name": "Joe Gebbia",
+        "archetype": "Product Wedge Specialist",
+        "score": 6.6,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      },
+      {
+        "id": "gary_marcus",
+        "name": "Gary Marcus",
+        "archetype": "Risk & Moat Skeptic",
+        "score": 2.2,
+        "color": "#FF3B30",
+        "coords": null,
+        "radius": null,
+        "category": null
+      }
+    ],
+    "edges": [
+      {
+        "source": "aravind_ravichandran",
+        "target": "paul_graham",
+        "tension": 0.27,
+        "reason": "Moderate debate",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "aravind_ravichandran",
+        "target": "vivek_tiwari",
+        "tension": 0.25,
+        "reason": "Moderate debate",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "aravind_ravichandran",
+        "target": "michael_seibel",
+        "tension": 0.27,
+        "reason": "Moderate debate",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "aravind_ravichandran",
+        "target": "joe_gebbia",
+        "tension": 0.19,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "aravind_ravichandran",
+        "target": "gary_marcus",
+        "tension": 0.93,
+        "reason": "Sharp philosophical divergence",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "paul_graham",
+        "target": "vivek_tiwari",
+        "tension": 0.12,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "paul_graham",
+        "target": "michael_seibel",
+        "tension": 0.17,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "paul_graham",
+        "target": "joe_gebbia",
+        "tension": 0.15,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "paul_graham",
+        "target": "gary_marcus",
+        "tension": 1.0,
+        "reason": "Sharp philosophical divergence",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "vivek_tiwari",
+        "target": "michael_seibel",
+        "tension": 0.17,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "vivek_tiwari",
+        "target": "joe_gebbia",
+        "tension": 0.15,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "vivek_tiwari",
+        "target": "gary_marcus",
+        "tension": 1.0,
+        "reason": "Sharp philosophical divergence",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "michael_seibel",
+        "target": "joe_gebbia",
+        "tension": 0.2,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "michael_seibel",
+        "target": "gary_marcus",
+        "tension": 1.0,
+        "reason": "Sharp philosophical divergence",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "joe_gebbia",
+        "target": "gary_marcus",
+        "tension": 1.0,
+        "reason": "Sharp philosophical divergence",
+        "relation": null,
+        "weight": null
+      }
+    ],
+    "tension_index": 0.46,
+    "cluster_tags": [
+      "Healthcare & Life Sciences",
+      "A.I. M.L. DATA SCIENCE"
+    ]
+  },
+  "created_at": "2026-11-21T20:15:26.125436+00:00"
+}

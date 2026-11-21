@@ -1,0 +1,416 @@
+{
+  "id": "rep_1d55b599",
+  "idea_id": "idea_a6bca508",
+  "title": "LogiFleet Dynamic",
+  "source": "offline",
+  "overall_score": 6.3,
+  "verdict_label": "Promising but risky",
+  "confidence_index": 0.88,
+  "consensus_percentage": 89.8,
+  "executive_summary": "Council Verdict: Promising but risky (6.3/10.0). Evaluated across 8 pillars by 4 domain personas. Primary strengths centered on Feasibility (8.1/10), while primary risk concentrated in Defensibility at Scale (4.8/10).",
+  "council_in_one_paragraph": "Paul Graham: \"As Paul Graham, my core rule is 'I was so delighted when I realized that one was happening.'. For 'LogiFleet Dynamic', y...\" | Drew Houston: \"As Drew Houston, my core rule is '\"Relentless prioritization on customer delight and true product-market fit.\"'. For 'Lo...\" | Azeem Azhar: \"As Azeem Azhar, my core rule is '\"How could you make sure you could even deliver on them?\"'. For 'LogiFleet Dynamic', yo...\"",
+  "pillar_scores": {
+    "market_demand": 5.9,
+    "differentiation": 5.5,
+    "feasibility": 8.1,
+    "financial_viability": 5.8,
+    "execution_risk": 6.0,
+    "regulatory_legal_risk": 7.4,
+    "market_timing": 7.2,
+    "defensibility_scale": 4.8
+  },
+  "top_warnings": [
+    {
+      "warning": "Do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity.",
+      "severity": "High",
+      "experts_count": 1,
+      "flagged_by": [
+        "Paul Graham"
+      ]
+    },
+    {
+      "warning": "Do not mistake ambition for a large market-size story without a credible path through the hard parts.",
+      "severity": "High",
+      "experts_count": 1,
+      "flagged_by": [
+        "Paul Graham"
+      ]
+    },
+    {
+      "warning": "Premature scaling before proving retention and unit economics.",
+      "severity": "High",
+      "experts_count": 1,
+      "flagged_by": [
+        "Drew Houston"
+      ]
+    },
+    {
+      "warning": "Building features based on hypothetical demand rather than observed user behavior.",
+      "severity": "High",
+      "experts_count": 1,
+      "flagged_by": [
+        "Drew Houston"
+      ]
+    },
+    {
+      "warning": "He is a visiting fellow at the Oxford Martin School, an executive fellow at Harvard Business School, and is co-chair on the global future council on complex risks at the World Economic Forum.",
+      "severity": "High",
+      "experts_count": 1,
+      "flagged_by": [
+        "Azeem Azhar"
+      ]
+    }
+  ],
+  "top_tips": [
+    {
+      "tip": "Relentless prioritization on customer delight and true product-market fit.",
+      "experts_count": 2,
+      "recommended_by": [
+        "Drew Houston",
+        "Gary Marcus"
+      ]
+    },
+    {
+      "tip": "Build compounding advantages through tight feedback loops and high execution velocity.",
+      "experts_count": 2,
+      "recommended_by": [
+        "Drew Houston",
+        "Gary Marcus"
+      ]
+    },
+    {
+      "tip": "Choose a problem that feels difficult enough to matter. The most consequential startup ideas often look intimidating before they look inevitable.",
+      "experts_count": 1,
+      "recommended_by": [
+        "Paul Graham"
+      ]
+    },
+    {
+      "tip": "Examine the founder's motivation as seriously as the market story. Serious ambition needs persistence, curiosity, and willingness to work through uncertainty.",
+      "experts_count": 1,
+      "recommended_by": [
+        "Paul Graham"
+      ]
+    },
+    {
+      "tip": "How could you make sure you could even deliver on them?",
+      "experts_count": 1,
+      "recommended_by": [
+        "Azeem Azhar"
+      ]
+    }
+  ],
+  "kill_questions": [
+    {
+      "question": "What makes this problem hard enough that others have avoided solving it?",
+      "raised_by": "Paul Graham",
+      "rationale": "Stance: Contrarian Philosopher. Score: 6.4/10."
+    },
+    {
+      "question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "raised_by": "Drew Houston",
+      "rationale": "Stance: Product Wedge Specialist. Score: 6.5/10."
+    },
+    {
+      "question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "raised_by": "Azeem Azhar",
+      "rationale": "Stance: Deep Tech Architect. Score: 6.3/10."
+    },
+    {
+      "question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "raised_by": "Gary Marcus",
+      "rationale": "Stance: Risk & Moat Skeptic. Score: 6.1/10."
+    }
+  ],
+  "tailored_actions": [
+    "Divide ownership clearly: assign one co-founder 100% to customer discovery in Enterprise Logistics and one to rapid product iteration.",
+    "Draft a 1-page pilot term sheet outlining 3 quantifiable success criteria to secure signed LOIs without custom feature bloat."
+  ],
+  "is_suspicious_input": false,
+  "consensus_dissent": {
+    "consensus_points": [
+      "The council concurs with an average score of 8.1/10 on Feasibility.",
+      "The council concurs with an average score of 7.4/10 on Regulatory & Legal Safety.",
+      "The council concurs with an average score of 7.2/10 on Market Timing."
+    ],
+    "sharp_disagreements": [
+      {
+        "topic": "Defensibility at Scale Split (2.7 vs 6.3)",
+        "optimist_view": "Drew Houston views defensibility at scale as a distinct competitive strength (6.3/10).",
+        "optimists": [
+          "Drew Houston"
+        ],
+        "skeptic_view": "Gary Marcus flags major structural vulnerability in defensibility at scale (2.7/10).",
+        "skeptics": [
+          "Gary Marcus"
+        ]
+      }
+    ]
+  },
+  "tactical_roadmap": {
+    "days_30": [
+      "Directly stress-test primary kill question: \"What makes this problem hard enough that others have avoided solving it?\"",
+      "Relentless prioritization on customer delight and true product-market fit.",
+      "De-risk existential warning: Do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity."
+    ],
+    "days_90": [
+      "Build compounding advantages through tight feedback loops and high execution velocity.",
+      "Overcome secondary friction point: Do not mistake ambition for a large market-size story without a credible path through the hard parts.",
+      "Establish quantifiable moat against copycats."
+    ],
+    "days_180": [
+      "Formalize proprietary data loops and compounding distribution advantages.",
+      "Scale gross margins above 70% while defending against competitor price-slashing."
+    ]
+  },
+  "expert_roster": [
+    {
+      "expert_id": "paul_graham",
+      "expert_name": "Paul Graham",
+      "role_or_title": "Co-founder, Y Combinator",
+      "stance_archetype": "Contrarian Philosopher",
+      "profile_depth": "deep",
+      "source": "offline",
+      "overall_score": 6.4,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 5.2,
+        "differentiation": 5.3,
+        "feasibility": 7.9,
+        "financial_viability": 6.1,
+        "execution_risk": 6.1,
+        "regulatory_legal_risk": 7.2,
+        "market_timing": 7.7,
+        "defensibility_scale": 5.4
+      },
+      "opinion_critique": "As Paul Graham, my core rule is 'I was so delighted when I realized that one was happening.'. For 'LogiFleet Dynamic', your wedge must overcome customer inertia. My primary concern is that do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity. Validate willingness to pay immediately before scaling.",
+      "specific_warnings": [
+        "Do not reject an idea only because it initially looks frighteningly hard; difficulty can be part of the opportunity.",
+        "Do not mistake ambition for a large market-size story without a credible path through the hard parts."
+      ],
+      "actionable_tips": [
+        "Choose a problem that feels difficult enough to matter. The most consequential startup ideas often look intimidating before they look inevitable.",
+        "Examine the founder's motivation as seriously as the market story. Serious ambition needs persistence, curiosity, and willingness to work through uncertainty."
+      ],
+      "kill_question": "What makes this problem hard enough that others have avoided solving it?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "Essays, YC talks/interviews, Hackers & Painters",
+        "Paul Graham On Startups, Ambition, and Great Founders"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    },
+    {
+      "expert_id": "drew_houston",
+      "expert_name": "Drew Houston",
+      "role_or_title": "Industry Leader in technology and software",
+      "stance_archetype": "Product Wedge Specialist",
+      "profile_depth": "deep",
+      "source": "offline",
+      "overall_score": 6.5,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 6.3,
+        "differentiation": 6.4,
+        "feasibility": 8.1,
+        "financial_viability": 5.3,
+        "execution_risk": 6.1,
+        "regulatory_legal_risk": 7.1,
+        "market_timing": 6.8,
+        "defensibility_scale": 6.3
+      },
+      "opinion_critique": "As Drew Houston, my core rule is '\"Relentless prioritization on customer delight and true product-market fit.\"'. For 'LogiFleet Dynamic', your wedge must overcome customer inertia. My primary concern is that premature scaling before proving retention and unit economics. Validate willingness to pay immediately before scaling.",
+      "specific_warnings": [
+        "Premature scaling before proving retention and unit economics.",
+        "Building features based on hypothetical demand rather than observed user behavior."
+      ],
+      "actionable_tips": [
+        "Relentless prioritization on customer delight and true product-market fit.",
+        "Build compounding advantages through tight feedback loops and high execution velocity."
+      ],
+      "kill_question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "Dropbox talks, essays, podcasts, YC appearances",
+        "YouTube Keynote / Interview Transcript Distillation (Drew Houston)"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    },
+    {
+      "expert_id": "azeem_azhar",
+      "expert_name": "Azeem Azhar",
+      "role_or_title": "Industry Leader in A.I. M.L. DATA SCIENCE",
+      "stance_archetype": "Deep Tech Architect",
+      "profile_depth": "deep",
+      "source": "offline",
+      "overall_score": 6.3,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 6.0,
+        "differentiation": 4.7,
+        "feasibility": 8.0,
+        "financial_viability": 6.2,
+        "execution_risk": 5.7,
+        "regulatory_legal_risk": 8.0,
+        "market_timing": 7.2,
+        "defensibility_scale": 4.8
+      },
+      "opinion_critique": "As Azeem Azhar, my core rule is '\"How could you make sure you could even deliver on them?\"'. For 'LogiFleet Dynamic', your wedge must overcome customer inertia. My primary concern is that he is a visiting fellow at the oxford martin school, an executive fellow at harvard business school, and is co-chair on the global future council on complex risks at the world economic forum. Validate willingness",
+      "specific_warnings": [
+        "He is a visiting fellow at the Oxford Martin School, an executive fellow at Harvard Business School, and is co-chair on the global future council on complex risks at the World Economic Forum.",
+        "It often exceeds very highly skilled people even in their own domain."
+      ],
+      "actionable_tips": [
+        "How could you make sure you could even deliver on them?",
+        "Now, as a leader, you've got to focus on transforming the core of what you do, not tinkering around the edges."
+      ],
+      "kill_question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "Exponential View newsletter/podcast/interviews",
+        "YouTube Keynote / Interview Transcript Distillation (Azeem Azhar)"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    },
+    {
+      "expert_id": "gary_marcus",
+      "expert_name": "Gary Marcus",
+      "role_or_title": "Industry Leader in A.I. M.L. DATA SCIENCE",
+      "stance_archetype": "Risk & Moat Skeptic",
+      "profile_depth": "deep",
+      "source": "offline",
+      "overall_score": 6.1,
+      "verdict_label": "Promising but risky",
+      "pillar_ratings": {
+        "market_demand": 6.1,
+        "differentiation": 5.4,
+        "feasibility": 8.4,
+        "financial_viability": 5.6,
+        "execution_risk": 6.0,
+        "regulatory_legal_risk": 7.4,
+        "market_timing": 7.1,
+        "defensibility_scale": 2.7
+      },
+      "opinion_critique": "As Gary Marcus, my core rule is '\"Relentless prioritization on customer delight and true product-market fit.\"'. For 'LogiFleet Dynamic', your wedge must overcome customer inertia. My primary concern is that for some of this, we don't know how well they'll stand on their feet as they take down. Validate willingness to pay immediately before scaling.",
+      "specific_warnings": [
+        "For some of this, we don't know how well they'll stand on their feet as they take down.",
+        "So they will get better and better and they will continue to make mistakes, too."
+      ],
+      "actionable_tips": [
+        "Relentless prioritization on customer delight and true product-market fit.",
+        "Build compounding advantages through tight feedback loops and high execution velocity."
+      ],
+      "kill_question": "If a dominant incumbent copies this feature next month, why do your customers stay?",
+      "first_question_to_founder": "Show me proof that real customers desperately want this today.",
+      "cited_sources": [
+        "Books, blog, debates, interviews",
+        "YouTube Keynote / Interview Transcript Distillation (Gary Marcus)"
+      ],
+      "is_dissenting": false,
+      "weight": 1.0
+    }
+  ],
+  "network_graph": {
+    "nodes": [
+      {
+        "id": "paul_graham",
+        "name": "Paul Graham",
+        "archetype": "Contrarian Philosopher",
+        "score": 6.4,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      },
+      {
+        "id": "drew_houston",
+        "name": "Drew Houston",
+        "archetype": "Product Wedge Specialist",
+        "score": 6.5,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      },
+      {
+        "id": "azeem_azhar",
+        "name": "Azeem Azhar",
+        "archetype": "Deep Tech Architect",
+        "score": 6.3,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      },
+      {
+        "id": "gary_marcus",
+        "name": "Gary Marcus",
+        "archetype": "Risk & Moat Skeptic",
+        "score": 6.1,
+        "color": "#00E5FF",
+        "coords": null,
+        "radius": null,
+        "category": null
+      }
+    ],
+    "edges": [
+      {
+        "source": "paul_graham",
+        "target": "drew_houston",
+        "tension": 0.16,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "paul_graham",
+        "target": "azeem_azhar",
+        "tension": 0.12,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "paul_graham",
+        "target": "gary_marcus",
+        "tension": 0.18,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "drew_houston",
+        "target": "azeem_azhar",
+        "tension": 0.19,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "drew_houston",
+        "target": "gary_marcus",
+        "tension": 0.19,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      },
+      {
+        "source": "azeem_azhar",
+        "target": "gary_marcus",
+        "tension": 0.15,
+        "reason": "Strong alignment",
+        "relation": null,
+        "weight": null
+      }
+    ],
+    "tension_index": 0.17,
+    "cluster_tags": [
+      "technology and software",
+      "A.I. M.L. DATA SCIENCE"
+    ]
+  },
+  "created_at": "2026-11-21T20:15:31.941164+00:00"
+}
