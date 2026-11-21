@@ -1,1006 +1,252 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>QUORUM // Autonomous War Room - AI Startup Evaluation Engine</title>
-  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
-  <!-- Material Symbols Outlined -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-  <!-- Three.js for Cinematic 3D Network Visualization -->
-  <script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "surface": "#05060A",
-            "surface-dim": "#080B12",
-            "surface-container": "#0D111B",
-            "surface-container-high": "#151B2B",
-            "surface-container-lowest": "#030407",
-            "primary": "#C3F5FF",
-            "primary-container": "#00E5FF",
-            "secondary": "#B6FF3B",
-            "tertiary": "#38BDF8",
-            "error": "#FF5C5C",
-            "outline": "#849396",
-            "outline-variant": "#232838",
-            "on-surface": "#E3E2E9",
-            "on-surface-variant": "#94A3B8"
-          },
-          fontFamily: {
-            headline: ["Space Grotesk", "sans-serif"],
-            telemetry: ["JetBrains Mono", "monospace"],
-            body: ["Inter", "sans-serif"]
-          }
-        }
-      }
-    };
-  </script>
-  <style>
-    body {
-      background-color: #05060A;
-      background-image: 
-        radial-gradient(circle at 50% 10%, rgba(0, 229, 255, 0.05) 0%, transparent 60%),
-        radial-gradient(circle at 90% 70%, rgba(182, 255, 59, 0.03) 0%, transparent 50%),
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
-      color: #E3E2E9;
-    }
-    .neon-glow-cyan {
-      box-shadow: 0 0 20px rgba(0, 229, 255, 0.35);
-    }
-    .neon-border-cyan {
-      border: 1px solid rgba(0, 229, 255, 0.3);
-      box-shadow: inset 0 0 12px rgba(0, 229, 255, 0.08);
-    }
-    .neon-border-lime {
-      border: 1px solid rgba(182, 255, 59, 0.35);
-      box-shadow: inset 0 0 12px rgba(182, 255, 59, 0.08);
-    }
-    .custom-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
-    .custom-scroll::-webkit-scrollbar-track { background: #080B12; }
-    .custom-scroll::-webkit-scrollbar-thumb { background: #232838; border-radius: 4px; }
-    .custom-scroll::-webkit-scrollbar-thumb:hover { background: #00E5FF; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUORUM // Autonomous War Room - Adversarial AI Expert Council</title>
+  <!-- Single Google Font for headings with font-display: swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Handcrafted accessible stylesheet (<15KB, zero Tailwind CDN) -->
+  <link rel="stylesheet" href="/static/app.css">
 </head>
-<body class="min-h-screen font-body flex flex-col antialiased selection:bg-primary-container selection:text-surface">
+<body>
 
-  <!-- TOP APP BAR -->
-  <header class="fixed top-0 left-0 w-full z-50 h-14 bg-surface/90 backdrop-blur-md border-b border-white/10 px-6 flex items-center justify-between">
-    <div class="flex items-center gap-4">
-      <div class="flex items-center gap-2 cursor-pointer" onclick="switchStage(1)">
-        <div class="w-7 h-7 bg-surface-container-high border border-primary-container/60 rounded flex items-center justify-center shadow-[0_0_12px_rgba(0,229,255,0.4)]">
-          <span class="w-2.5 h-2.5 bg-primary-container rotate-45"></span>
-        </div>
-        <span class="font-headline font-bold text-lg tracking-wider text-primary">QUORUM</span>
-      </div>
-      <div class="hidden sm:flex items-center gap-2 px-2.5 py-0.5 rounded bg-surface-container border border-outline-variant text-[11px] font-telemetry">
-        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_6px_#aff833]"></span>
-        <span class="text-secondary font-semibold" id="sys-status-badge">SYS: 520+ EXPERTS LOADED</span>
-      </div>
-    </div>
+  <!-- Skip-to-content Link for Keyboard Accessibility (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- 4-Stage Navigation Pipeline -->
-    <nav class="flex items-center gap-4 sm:gap-6 font-telemetry text-xs">
-      <div id="nav-step-1" class="flex items-center gap-1.5 cursor-pointer text-primary-container border-b-2 border-primary-container pb-1 transition-all" onclick="switchStage(1)">
-        <span class="text-secondary font-bold">01</span>
-        <span>SUBMIT</span>
-      </div>
-      <span class="text-outline-variant">→</span>
-      <div id="nav-step-2" class="flex items-center gap-1.5 cursor-pointer text-outline hover:text-on-surface pb-1 transition-all" onclick="switchStage(2)">
-        <span>02</span>
-        <span>WAR ROOM</span>
-      </div>
-      <span class="text-outline-variant">→</span>
-      <div id="nav-step-3" class="flex items-center gap-1.5 cursor-pointer text-outline hover:text-on-surface pb-1 transition-all" onclick="switchStage(3)">
-        <span>03</span>
-        <span>COUNCIL</span>
-      </div>
-      <span class="text-outline-variant">→</span>
-      <div id="nav-step-4" class="flex items-center gap-1.5 cursor-pointer text-outline hover:text-on-surface pb-1 transition-all" onclick="switchStage(4)">
-        <span>04</span>
-        <span>DOSSIER</span>
-      </div>
-    </nav>
+  <!-- Top Application Navigation -->
+  <header class="app-header" role="banner">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand" aria-label="QUORUM War Room Home">
+        <span style="font-size: 20px; font-weight: 800; letter-spacing: -0.04em;">QUORUM</span>
+        <span class="brand-badge">WAR ROOM</span>
+      </a>
 
-    <div class="flex items-center gap-3">
-      <div class="hidden md:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container border border-white/5 font-telemetry text-[11px] text-outline">
-        <span>PING:</span>
-        <span class="text-primary-container font-semibold">12ms</span>
-      </div>
-      <button onclick="fillExample()" class="px-3 py-1 rounded bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-telemetry text-primary-container transition-all" title="Load sample startup idea">
-        Sample Pitch
-      </button>
+      <!-- 3-Step Flow Tracker -->
+      <nav class="step-tracker" id="step-tracker" aria-label="Evaluation Process Steps">
+        <button class="step-btn active" data-step="1" id="nav-step-1" aria-current="step">
+          <span class="mono">1</span> Pitch
+        </button>
+        <button class="step-btn" data-step="2" id="nav-step-2">
+          <span class="mono">2</span> Council
+        </button>
+        <button class="step-btn" data-step="3" id="nav-step-3">
+          <span class="mono">3</span> Verdict
+        </button>
+      </nav>
     </div>
   </header>
 
-  <!-- MAIN VIEWPORT -->
-  <main class="flex-1 max-w-[1440px] w-full mx-auto px-4 md:px-8 pt-20 pb-16">
+  <!-- Main Content Landmark -->
+  <main class="container" id="main-content" role="main" style="padding-top: 32px; padding-bottom: 60px;">
 
-    <!-- ================= STAGE 01: SUBMIT IDEA ================= -->
-    <section id="stage-1" class="space-y-6">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4">
-        <div>
-          <div class="flex items-center gap-2 font-telemetry text-xs text-primary-container">
-            <span class="material-symbols-outlined text-sm">hub</span>
-            <span>STAGE 01 // VENTURE TELEMETRY INGESTION</span>
-          </div>
-          <h1 class="font-headline font-bold text-3xl md:text-4xl tracking-tight text-on-surface mt-1">
-            Submit Venture for Council Scrutiny
+    <!-- ===================================================================== -->
+    <!-- STEP 1: IDEA ENTRY & FOUNDER SITUATIONAL CONTEXT                     -->
+    <!-- ===================================================================== -->
+    <section id="step-1-idea" aria-labelledby="heading-step-1">
+      <div style="max-width: 840px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <h1 id="heading-step-1" style="font-size: 36px; margin-bottom: 10px; color: var(--text-main);">
+            Subject Your Startup to the Council
           </h1>
-          <p class="text-on-surface-variant text-sm mt-1 max-w-2xl">
-            Pass your startup pitch, thesis, or business model to 520+ AI-modeled titans, contrarian operators, and industry specialists.
+          <p style="font-size: 15px; color: var(--text-muted); max-width: 680px; margin: 0 auto;">
+            Pitch your concept to an adversarial boardroom of 5–7 real-world industry icons.
+            Receive 8-pillar scoring, fatal kill questions, and tailored de-risking actions before building.
           </p>
         </div>
-      </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <!-- Input Form -->
-        <div class="lg:col-span-8 bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/10 p-6 md:p-8 space-y-5 shadow-2xl">
-          <div>
-            <label class="block font-telemetry text-xs text-outline uppercase tracking-wider mb-2">Startup / Project Name</label>
-            <input id="input-title" type="text" placeholder="e.g. QuikD2C AI, HyperSaaS, GridFlow..." 
-              class="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest border border-white/10 text-on-surface focus:border-primary-container focus:ring-0 font-body text-sm placeholder:text-outline/60"/>
-          </div>
-
-          <div>
-            <label class="block font-telemetry text-xs text-outline uppercase tracking-wider mb-2">Executive Pitch & Problem Vector</label>
-            <textarea id="input-pitch" rows="6" placeholder="Describe the core problem, customer ICP, architectural solution, and monetization strategy..." 
-              class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-white/10 text-on-surface focus:border-primary-container focus:ring-0 font-body text-sm leading-relaxed placeholder:text-outline/60"></textarea>
-          </div>
-
-          <!-- Context Pills -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div>
-              <label class="block font-telemetry text-[11px] text-outline uppercase mb-1">Stage</label>
-              <select id="input-stage" class="w-full px-3 py-2 rounded bg-surface-container-lowest border border-white/10 text-xs font-telemetry text-on-surface">
-                <option value="Idea">Idea / Concept</option>
-                <option value="Prototype">Prototype</option>
-                <option value="MVP" selected>MVP in Testing</option>
-                <option value="Growth">Growth / Scaling</option>
-              </select>
-            </div>
-            <div>
-              <label class="block font-telemetry text-[11px] text-outline uppercase mb-1">Target Market</label>
-              <select id="input-market" class="w-full px-3 py-2 rounded bg-surface-container-lowest border border-white/10 text-xs font-telemetry text-on-surface">
-                <option value="B2B" selected>B2B Enterprise / SMB</option>
-                <option value="B2C">B2C Consumer</option>
-                <option value="B2B2C">B2B2C Hybrid</option>
-                <option value="Gov/Defense">Gov & Regulated</option>
-              </select>
-            </div>
-            <div>
-              <label class="block font-telemetry text-[11px] text-outline uppercase mb-1">Geography</label>
-              <select id="input-geography" class="w-full px-3 py-2 rounded bg-surface-container-lowest border border-white/10 text-xs font-telemetry text-on-surface">
-                <option value="Global" selected>Global / Cross-Border</option>
-                <option value="US">North America</option>
-                <option value="Europe">Europe</option>
-                <option value="Asia">Asia-Pacific</option>
-              </select>
-            </div>
-            <div>
-              <label class="block font-telemetry text-[11px] text-outline uppercase mb-1">Budget / Runway</label>
-              <select id="input-budget" class="w-full px-3 py-2 rounded bg-surface-container-lowest border border-white/10 text-xs font-telemetry text-on-surface">
-                <option value="Bootstrapped" selected>Bootstrapped</option>
-                <option value="Pre-Seed">Pre-Seed (<$500k)</option>
-                <option value="Seed">Seed ($1M - $3M)</option>
-                <option value="Series A">Series A+ ($5M+)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="pt-4 flex items-center justify-between border-t border-white/10">
-            <span class="font-telemetry text-xs text-outline" id="brief-status-hint">Zero sugar-coating enabled.</span>
-            <button id="btn-submit-idea" onclick="submitIdeaForAnalysis()" 
-              class="px-6 py-3 rounded-lg bg-primary-container text-surface font-headline font-bold text-sm flex items-center gap-2 hover:brightness-110 neon-glow-cyan active:scale-95 transition-all">
-              <span class="material-symbols-outlined text-lg">radar</span>
-              <span>SYNTHESIZE BRIEF & RECOMMEND JURY</span>
+        <!-- 1-Click Sample Idea Buttons (Phase 7 Demo Readiness) -->
+        <div style="margin-bottom: 20px; text-align: center;">
+          <span style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-dim); margin-right: 8px;">
+            Try a sample idea:
+          </span>
+          <div style="display: inline-flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 6px;">
+            <button type="button" class="sample-btn" onclick="window.QuorumApp.loadSample(0)">
+              ⚡ B2B DevTool: EdgeRust
+            </button>
+            <button type="button" class="sample-btn" onclick="window.QuorumApp.loadSample(1)">
+              🩺 HealthTech: PostOp Vision
+            </button>
+            <button type="button" class="sample-btn" onclick="window.QuorumApp.loadSample(2)">
+              🌱 CleanTech: EcoDeliver Cargo
             </button>
           </div>
         </div>
 
-        <!-- Ingestion Telemetry Sidebar -->
-        <div class="lg:col-span-4 space-y-5">
-          <div class="bg-surface-container/60 backdrop-blur-md rounded-2xl border border-white/10 p-5 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="font-telemetry text-xs uppercase text-primary-container font-semibold">Active Council Pool</span>
-              <span class="text-xs font-telemetry text-secondary">520+ PROFILES</span>
-            </div>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Every submission activates an algorithmic panel routing engine that searches sector taxonomies, investment track records, and operational specialties.
-            </p>
-            <div class="space-y-2 pt-2 border-t border-white/5 font-telemetry text-xs">
-              <div class="flex items-center justify-between text-outline">
-                <span>Domain Taxonomy Match</span>
-                <span class="text-secondary font-semibold">Ready</span>
-              </div>
-              <div class="flex items-center justify-between text-outline">
-                <span>Adversarial Contrarian Bias</span>
-                <span class="text-primary-container font-semibold">Active (Unfiltered)</span>
-              </div>
-              <div class="flex items-center justify-between text-outline">
-                <span>8-Pillar Scoring Engine</span>
-                <span class="text-on-surface font-semibold">Armed</span>
-              </div>
-            </div>
+        <form id="pitch-form" class="card" style="display: flex; flex-direction: column; gap: 18px;" novalidate>
+          <div>
+            <label for="title-input" class="label">Startup Working Title</label>
+            <input type="text" id="title-input" class="input" placeholder="e.g. EdgeRust Telemetry, QuikD2C AI, EcoDeliver" required />
           </div>
 
-          <!-- Featured Icons Preview -->
-          <div class="bg-surface-container/40 rounded-xl border border-white/5 p-4 space-y-3">
-            <span class="font-telemetry text-[11px] text-outline uppercase tracking-wider block">Key Personas in Chamber</span>
-            <div class="grid grid-cols-2 gap-2">
-              <div class="p-2 rounded bg-surface-container-lowest/80 border border-white/5 flex items-center gap-2">
-                <span class="w-6 h-6 rounded bg-primary-container/20 text-primary-container text-[11px] font-bold flex items-center justify-center">PG</span>
-                <span class="text-xs text-on-surface font-medium truncate">Paul Graham</span>
-              </div>
-              <div class="p-2 rounded bg-surface-container-lowest/80 border border-white/5 flex items-center gap-2">
-                <span class="w-6 h-6 rounded bg-secondary/20 text-secondary text-[11px] font-bold flex items-center justify-center">PT</span>
-                <span class="text-xs text-on-surface font-medium truncate">Peter Thiel</span>
-              </div>
-              <div class="p-2 rounded bg-surface-container-lowest/80 border border-white/5 flex items-center gap-2">
-                <span class="w-6 h-6 rounded bg-tertiary/20 text-tertiary text-[11px] font-bold flex items-center justify-center">MS</span>
-                <span class="text-xs text-on-surface font-medium truncate">Michael Seibel</span>
-              </div>
-              <div class="p-2 rounded bg-surface-container-lowest/80 border border-white/5 flex items-center gap-2">
-                <span class="w-6 h-6 rounded bg-error/20 text-error text-[11px] font-bold flex items-center justify-center">MA</span>
-                <span class="text-xs text-on-surface font-medium truncate">Marc Andreessen</span>
-              </div>
-            </div>
+          <div>
+            <label for="pitch-input" class="label">The Pitch (Problem, Customer, Wedge, Model)</label>
+            <textarea id="pitch-input" class="textarea" rows="6" placeholder="Explain what acute problem you solve, who desperately needs this today, your unfair wedge, and how you charge customers..." required></textarea>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ================= STAGE 02: WAR ROOM (BRIEF & JURY CURATION) ================= -->
-    <section id="stage-2" class="space-y-6 hidden">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4">
-        <div>
-          <div class="flex items-center gap-2 font-telemetry text-xs text-secondary">
-            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_6px_#aff833]"></span>
-            <span>STAGE 02 // BRIEF SYNTHESIS & COUNCIL CURATION</span>
-          </div>
-          <h1 class="font-headline font-bold text-3xl tracking-tight text-on-surface mt-1" id="war-room-title">
-            Venture Specification & Recommended Panel
-          </h1>
-          <p class="text-on-surface-variant text-sm mt-1" id="war-room-subtitle">
-            Review auto-extracted thesis vector and customize your advisory panel.
-          </p>
-        </div>
-        <button onclick="executeCouncilEvaluation()" 
-          class="px-6 py-2.5 rounded-lg bg-primary-container text-surface font-headline font-bold text-sm flex items-center gap-2 hover:brightness-110 neon-glow-cyan active:scale-95 transition-all">
-          <span class="material-symbols-outlined text-lg">gavel</span>
-          <span>CONVENE COUNCIL & COMMENCE INTERROGATION</span>
-        </button>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- Left: Venture Brief Specs -->
-        <aside class="lg:col-span-4 space-y-4">
-          <div class="bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/10 p-5 space-y-4 shadow-xl">
-            <div class="flex items-center justify-between border-b border-white/10 pb-3">
-              <span class="font-telemetry text-xs uppercase text-primary-container font-semibold">01 // Extracted Brief</span>
-              <span class="px-2 py-0.5 rounded bg-surface-container-lowest border border-secondary/40 text-[10px] font-telemetry text-secondary">LOCKED</span>
-            </div>
-
-            <div class="space-y-3 text-xs">
-              <div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-white/5">
-                <span class="text-outline uppercase font-telemetry block text-[10px] mb-1">01. Problem Vector</span>
-                <p id="brief-problem" class="text-on-surface leading-relaxed font-body">Analyzing...</p>
-              </div>
-
-              <div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-white/5">
-                <span class="text-outline uppercase font-telemetry block text-[10px] mb-1">02. Target ICP Cohort</span>
-                <p id="brief-persona" class="text-on-surface leading-relaxed font-body">Analyzing...</p>
-              </div>
-
-              <div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-white/5">
-                <span class="text-outline uppercase font-telemetry block text-[10px] mb-1">03. Architectural Solution</span>
-                <p id="brief-solution" class="text-on-surface leading-relaxed font-body">Analyzing...</p>
-              </div>
-
-              <div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-white/5">
-                <span class="text-outline uppercase font-telemetry block text-[10px] mb-1">04. Business Engine</span>
-                <p id="brief-model" class="text-on-surface leading-relaxed font-body">Analyzing...</p>
-              </div>
-            </div>
-
-            <!-- Taxonomies detected -->
-            <div class="pt-3 border-t border-white/10 space-y-2">
-              <span class="font-telemetry text-[11px] text-outline block">Resolved Taxonomy Sectors:</span>
-              <div id="brief-sectors" class="flex flex-wrap gap-1.5">
-                <!-- Injected dynamically -->
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        <!-- Right: Council Panel Curation Grid -->
-        <section class="lg:col-span-8 space-y-4">
-          <div class="bg-surface-container/60 backdrop-blur-md rounded-2xl border border-white/10 p-5 space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
+          <!-- Phase 2: User Context Fields (Smarter Assistant) -->
+          <div style="border-top: 1px solid var(--border); padding-top: 14px;">
+            <span class="label" style="color: var(--cyan); margin-bottom: 10px;">Founder Context (Tailors Council Selection & Milestones)</span>
+            <div class="grid-3" style="margin-bottom: 12px;">
               <div>
-                <h3 class="font-headline font-semibold text-lg text-on-surface">Curated Council Jury</h3>
-                <span id="panel-count-label" class="font-telemetry text-xs text-outline">10 Domain Titans & Adversaries Selected</span>
+                <label for="stage-select" class="label" style="font-size: 11px;">Current Stage</label>
+                <select id="stage-select" class="select">
+                  <option value="Idea">Idea / Concept</option>
+                  <option value="Prototype">Prototype / Alpha</option>
+                  <option value="MVP">Live MVP with Early Users</option>
+                  <option value="Early Revenue">Early Revenue</option>
+                </select>
               </div>
-              <div class="flex items-center gap-2">
-                <span class="font-telemetry text-xs text-outline">Filter:</span>
-                <button onclick="filterPanel('all')" class="px-2.5 py-1 rounded bg-primary-container/20 border border-primary-container text-primary-container text-xs font-telemetry">All</button>
-                <button onclick="filterPanel('contrarian')" class="px-2.5 py-1 rounded bg-surface-container-lowest border border-white/10 text-outline text-xs font-telemetry hover:text-on-surface">Contrarians</button>
+
+              <div>
+                <label for="team-size-select" class="label" style="font-size: 11px;">Team Structure</label>
+                <select id="team-size-select" class="select">
+                  <option value="Solo Founder">Solo Founder</option>
+                  <option value="2-3 Co-founders">2-3 Co-founders</option>
+                  <option value="Small Team (4-10)">Small Team (4-10)</option>
+                  <option value="Growth (10+)">Growth Stage (10+)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="runway-select" class="label" style="font-size: 11px;">Runway / Budget</label>
+                <select id="runway-select" class="select">
+                  <option value="Bootstrapped">Bootstrapped / Zero Capital</option>
+                  <option value="Pre-Seed ($50k-$250k)">Pre-Seed ($50k - $250k)</option>
+                  <option value="Seed ($250k-$2M)">Seed ($250k - $2M)</option>
+                  <option value="Series A+">Series A+</option>
+                </select>
               </div>
             </div>
 
-            <!-- Expert Cards Container -->
-            <div id="panel-cards-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5 max-h-[620px] overflow-y-auto custom-scroll pr-1">
-              <!-- Dynamically populated -->
+            <div class="grid-3">
+              <div>
+                <label for="goal-select" class="label" style="font-size: 11px;">Immediate Core Goal</label>
+                <select id="goal-select" class="select">
+                  <option value="Validate Urgency & Demand">Validate Urgency & Demand</option>
+                  <option value="Secure Pilot LOIs">Secure Pilot LOIs / Contracts</option>
+                  <option value="Raise Angel/Pre-Seed">Raise Angel / Pre-Seed</option>
+                  <option value="Launch Publicly">Launch Publicly</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="market-select" class="label" style="font-size: 11px;">Customer Segment</label>
+                <select id="market-select" class="select">
+                  <option value="B2B">B2B / SaaS Operators</option>
+                  <option value="Enterprise">Enterprise / Fortune 500</option>
+                  <option value="B2C">Consumer / Prosumer</option>
+                  <option value="D2C">Direct-to-Consumer / E-Commerce</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="geo-select" class="label" style="font-size: 11px;">Target Market Region</label>
+                <select id="geo-select" class="select">
+                  <option value="Global">Global</option>
+                  <option value="North America">North America</option>
+                  <option value="India">India</option>
+                  <option value="Europe">Europe</option>
+                  <option value="Southeast Asia">Southeast Asia</option>
+                </select>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
-    </section>
 
-    <!-- ================= STAGE 03: LIVE COUNCIL THEATER & 3D NETWORK ================= -->
-    <section id="stage-3" class="space-y-6 hidden">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4">
-        <div>
-          <div class="flex items-center gap-2 font-telemetry text-xs text-primary-container">
-            <span class="w-2 h-2 rounded-full bg-primary-container animate-ping shadow-[0_0_8px_#00E5FF]"></span>
-            <span>STAGE 03 // LIVE ADVERSARIAL DELIBERATION THEATER</span>
-          </div>
-          <h1 class="font-headline font-bold text-3xl tracking-tight text-on-surface mt-1">
-            Council Chamber in Session
-          </h1>
-          <p class="text-on-surface-variant text-sm mt-1">
-            Witness the real-time cross-examination of your venture across 8 validation pillars.
-          </p>
-        </div>
-        <div class="flex items-center gap-3">
-          <button onclick="switchStage(4)" 
-            class="px-5 py-2.5 rounded-lg bg-surface-container-high border border-white/20 text-on-surface font-telemetry text-xs hover:border-primary-container transition-all">
-            SKIP TO FULL DOSSIER →
-          </button>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- 3D Network Canvas Container -->
-        <div class="lg:col-span-7 bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/10 p-4 shadow-2xl relative min-h-[500px] flex flex-col">
-          <div class="flex items-center justify-between pb-2 border-b border-white/5 text-xs font-telemetry text-outline">
-            <span>3D CINEMATIC TOPOLOGY GRAPH</span>
-            <span class="text-secondary">INTERACTIVE ORBIT / ZOOM</span>
-          </div>
-          <div id="threejs-canvas-wrapper" class="flex-1 w-full h-[460px] relative rounded-xl overflow-hidden bg-[#030407]">
-            <!-- Three.js Canvas injected here -->
-          </div>
-        </div>
-
-        <!-- Live Interrogation Stream Feed -->
-        <div class="lg:col-span-5 bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/10 p-5 space-y-4 flex flex-col justify-between shadow-2xl">
+          <!-- Document Upload Dropzone -->
           <div>
-            <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
-                <span class="font-headline font-semibold text-sm text-on-surface uppercase tracking-wider">Adversarial Feed</span>
-              </div>
-              <span class="font-telemetry text-[11px] text-outline" id="critiques-count-badge">8 Critiques Ingested</span>
-            </div>
-
-            <div id="deliberation-stream" class="space-y-3.5 max-h-[420px] overflow-y-auto custom-scroll pr-1">
-              <!-- Critique cards injected dynamically -->
+            <label class="label">Upload Pitch Deck or Spec (Optional, Max 10 MB, 30 Pages)</label>
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload document dropzone">
+              <input type="file" id="file-input" accept=".pdf,.docx,.doc,.txt,.md" style="display: none;" />
+              <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 4px;">
+                <strong style="color: var(--cyan);">Click to upload</strong> or drag & drop PDF, DOCX, TXT, MD
+              </p>
+              <span id="file-name" class="mono" style="font-size: 12px; color: var(--lime);"></span>
             </div>
           </div>
 
-          <div class="pt-3 border-t border-white/10">
-            <button onclick="switchStage(4)" 
-              class="w-full py-3 rounded-lg bg-primary-container text-surface font-headline font-bold text-sm flex items-center justify-center gap-2 hover:brightness-110 neon-glow-cyan active:scale-95 transition-all">
-              <span class="material-symbols-outlined text-base">assessment</span>
-              <span>SYNTHESIZE COMPLETE DOSSIER REPORT (STAGE 04)</span>
+          <div style="display: flex; justify-content: flex-end; margin-top: 6px;">
+            <button type="submit" class="btn btn-primary" style="padding: 12px 28px; font-size: 15px;">
+              Convene Council →
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </section>
 
-    <!-- ================= STAGE 04: EXECUTIVE DOSSIER REPORT ================= -->
-    <section id="stage-4" class="space-y-8 hidden">
-      <!-- Report Header -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+    <!-- ===================================================================== -->
+    <!-- STEP 2: WAR ROOM PANEL REVIEW                                        -->
+    <!-- ===================================================================== -->
+    <section id="step-2-panel" style="display: none;" aria-labelledby="heading-step-2">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 14px;">
         <div>
-          <div class="flex items-center gap-2 font-telemetry text-xs text-primary-container">
-            <span class="material-symbols-outlined text-sm">verified</span>
-            <span id="report-id-badge">DOSSIER REF // QRM-EXECUTIVE-VERDICT</span>
-          </div>
-          <h1 class="font-headline font-bold text-3xl tracking-tight text-on-surface mt-1" id="report-title-heading">
-            Council Executive Overview Report
-          </h1>
-        </div>
-        <div class="flex items-center gap-2">
-          <button onclick="window.print()" class="px-4 py-2 rounded-lg bg-surface-container border border-white/10 text-xs font-telemetry text-on-surface hover:text-primary transition-all">
-            Export PDF
-          </button>
-          <button onclick="switchStage(1)" class="px-4 py-2 rounded-lg bg-primary-container/10 border border-primary-container/40 text-xs font-telemetry text-primary-container hover:bg-primary-container hover:text-surface transition-all">
-            + Test Another Venture
-          </button>
-        </div>
-      </div>
-
-      <!-- Bento Metric Row -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        <!-- Overall Score Card -->
-        <div class="bg-surface-container/80 backdrop-blur-md rounded-2xl border border-primary-container/30 p-6 neon-border-cyan flex flex-col justify-between">
-          <span class="font-telemetry text-xs uppercase text-primary-container font-semibold">Executive Verdict</span>
-          <div class="my-3 flex items-baseline gap-2">
-            <span class="font-headline font-bold text-5xl text-on-surface" id="metric-overall-score">7.2</span>
-            <span class="font-telemetry text-sm text-outline">/ 10</span>
-          </div>
-          <div class="inline-block px-2.5 py-0.5 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-xs font-telemetry font-semibold" id="metric-verdict-badge">
-            PROMISING IDEA
-          </div>
-        </div>
-
-        <!-- Consensus Card -->
-        <div class="bg-surface-container/80 backdrop-blur-md rounded-2xl border border-white/10 p-6 flex flex-col justify-between">
-          <span class="font-telemetry text-xs uppercase text-outline">Council Consensus</span>
-          <div class="my-3 flex items-baseline gap-1">
-            <span class="font-headline font-bold text-4xl text-secondary" id="metric-consensus">74%</span>
-          </div>
-          <p class="text-xs text-on-surface-variant font-telemetry">Agreement index across panel jury</p>
-        </div>
-
-        <!-- Top Critical Warning -->
-        <div class="bg-surface-container/80 backdrop-blur-md rounded-2xl border border-error/30 p-6 flex flex-col justify-between">
-          <span class="font-telemetry text-xs uppercase text-error font-semibold flex items-center gap-1">
-            <span class="material-symbols-outlined text-sm">warning</span>
-            Fatal Risk Factor
-          </span>
-          <p class="text-xs text-on-surface leading-snug my-2" id="metric-fatal-warning">
-            Customer acquisition payback drag under scale.
+          <h2 id="heading-step-2" style="font-size: 28px; color: var(--text-main);">Adversarial War Room Council</h2>
+          <p style="font-size: 14px; color: var(--text-muted);">
+            Balanced 5–7 member council selected from 709 domain icons based on your pitch and founder context.
           </p>
-          <span class="font-telemetry text-[11px] text-outline">Priority 1 Mitigation</span>
         </div>
-
-        <!-- 30-Day Milestone -->
-        <div class="bg-surface-container/80 backdrop-blur-md rounded-2xl border border-tertiary/30 p-6 flex flex-col justify-between">
-          <span class="font-telemetry text-xs uppercase text-tertiary font-semibold flex items-center gap-1">
-            <span class="material-symbols-outlined text-sm">timeline</span>
-            Immediate 30-Day Focus
-          </span>
-          <p class="text-xs text-on-surface leading-snug my-2" id="metric-first-roadmap">
-            Conduct 15 unvarnished problem discovery calls.
-          </p>
-          <span class="font-telemetry text-[11px] text-outline">Day 1-30 Tactical Directive</span>
-        </div>
-      </div>
-
-      <!-- 8 Pillars Radar Grid -->
-      <div class="bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/10 p-6 space-y-4">
-        <h3 class="font-headline font-semibold text-lg text-on-surface border-b border-white/10 pb-3">
-          8 Core Validation Pillars Diagnostics
-        </h3>
-        <div id="pillars-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <!-- Dynamically populated -->
-        </div>
-      </div>
-
-      <!-- Kill Questions & Tactical Roadmap -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- Kill Questions -->
-        <div class="lg:col-span-6 bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/10 p-6 space-y-4">
-          <div class="flex items-center gap-2 border-b border-white/10 pb-3">
-            <span class="material-symbols-outlined text-error">gavel</span>
-            <h3 class="font-headline font-semibold text-lg text-on-surface">Investor & Contender Kill Questions</h3>
-          </div>
-          <div id="kill-questions-list" class="space-y-2.5">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <!-- Tactical 30-60-90 Roadmap -->
-        <div class="lg:col-span-6 bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/10 p-6 space-y-4">
-          <div class="flex items-center gap-2 border-b border-white/10 pb-3">
-            <span class="material-symbols-outlined text-secondary">trending_up</span>
-            <h3 class="font-headline font-semibold text-lg text-on-surface">Tactical Execution Roadmap</h3>
-          </div>
-          <div id="roadmap-timeline" class="space-y-4">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Interactive Cross-Examination Terminal -->
-      <div class="bg-surface-container/80 backdrop-blur-md rounded-2xl border border-primary-container/30 p-6 space-y-4 neon-border-cyan">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary-container">psychology</span>
-            <h3 class="font-headline font-semibold text-lg text-on-surface">Council Persona Cross-Examination</h3>
-          </div>
-          <div class="flex items-center gap-2">
-            <label class="text-xs font-telemetry text-outline">Target Persona:</label>
-            <select id="chat-expert-select" class="px-3 py-1.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-telemetry text-on-surface">
-              <!-- Dynamically populated -->
-            </select>
-          </div>
-        </div>
-
-        <!-- Chat history box -->
-        <div id="chat-messages-box" class="h-60 overflow-y-auto custom-scroll p-4 rounded-xl bg-surface-container-lowest/90 border border-white/5 space-y-3 text-xs">
-          <div class="p-3 rounded-lg bg-surface-container border border-white/5 text-on-surface">
-            <strong class="text-primary-container font-telemetry">Council Telemetry:</strong> Select any persona and question their critique or ask for surgical advice on how to execute this venture.
-          </div>
-        </div>
-
-        <!-- Input row -->
-        <div class="flex items-center gap-3">
-          <input id="chat-input" type="text" placeholder="Challenge this persona or ask for specific execution steps..." 
-            class="flex-1 px-4 py-2.5 rounded-lg bg-surface-container-lowest border border-white/10 text-xs text-on-surface focus:border-primary-container focus:ring-0 placeholder:text-outline"
-            onkeydown="if(event.key === 'Enter') sendChatMessage()"/>
-          <button onclick="sendChatMessage()" 
-            class="px-5 py-2.5 rounded-lg bg-primary-container text-surface font-headline font-bold text-xs flex items-center gap-1.5 hover:brightness-110">
-            <span class="material-symbols-outlined text-sm">send</span>
-            <span>INTERROGATE</span>
+        <div style="display: flex; gap: 10px;">
+          <button id="reroll-panel-btn" class="btn btn-secondary btn-sm" aria-label="Re-roll expert council composition">
+            🎲 Re-roll Council
+          </button>
+          <button id="launch-council-btn" class="btn btn-lime">
+            Begin Deliberation →
           </button>
         </div>
       </div>
+
+      <!-- Expert Cards Grid -->
+      <div id="panel-list" class="grid-3" role="region" aria-label="Council Members List"></div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- STEP 3: LIVE VERDICT & COUNCIL SYNTHESIS                              -->
+    <!-- ===================================================================== -->
+    <section id="step-3-verdict" style="display: none;" aria-labelledby="heading-step-3">
+
+      <!-- Real-Time Progress View (SSE) with aria-live -->
+      <div id="streaming-progress" class="card" style="margin-bottom: 30px; text-align: center; padding: 40px 20px;" aria-live="polite">
+        <h2 id="heading-step-3" style="font-size: 24px; color: var(--cyan); margin-bottom: 8px;">Council in Session</h2>
+        <p id="progress-label" style="font-size: 15px; color: var(--text-muted); margin-bottom: 20px;">
+          Evaluating startup across 8 operational pillars...
+        </p>
+        <div class="bar-track" style="max-width: 500px; margin: 0 auto 16px auto; height: 10px;">
+          <div id="progress-bar-fill" class="bar-fill fill-cyan" style="width: 10%;"></div>
+        </div>
+        <div id="streaming-cards" class="grid-3" style="margin-top: 20px;"></div>
+      </div>
+
+      <!-- Final Synthesized Report View -->
+      <div id="report-container" role="region" aria-label="Council Synthesis Report"></div>
     </section>
 
   </main>
 
-  <!-- PERSISTENT FOOTER -->
-  <footer class="fixed bottom-0 left-0 w-full z-40 h-8 bg-surface-container-lowest/95 backdrop-blur-sm border-t border-white/5 px-6 flex items-center justify-between text-[11px] font-telemetry text-outline">
-    <div class="flex items-center gap-2">
-      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-      <span>AI-simulated perspectives inspired by public philosophy. Uncompromising startup reality.</span>
+  <!-- Reusable Accessible Modal (Dossier, Swapping, 1-on-1 Persona Chat) -->
+  <div id="modal-overlay" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content" id="modal-content-box">
+      <div style="display: flex; justify-content: flex-end;">
+        <button id="modal-close-btn" class="btn btn-secondary btn-sm" style="padding: 4px 8px;" aria-label="Close dialog">✕ Close</button>
+      </div>
+      <div id="modal-body" style="margin-top: 10px;"></div>
     </div>
-    <div class="flex items-center gap-4 hidden sm:flex">
-      <span>LATENCY: 8ms</span>
-      <span>•</span>
-      <span>API: FASTAPI V1.0</span>
-      <span>•</span>
-      <span>ENGINE: GEMINI FLASH</span>
+  </div>
+
+  <!-- Accessible Footer Landmark with Required Legal Disclaimer -->
+  <footer class="app-footer" role="contentinfo">
+    <div class="container">
+      <p style="margin-bottom: 6px; font-weight: 600;">
+        QUORUM // Autonomous War Room Engine • Startup Co-Pilot Platform
+      </p>
+      <p style="font-size: 11px; color: var(--text-dim); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+        Personas are AI simulations based on public talks and writing. They are not the real people and do not reflect their actual opinions.
+      </p>
     </div>
   </footer>
 
-  <!-- SCRIPT: APPLICATION ORCHESTRATION & API CONNECTIONS -->
-  <script>
-    let currentBrief = null;
-    let currentPanel = [];
-    let currentReport = null;
-    let threeRenderer = null, threeScene = null, threeCamera = null, threeAnimId = null;
-
-    // Stage switcher
-    function switchStage(stageNum) {
-      for (let i = 1; i <= 4; i++) {
-        const sec = document.getElementById(`stage-${i}`);
-        const nav = document.getElementById(`nav-step-${i}`);
-        if (sec && nav) {
-          if (i === stageNum) {
-            sec.classList.remove('hidden');
-            nav.classList.add('text-primary-container', 'border-b-2', 'border-primary-container');
-            nav.classList.remove('text-outline');
-          } else {
-            sec.classList.add('hidden');
-            nav.classList.remove('text-primary-container', 'border-b-2', 'border-primary-container');
-            nav.classList.add('text-outline');
-          }
-        }
-      }
-      if (stageNum === 3 && currentReport) {
-        init3DNetworkGraph(currentReport.network_graph);
-      }
-    }
-
-    // Prepopulate example
-    function fillExample() {
-      document.getElementById('input-title').value = "QuikD2C AI";
-      document.getElementById('input-pitch').value = "An autonomous multi-agent intelligence that reconciles customer support tickets, predicts return fraud, and dynamically restocks inventory for high-velocity D2C fashion apparel brands.";
-      document.getElementById('input-stage').value = "MVP";
-      document.getElementById('input-market').value = "B2B";
-      document.getElementById('input-budget').value = "Bootstrapped";
-    }
-
-    // Step 1: Submit idea & analyze
-    async function submitIdeaForAnalysis() {
-      const title = document.getElementById('input-title').value.trim() || "Untitled Venture";
-      const pitch = document.getElementById('input-pitch').value.trim();
-      const stage = document.getElementById('input-stage').value;
-      const target_market = document.getElementById('input-market').value;
-      const geography = document.getElementById('input-geography').value;
-      const budget = document.getElementById('input-budget').value;
-
-      if (!pitch) {
-        alert("Please describe the startup idea or pitch first.");
-        return;
-      }
-
-      const btn = document.getElementById('btn-submit-idea');
-      btn.disabled = true;
-      btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-lg">sync</span> <span>ANALYZING TAXONOMY...</span>`;
-
-      try {
-        const res = await fetch('/api/ideas/analyze', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            title,
-            pitch,
-            context: { stage, target_market, geography, budget }
-          })
-        });
-        currentBrief = await res.json();
-
-        // Fetch panel
-        const panelRes = await fetch(`/api/council/recommend-panel?panel_size=12`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(currentBrief)
-        });
-        currentPanel = await panelRes.json();
-
-        renderWarRoomView(currentBrief, currentPanel);
-        switchStage(2);
-      } catch (err) {
-        console.error("Analysis failed:", err);
-        alert("Error analyzing venture pitch. Ensure backend is running.");
-      } finally {
-        btn.disabled = false;
-        btn.innerHTML = `<span class="material-symbols-outlined text-lg">radar</span> <span>SYNTHESIZE BRIEF & RECOMMEND JURY</span>`;
-      }
-    }
-
-    // Render Stage 2 War Room
-    function renderWarRoomView(brief, panel) {
-      document.getElementById('war-room-title').textContent = `${brief.title} // Specification`;
-      document.getElementById('brief-problem').textContent = brief.extracted_problem || "High-friction legacy process.";
-      document.getElementById('brief-persona').textContent = brief.target_persona || "Mid-market B2B buyers.";
-      document.getElementById('brief-solution').textContent = brief.core_solution || "Automated multi-agent workflows.";
-      document.getElementById('brief-model').textContent = brief.business_model || "SaaS subscription + volume usage tier.";
-
-      const sectorsContainer = document.getElementById('brief-sectors');
-      sectorsContainer.innerHTML = '';
-      (brief.detected_sectors || ['Technology & Software']).forEach(s => {
-        const badge = document.createElement('span');
-        badge.className = 'px-2 py-0.5 rounded-full bg-primary-container/10 border border-primary-container/30 text-primary-container font-telemetry text-[11px]';
-        badge.textContent = s;
-        sectorsContainer.appendChild(badge);
-      });
-
-      renderPanelGrid(panel);
-    }
-
-    function renderPanelGrid(panel) {
-      const grid = document.getElementById('panel-cards-grid');
-      grid.innerHTML = '';
-      document.getElementById('panel-count-label').textContent = `${panel.length} Domain Titans & Adversaries Selected`;
-
-      panel.forEach(exp => {
-        const initials = exp.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
-        const card = document.createElement('div');
-        card.className = 'p-3.5 rounded-xl bg-surface-container-lowest/80 border border-white/10 hover:border-primary-container/40 transition-all flex flex-col justify-between gap-2.5';
-        card.innerHTML = `
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-primary-container/20 border border-primary-container/40 text-primary-container font-headline font-bold text-xs flex items-center justify-center">
-              ${initials}
-            </div>
-            <div class="truncate">
-              <h4 class="font-headline font-semibold text-xs text-on-surface truncate">${exp.name}</h4>
-              <p class="font-telemetry text-[10px] text-outline truncate">${exp.title_or_role || exp.primary_sector}</p>
-            </div>
-          </div>
-          <div class="p-2 rounded bg-surface-container border border-white/5 text-[11px] text-on-surface-variant font-body">
-            <span class="text-[9px] font-telemetry text-secondary uppercase block mb-0.5">Philosophy Lens</span>
-            ${exp.core_principles && exp.core_principles[0] ? exp.core_principles[0] : 'First principles market validation'}
-          </div>
-          <div class="flex items-center justify-between font-telemetry text-[10px]">
-            <span class="text-secondary font-semibold">PRIMED</span>
-            <span class="text-outline">${exp.operational_archetype}</span>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    // Step 2: Convene Council & Run Evaluation
-    async function executeCouncilEvaluation() {
-      if (!currentBrief) return;
-      switchStage(3);
-
-      const streamContainer = document.getElementById('deliberation-stream');
-      streamContainer.innerHTML = `
-        <div class="p-4 rounded-xl bg-surface-container-lowest/80 border border-primary-container/30 text-xs font-telemetry space-y-2">
-          <div class="flex items-center gap-2 text-primary-container">
-            <span class="material-symbols-outlined animate-spin text-sm">sync</span>
-            <span>CONVENING COUNCIL DELIBERATION CHAMBER...</span>
-          </div>
-          <p class="text-outline">Querying simulated personas across 8 pillars (Market Demand, Feasibility, Defensibility, Unit Economics)...</p>
-        </div>
-      `;
-
-      try {
-        const res = await fetch('/api/council/evaluate', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            brief: currentBrief,
-            panel_size: currentPanel.length || 10
-          })
-        });
-        currentReport = await res.json();
-        renderDeliberationFeed(currentReport);
-        init3DNetworkGraph(currentReport.network_graph);
-        renderReportDossier(currentReport);
-      } catch (err) {
-        console.error("Evaluation failed:", err);
-        streamContainer.innerHTML = `<div class="p-3 text-xs text-error font-telemetry">Failed running evaluation. Please check server logs.</div>`;
-      }
-    }
-
-    // Render Stream in Stage 3
-    function renderDeliberationFeed(report) {
-      const streamContainer = document.getElementById('deliberation-stream');
-      streamContainer.innerHTML = '';
-      document.getElementById('critiques-count-badge').textContent = `${report.critiques.length} Critiques Synthesized`;
-
-      report.critiques.forEach(c => {
-        const initials = c.expert_name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
-        const card = document.createElement('div');
-        card.className = 'p-3.5 rounded-xl bg-surface-container-lowest/85 border border-white/10 hover:border-white/20 transition-all space-y-2 text-xs';
-        card.innerHTML = `
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <span class="w-6 h-6 rounded bg-primary-container/20 text-primary-container font-headline font-bold text-[10px] flex items-center justify-center">${initials}</span>
-              <strong class="text-on-surface font-headline">${c.expert_name}</strong>
-              <span class="text-[10px] font-telemetry text-outline">${c.expert_role || ''}</span>
-            </div>
-            <span class="px-2 py-0.5 rounded font-telemetry text-[10px] ${c.score >= 7.5 ? 'bg-secondary/10 text-secondary' : c.score >= 5.0 ? 'bg-tertiary/10 text-tertiary' : 'bg-error/10 text-error'}">
-              SCORE: ${c.score.toFixed(1)}/10
-            </span>
-          </div>
-          <p class="text-on-surface-variant leading-relaxed font-body">"${c.commentary}"</p>
-          ${c.attack_vector ? `
-            <div class="p-2 rounded bg-error/10 border border-error/20 text-[11px] text-error font-telemetry">
-              <strong>FATAL ATTACK VECTOR:</strong> ${c.attack_vector}
-            </div>
-          ` : ''}
-        `;
-        streamContainer.appendChild(card);
-      });
-    }
-
-    // Render Final Stage 4 Dossier
-    function renderReportDossier(report) {
-      document.getElementById('report-title-heading').textContent = `${report.title} // Executive Dossier`;
-      document.getElementById('report-id-badge').textContent = `DOSSIER REF // ${report.id.toUpperCase()}`;
-      document.getElementById('metric-overall-score').textContent = report.overall_score.toFixed(1);
-      document.getElementById('metric-verdict-badge').textContent = report.verdict_label.toUpperCase();
-      document.getElementById('metric-consensus').textContent = `${Math.round(report.consensus_percentage)}%`;
-
-      if (report.top_warnings && report.top_warnings[0]) {
-        document.getElementById('metric-fatal-warning').textContent = report.top_warnings[0];
-      }
-      if (report.tactical_roadmap && report.tactical_roadmap.days_30 && report.tactical_roadmap.days_30[0]) {
-        document.getElementById('metric-first-roadmap').textContent = report.tactical_roadmap.days_30[0];
-      }
-
-      // Pillars
-      const pillarsGrid = document.getElementById('pillars-grid');
-      pillarsGrid.innerHTML = '';
-      const p = report.pillar_scores;
-      const pillarNames = [
-        ["Market Demand", p.market_demand],
-        ["Differentiation", p.differentiation],
-        ["Feasibility", p.feasibility],
-        ["Financial Viability", p.financial_viability],
-        ["Execution Risk", p.execution_risk],
-        ["Regulatory Risk", p.regulatory_legal_risk],
-        ["Market Timing", p.market_timing],
-        ["Defensibility", p.defensibility_scale]
-      ];
-
-      pillarNames.forEach(([label, score]) => {
-        const item = document.createElement('div');
-        const pct = Math.min(100, Math.round((score / 10) * 100));
-        item.className = 'p-3 rounded-xl bg-surface-container-lowest/80 border border-white/5 space-y-1.5';
-        item.innerHTML = `
-          <div class="flex items-center justify-between text-xs font-telemetry">
-            <span class="text-outline truncate">${label}</span>
-            <span class="text-on-surface font-semibold">${score.toFixed(1)}</span>
-          </div>
-          <div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
-            <div class="h-full rounded-full ${score >= 7 ? 'bg-secondary' : score >= 5 ? 'bg-tertiary' : 'bg-error'}" style="width: ${pct}%"></div>
-          </div>
-        `;
-        pillarsGrid.appendChild(item);
-      });
-
-      // Kill Questions
-      const kqList = document.getElementById('kill-questions-list');
-      kqList.innerHTML = '';
-      (report.kill_questions || []).forEach((q, idx) => {
-        const div = document.createElement('div');
-        div.className = 'p-3 rounded-lg bg-surface-container-lowest/80 border border-error/20 text-xs text-on-surface leading-relaxed flex items-start gap-2.5';
-        div.innerHTML = `
-          <span class="text-error font-telemetry font-bold text-sm">0${idx+1}</span>
-          <span>${q}</span>
-        `;
-        kqList.appendChild(div);
-      });
-
-      // Roadmap
-      const rmList = document.getElementById('roadmap-timeline');
-      rmList.innerHTML = '';
-      const rm = report.tactical_roadmap;
-      const phases = [
-        ["Day 1 - 30 (De-risking & Discovery)", rm.days_30 || []],
-        ["Day 31 - 60 (MVP & Validation)", rm.days_60 || []],
-        ["Day 61 - 90 (Go-to-Market & Scale)", rm.days_90 || []]
-      ];
-      phases.forEach(([phaseTitle, steps]) => {
-        const phaseDiv = document.createElement('div');
-        phaseDiv.className = 'p-3 rounded-xl bg-surface-container-lowest/80 border border-white/5 space-y-1 text-xs';
-        phaseDiv.innerHTML = `
-          <span class="font-telemetry text-secondary text-[11px] font-semibold block">${phaseTitle}</span>
-          <ul class="list-disc list-inside text-on-surface-variant space-y-1 pl-1">
-            ${steps.map(s => `<li>${s}</li>`).join('')}
-          </ul>
-        `;
-        rmList.appendChild(phaseDiv);
-      });
-
-      // Setup Chat dropdown
-      const select = document.getElementById('chat-expert-select');
-      select.innerHTML = '';
-      report.critiques.forEach(c => {
-        const opt = document.createElement('option');
-        opt.value = c.expert_id;
-        opt.textContent = `${c.expert_name} (${c.expert_role || 'Council Member'})`;
-        select.appendChild(opt);
-      });
-    }
-
-    // Follow-up Persona Chat
-    async function sendChatMessage() {
-      const input = document.getElementById('chat-input');
-      const msg = input.value.trim();
-      const select = document.getElementById('chat-expert-select');
-      const expertId = select.value;
-      const expertName = select.options[select.selectedIndex]?.text || "Expert";
-
-      if (!msg) return;
-      input.value = '';
-
-      const box = document.getElementById('chat-messages-box');
-      // Append user message
-      box.innerHTML += `
-        <div class="p-2.5 rounded-lg bg-surface-container-high/80 border border-white/5 text-right">
-          <strong class="text-primary-container font-telemetry">Founder:</strong>
-          <span class="text-on-surface font-body">${msg}</span>
-        </div>
-      `;
-      box.scrollTop = box.scrollHeight;
-
-      try {
-        const res = await fetch('/api/council/expert-chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            expert_id: expertId,
-            user_message: msg
-          })
-        });
-        const data = await res.json();
-        box.innerHTML += `
-          <div class="p-3 rounded-lg bg-surface-container border border-primary-container/30">
-            <strong class="text-secondary font-telemetry">${data.expert_name}:</strong>
-            <p class="text-on-surface font-body mt-1 leading-relaxed">${data.reply}</p>
-          </div>
-        `;
-        box.scrollTop = box.scrollHeight;
-      } catch (err) {
-        box.innerHTML += `<div class="p-2 text-error text-[11px]">Failed to receive response from expert persona.</div>`;
-      }
-    }
-
-    // Three.js 3D Interactive Network Visualizer
-    function init3DNetworkGraph(graphData) {
-      if (!graphData || !graphData.nodes) return;
-      const container = document.getElementById('threejs-canvas-wrapper');
-      if (!container) return;
-
-      if (threeAnimId) cancelAnimationFrame(threeAnimId);
-      container.innerHTML = '';
-
-      const width = container.clientWidth;
-      const height = container.clientHeight;
-
-      threeScene = new THREE.Scene();
-      threeScene.fog = new THREE.FogExp2(0x05060A, 0.003);
-
-      threeCamera = new THREE.PerspectiveCamera(55, width / height, 0.1, 1000);
-      threeCamera.position.set(0, 30, 160);
-
-      threeRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      threeRenderer.setSize(width, height);
-      threeRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      container.appendChild(threeRenderer.domElement);
-
-      const rootGroup = new THREE.Group();
-      threeScene.add(rootGroup);
-
-      // Light
-      const ambLight = new THREE.AmbientLight(0xffffff, 0.9);
-      threeScene.add(ambLight);
-      const pointLight = new THREE.PointLight(0x00E5FF, 2.5, 300);
-      pointLight.position.set(0, 0, 50);
-      threeScene.add(pointLight);
-
-      // Map nodes to Three.js meshes
-      const nodeMeshes = {};
-      graphData.nodes.forEach(n => {
-        const col = new THREE.Color(n.color || "#00E5FF");
-        const radius = Math.max(1.8, (n.radius || 10) * 0.2);
-        const geo = new THREE.SphereGeometry(radius, 16, 16);
-        const mat = new THREE.MeshBasicMaterial({ color: col, wireframe: n.category === 'idea' });
-        const mesh = new THREE.Mesh(geo, mat);
-        mesh.position.set(n.coords.x * 1.4, n.coords.y * 1.4, n.coords.z * 1.4);
-        rootGroup.add(mesh);
-        nodeMeshes[n.id] = mesh;
-      });
-
-      // Lines for Edges
-      if (graphData.edges) {
-        const lineGeo = new THREE.BufferGeometry();
-        const positions = [];
-        const colors = [];
-        graphData.edges.forEach(e => {
-          const m1 = nodeMeshes[e.source];
-          const m2 = nodeMeshes[e.target];
-          if (m1 && m2) {
-            positions.push(m1.position.x, m1.position.y, m1.position.z);
-            positions.push(m2.position.x, m2.position.y, m2.position.z);
-            const edgeCol = new THREE.Color(e.color || "#38BDF8");
-            colors.push(edgeCol.r, edgeCol.g, edgeCol.b);
-            colors.push(edgeCol.r, edgeCol.g, edgeCol.b);
-          }
-        });
-        lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-        lineGeo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-        const lineMat = new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.45 });
-        const lineSegments = new THREE.LineSegments(lineGeo, lineMat);
-        rootGroup.add(lineSegments);
-      }
-
-      // Interaction mouse orbit
-      let isDragging = false, prevMouseX = 0, prevMouseY = 0;
-      container.addEventListener('mousedown', (e) => { isDragging = true; prevMouseX = e.clientX; prevMouseY = e.clientY; });
-      window.addEventListener('mouseup', () => { isDragging = false; });
-      window.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const dx = e.clientX - prevMouseX;
-        const dy = e.clientY - prevMouseY;
-        rootGroup.rotation.y += dx * 0.008;
-        rootGroup.rotation.x += dy * 0.008;
-        prevMouseX = e.clientX;
-        prevMouseY = e.clientY;
-      });
-
-      // Animate
-      function animate() {
-        threeAnimId = requestAnimationFrame(animate);
-        if (!isDragging) {
-          rootGroup.rotation.y += 0.003;
-        }
-        threeRenderer.render(threeScene, threeCamera);
-      }
-      animate();
-    }
-  </script>
+  <!-- Unified Vanilla ES6 Client Engine -->
+  <script src="/static/app.js"></script>
 </body>
 </html>
